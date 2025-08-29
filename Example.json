@@ -1,20 +1,3 @@
-
-
-
-
-# ####################################
-# sudo su
-# ./S_Analysis.sh xxx
-
-# ####################################
-# /workspaces/llvmta/testcases/tacle-bench/bench
-# /app
-#   - /lift               True
-#   - /powerwindow        Faile
-# /kernel
-#   - /bitcount
-# ####################################
-
 {
     "app":
         [
