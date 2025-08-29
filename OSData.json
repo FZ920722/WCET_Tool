@@ -1,0 +1,299 @@
+{
+    "aio.h": [
+        "aio_cancel",
+        "aio_fsync",
+        "aio_read",
+        "aio_write"
+    ],
+    "fcntl.h": [
+        "fcntl",
+        "open"
+    ],
+    "mqueue.h": [
+        "mq_close",
+        "mq_getattr",
+        "mq_notify",
+        "mq_open",
+        "mq_receive",
+        "mq_send",
+        "mq_setattr",
+        "mq_timedreceive",
+        "mq_timedsend",
+        "mq_unlink"
+    ],
+    "nuttx/arch.h": [
+        "pgalloc",
+        "up_fork"
+    ],
+    "nuttx/binfmt/binfmt.h": [
+        "exec"
+    ],
+    "nuttx/clock.h": [
+        "perf_gettime",
+        "perf_convert"
+    ],
+    "nuttx/fs/fs.h": [
+        "nx_mkfifo"
+    ],
+    "nuttx/module.h": [
+        "insmod",
+        "modhandle",
+        "rmmod"
+    ],
+    "nuttx/perf.h": [
+        "perf_event_open"
+    ],
+    "nuttx/pthread.h": [
+        "nx_pthread_create",
+        "nx_pthread_exit"
+    ],
+    "nuttx/sched.h": [
+        "nxsched_get_stackinfo"
+    ],
+    "nuttx/sched_note.h": [
+        "sched_note_event_ip",
+        "sched_note_vprintf_ip"
+    ],
+    "nuttx/semaphore.h": [
+        "nxsem_clockwait",
+        "nxsem_clockwait_uninterruptible",
+        "nxsem_close",
+        "nxsem_destroy",
+        "nxsem_getprioceiling",
+        "nxsem_open",
+        "nxsem_post_slow",
+        "nxsem_reset",
+        "nxsem_set_protocol",
+        "nxsem_setprioceiling",
+        "nxsem_tickwait",
+        "nxsem_tickwait_uninterruptible",
+        "nxsem_timedwait",
+        "nxsem_trywait_slow",
+        "nxsem_unlink",
+        "nxsem_wait_slow"
+    ],
+    "nuttx/spawn.h": [
+        "task_spawn"
+    ],
+    "nuttx/syslog/syslog.h": [
+        "nx_vsyslog"
+    ],
+    "poll.h": [
+        "poll",
+        "ppoll"
+    ],
+    "pthread.h": [
+        "pthread_cancel",
+        "pthread_detach",
+        "pthread_getaffinity_np",
+        "pthread_getschedparam",
+        "pthread_join",
+        "pthread_setaffinity_np",
+        "pthread_setschedparam",
+        "pthread_setschedprio",
+        "pthread_sigmask"
+    ],
+    "sched.h": [
+        "sched_backtrace",
+        "sched_getaffinity",
+        "sched_getcpu",
+        "sched_getparam",
+        "sched_getscheduler",
+        "sched_lock",
+        "sched_lockcount",
+        "sched_rr_get_interval",
+        "sched_setaffinity",
+        "sched_setparam",
+        "sched_setscheduler",
+        "sched_unlock",
+        "sched_yield",
+        "task_create",
+        "task_delete",
+        "task_restart"
+    ],
+    "signal.h": [
+        "kill",
+        "sigaction",
+        "sigpending",
+        "sigprocmask",
+        "sigqueue",
+        "sigsuspend",
+        "sigtimedwait",
+        "sigwaitinfo",
+        "tgkill"
+    ],
+    "spawn.h": [
+        "posix_spawn"
+    ],
+    "stdio.h": [
+        "rename"
+    ],
+    "stdlib.h": [
+        "clearenv",
+        "get_environ_ptr",
+        "getenv",
+        "putenv",
+        "setenv",
+        "unsetenv"
+    ],
+    "sys/boardctl.h": [
+        "boardctl"
+    ],
+    "sys/epoll.h": [
+        "epoll_close",
+        "epoll_create",
+        "epoll_create1",
+        "epoll_ctl",
+        "epoll_pwait",
+        "epoll_wait"
+    ],
+    "sys/eventfd.h": [
+        "eventfd"
+    ],
+    "sys/inotify.h": [
+        "inotify_add_watch",
+        "inotify_init",
+        "inotify_init1",
+        "inotify_rm_watch"
+    ],
+    "sys/ioctl.h": [
+        "ioctl"
+    ],
+    "sys/mman.h": [
+        "mmap",
+        "msync",
+        "munmap",
+        "shm_open",
+        "shm_unlink"
+    ],
+    "sys/mount.h": [
+        "mount",
+        "umount2"
+    ],
+    "sys/prctl.h": [
+        "prctl"
+    ],
+    "sys/select.h": [
+        "pselect",
+        "select"
+    ],
+    "sys/sendfile.h": [
+        "sendfile"
+    ],
+    "sys/shm.h": [
+        "shmat",
+        "shmctl",
+        "shmdt",
+        "shmget"
+    ],
+    "sys/signalfd.h": [
+        "signalfd"
+    ],
+    "sys/socket.h": [
+        "accept4",
+        "bind",
+        "connect",
+        "getpeername",
+        "getsockname",
+        "getsockopt",
+        "listen",
+        "recv",
+        "recvfrom",
+        "recvmsg",
+        "send",
+        "sendmsg",
+        "sendto",
+        "setsockopt",
+        "shutdown",
+        "socket",
+        "socketpair"
+    ],
+    "sys/stat.h": [
+        "chmod",
+        "fchmod",
+        "fstat",
+        "futimens",
+        "lchmod",
+        "lstat",
+        "lutimens",
+        "mkdir",
+        "stat",
+        "utimens"
+    ],
+    "sys/statfs.h": [
+        "fstatfs",
+        "statfs"
+    ],
+    "sys/sysinfo.h": [
+        "sysinfo"
+    ],
+    "sys/time.h": [
+        "adjtime",
+        "getitimer",
+        "setitimer"
+    ],
+    "sys/timerfd.h": [
+        "timerfd_create",
+        "timerfd_gettime",
+        "timerfd_settime"
+    ],
+    "sys/timex.h": [
+        "clock_adjtime"
+    ],
+    "sys/uio.h": [
+        "readv",
+        "writev"
+    ],
+    "sys/wait.h": [
+        "wait",
+        "waitid",
+        "waitpid"
+    ],
+    "time.h": [
+        "clock",
+        "clock_gettime",
+        "clock_getres",
+        "clock_nanosleep",
+        "clock_settime",
+        "timer_create",
+        "timer_delete",
+        "timer_getoverrun",
+        "timer_gettime",
+        "timer_settime"
+    ],
+    "unistd.h": [
+        "_exit",
+        "chown",
+        "close",
+        "dup",
+        "dup2",
+        "execve",
+        "fchown",
+        "fsync",
+        "ftruncate",
+        "getegid",
+        "geteuid",
+        "getgid",
+        "gethostname",
+        "getppid",
+        "getuid",
+        "lchown",
+        "link",
+        "lseek",
+        "pipe2",
+        "pread",
+        "pwrite",
+        "read",
+        "readlink",
+        "rmdir",
+        "setegid",
+        "seteuid",
+        "setgid",
+        "sethostname",
+        "setuid",
+        "symlink",
+        "sync",
+        "unlink",
+        "write"
+    ]
+}
