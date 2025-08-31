@@ -1,0 +1,644 @@
+Textual Machine Code Representation
+------------------------------------
+
+# Machine code for function nx_pthread_create: NoPHIs, TracksLiveness, NoVRegs, TiedOpsRewritten
+Frame Objects:
+  fi#-1: size=4, align=8, fixed, at location [SP]
+  fi#0: size=12, align=4, at location [SP-20]
+  fi#1: size=4, align=4, at location [SP-24]
+  fi#2: size=4, align=4, at location [SP-28]
+  fi#3: size=4, align=4, at location [SP-32]
+  fi#4: size=4, align=4, at location [SP-36]
+  fi#5: size=4, align=4, at location [SP-40]
+  fi#6: size=4, align=4, at location [SP-44]
+  fi#7: size=4, align=4, at location [SP-48]
+  fi#8: size=4, align=4, at location [SP-52]
+  fi#9: size=4, align=4, at location [SP-56]
+  fi#10: size=4, align=4, at location [SP-60]
+  fi#11: size=4, align=4, at location [SP-64]
+  fi#12: size=4, align=4, at location [SP-68]
+  fi#13: size=4, align=4, at location [SP-72]
+  fi#14: size=4, align=4, at location [SP-76]
+  fi#15: size=4, align=4, at location [SP-80]
+  fi#16: size=4, align=4, at location [SP-84]
+  fi#17: size=4, align=4, at location [SP-88]
+  fi#18: size=4, align=4, at location [SP-92]
+  fi#19: size=4, align=4, at location [SP-96]
+  fi#20: size=4, align=4, at location [SP-100]
+  fi#21: size=4, align=4, at location [SP-4]
+  fi#22: size=4, align=4, at location [SP-8]
+Function Live Ins: $r0, $r1, $r2, $r3
+
+bb.0 (%ir-block.5):
+  successors: %bb.1, %bb.2
+  liveins: $r0, $r1, $r2, $r3, $lr
+  $sp = frame-setup STMDB_UPD $sp(tied-def 0), 14, $noreg, killed $r11, killed $lr
+  frame-setup CFI_INSTRUCTION def_cfa_offset 8
+  frame-setup CFI_INSTRUCTION offset $lr, -4
+  frame-setup CFI_INSTRUCTION offset $r11, -8
+  $r11 = frame-setup MOVr killed $sp, 14, $noreg, $noreg
+  frame-setup CFI_INSTRUCTION def_cfa_register $r11
+  $sp = frame-setup SUBri killed $sp, 96, 14, $noreg, $noreg
+  STRi12 killed $r3, $r11, -36, 14, $noreg :: (store (s32) into %stack.6)
+  STRi12 killed $r2, $r11, -32, 14, $noreg :: (store (s32) into %stack.5)
+  STRi12 killed $r1, $r11, -28, 14, $noreg :: (store (s32) into %stack.4)
+  STRi12 $r0, $r11, -24, 14, $noreg :: (store (s32) into %stack.3)
+  renamable $r1 = LDRi12 $r11, 8, 14, $noreg :: (load (s32) from %fixed-stack.0)
+  STRi12 killed $r1, $r11, -20, 14, $noreg :: (store (s32) into %stack.2)
+  $r3 = MOVi16 target-flags(arm-lo16) @g_default_pthread_attr, 14, $noreg, debug-location !16; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:183:33
+  $r3 = MOVTi16 $r3(tied-def 0), target-flags(arm-hi16) @g_default_pthread_attr, 14, $noreg, debug-location !16; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:183:33
+  renamable $r1 = LDRi12 renamable $r3, 0, 14, $noreg, debug-location !16 :: (dereferenceable load (s32) from `i8* getelementptr inbounds (%struct.pthread_attr_s, %struct.pthread_attr_s* @g_default_pthread_attr, i32 0, i32 0)`); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:183:33
+  renamable $r2 = LDRi12 renamable $r3, 4, 14, $noreg, debug-location !16 :: (dereferenceable load (s32) from `i8* getelementptr inbounds (%struct.pthread_attr_s, %struct.pthread_attr_s* @g_default_pthread_attr, i32 0, i32 0)` + 4); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:183:33
+  renamable $r3 = LDRi12 killed renamable $r3, 8, 14, $noreg, debug-location !16 :: (dereferenceable load (s32) from `i8* getelementptr inbounds (%struct.pthread_attr_s, %struct.pthread_attr_s* @g_default_pthread_attr, i32 0, i32 0)` + 8); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:183:33
+  STRi12 killed renamable $r3, $r11, -4, 14, $noreg, debug-location !16 :: (store (s32) into %ir.8 + 8); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:183:33
+  STRi12 killed renamable $r2, $r11, -8, 14, $noreg, debug-location !16 :: (store (s32) into %ir.8 + 4); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:183:33
+  STRi12 killed renamable $r1, $r11, -12, 14, $noreg, debug-location !16 :: (store (s32) into %ir.8); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:183:33
+  CMPri renamable $r0, 0, 14, $noreg, implicit-def $cpsr, debug-location !17; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:191:3
+  Bcc %bb.2, 1, killed $cpsr, debug-location !17; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:191:3
+  B %bb.1, debug-location !17; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:191:3
+
+bb.1 (%ir-block.9):
+; predecessors: %bb.0
+
+  $r0 = MOVi16 target-flags(arm-lo16) @.str, 14, $noreg, debug-location !17; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:191:3
+  $r0 = MOVTi16 $r0(tied-def 0), target-flags(arm-hi16) @.str, 14, $noreg, debug-location !17; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:191:3
+  renamable $r1 = MOVi 191, 14, $noreg, $noreg
+  renamable $r2 = MOVi 0, 14, $noreg, $noreg
+  BL @__assert, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, debug-location !17; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:191:3
+
+bb.2 (%ir-block.10):
+; predecessors: %bb.0
+  successors: %bb.3(0x80000000); %bb.3(100.00%)
+
+  B %bb.3, debug-location !17; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:191:3
+
+bb.3 (%ir-block.11):
+; predecessors: %bb.2
+  successors: %bb.4, %bb.5
+
+  $r0 = MOVi16 target-flags(arm-lo16) @g_readytorun, 14, $noreg, debug-location !18; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:193:12
+  $r0 = MOVTi16 $r0(tied-def 0), target-flags(arm-hi16) @g_readytorun, 14, $noreg, debug-location !18; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:193:12
+  renamable $r0 = LDRi12 killed renamable $r0, 0, 14, $noreg, debug-location !18 :: (dereferenceable load (s32) from `%struct.tcb_s** bitcast (%struct.dq_entry_s* @g_readytorun to %struct.tcb_s**)`); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:193:12
+  STRi12 $r0, $r11, -40, 14, $noreg :: (store (s32) into %stack.7)
+  CMPri renamable $r0, 0, 14, $noreg, implicit-def $cpsr, debug-location !19; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:194:3
+  Bcc %bb.5, 1, killed $cpsr, debug-location !19; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:194:3
+  B %bb.4, debug-location !19; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:194:3
+
+bb.4 (%ir-block.13):
+; predecessors: %bb.3
+
+  $r0 = MOVi16 target-flags(arm-lo16) @.str, 14, $noreg, debug-location !19; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:194:3
+  $r0 = MOVTi16 $r0(tied-def 0), target-flags(arm-hi16) @.str, 14, $noreg, debug-location !19; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:194:3
+  renamable $r1 = MOVi 194, 14, $noreg, $noreg
+  renamable $r2 = MOVi 0, 14, $noreg, $noreg
+  BL @__assert, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, debug-location !19; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:194:3
+
+bb.5 (%ir-block.14):
+; predecessors: %bb.3
+  successors: %bb.6(0x80000000); %bb.6(100.00%)
+
+  B %bb.6, debug-location !19; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:194:3
+
+bb.6 (%ir-block.15):
+; predecessors: %bb.5
+  successors: %bb.7, %bb.10
+
+  $r0 = LDRi12 $r11, -32, 14, $noreg, debug-location !21 :: (load (s32) from %stack.5); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:198:7
+  CMPri renamable $r0, 0, 14, $noreg, implicit-def $cpsr, debug-location !21; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:198:7
+  STRi12 killed $r0, $r11, -44, 14, $noreg :: (store (s32) into %stack.8)
+  Bcc %bb.10, 1, killed $cpsr, debug-location !21; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:198:7
+  B %bb.7, debug-location !21; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:198:7
+
+bb.7 (%ir-block.16):
+; predecessors: %bb.6
+  successors: %bb.9, %bb.8
+
+  $r0 = LDRi12 $r11, -40, 14, $noreg, debug-location !22 :: (load (s32) from %stack.7); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:202:12
+  renamable $r0 = LDRi12 renamable $r0, 44, 14, $noreg, debug-location !22 :: (load (s32) from %ir.17); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:202:12
+  CMPri killed renamable $r0, 1, 14, $noreg, implicit-def $cpsr, debug-location !23; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:202:11
+  Bcc %bb.9, 11, killed $cpsr, debug-location !23; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:202:11
+  B %bb.8, debug-location !23; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:202:11
+
+bb.8 (%ir-block.20):
+; predecessors: %bb.7
+  successors: %bb.9(0x80000000); %bb.9(100.00%)
+
+  $r0 = LDRi12 $r11, -40, 14, $noreg, debug-location !24 :: (load (s32) from %stack.7); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:204:43
+  renamable $r0 = LDRBi12 renamable $r0, 48, 14, $noreg, debug-location !24 :: (load (s8) from %ir.21, align 4); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:204:43
+  STRBi12 killed renamable $r0, $r11, -12, 14, $noreg, debug-location !26 :: (store (s8) into %ir.23, align 4); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:204:33
+  B %bb.9, debug-location !27; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:205:9
+
+bb.9 (%ir-block.24):
+; predecessors: %bb.7, %bb.8
+  successors: %bb.10(0x80000000); %bb.10(100.00%)
+
+  renamable $r0 = SUBri $r11, 12, 14, $noreg, $noreg
+  STRi12 killed $r0, $r11, -44, 14, $noreg :: (store (s32) into %stack.8)
+  B %bb.10, debug-location !28; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:208:5
+
+bb.10 (%ir-block.25):
+; predecessors: %bb.6, %bb.9
+  successors: %bb.11, %bb.14
+
+  $r0 = LDRi12 $r11, -44, 14, $noreg :: (load (s32) from %stack.8)
+  STRi12 killed $r0, $sp, 40, 14, $noreg :: (store (s32) into %stack.11)
+  renamable $r0 = MOVi 204, 14, $noreg, $noreg
+  BL @zalloc, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit-def $sp, implicit-def $r0, debug-location !29; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:212:10
+  $r1 = MOVr $r0, 14, $noreg, $noreg, debug-location !29; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:212:10
+  STRi12 killed $r1, $sp, 44, 14, $noreg :: (store (s32) into %stack.10)
+  $r1 = MOVr $r0, 14, $noreg, $noreg, debug-location !29; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:212:10
+  STRi12 killed $r1, $sp, 48, 14, $noreg :: (store (s32) into %stack.9)
+  CMPri killed renamable $r0, 0, 14, $noreg, implicit-def $cpsr, debug-location !31; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:213:7
+  Bcc %bb.14, 1, killed $cpsr, debug-location !31; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:213:7
+  B %bb.11, debug-location !31; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:213:7
+
+bb.11 (%ir-block.28):
+; predecessors: %bb.10
+  successors: %bb.12(0x80000000); %bb.12(100.00%)
+
+  B %bb.12, debug-location !32; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:215:7
+
+bb.12 (%ir-block.29):
+; predecessors: %bb.11
+  successors: %bb.13(0x80000000); %bb.13(100.00%)
+
+  B %bb.13, debug-location !32; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:215:7
+
+bb.13 (%ir-block.30):
+; predecessors: %bb.12
+  successors: %bb.42(0x80000000); %bb.42(100.00%)
+
+  renamable $r0 = MOVi 12, 14, $noreg, $noreg
+  STRi12 killed $r0, $sp, 36, 14, $noreg :: (store (s32) into %stack.12)
+  B %bb.42, debug-location !33; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:216:7
+
+bb.14 (%ir-block.31):
+; predecessors: %bb.10
+  successors: %bb.15, %bb.16
+
+  $r0 = LDRi12 $sp, 44, 14, $noreg, debug-location !35 :: (load (s32) from %stack.10); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:219:19
+  renamable $r1 = LDRi12 renamable $r0, 64, 14, $noreg, debug-location !35 :: (load (s32) from %ir.33); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:219:19
+  renamable $r1 = ORRri killed renamable $r1, 32768, 14, $noreg, $noreg, debug-location !35; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:219:19
+  STRi12 killed renamable $r1, renamable $r0, 64, 14, $noreg, debug-location !35 :: (store (s32) into %ir.33); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:219:19
+  BL @nxtask_joininit, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit-def $sp, debug-location !37; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:223:3
+  $r0 = LDRi12 $sp, 48, 14, $noreg, debug-location !37 :: (load (s32) from %stack.9); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:223:3
+  BL @group_bind, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit-def $sp, debug-location !38; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:229:3
+  $r0 = LDRi12 $sp, 40, 14, $noreg, debug-location !38 :: (load (s32) from %stack.11); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:229:3
+  renamable $r0 = LDRBi12 renamable $r0, 3, 14, $noreg, debug-location !39 :: (load (s8) from %ir.37); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:242:13
+  CMPri killed renamable $r0, 1, 14, $noreg, implicit-def $cpsr, debug-location !41; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:242:7
+  Bcc %bb.16, 1, killed $cpsr, debug-location !41; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:242:7
+  B %bb.15, debug-location !41; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:242:7
+
+bb.15 (%ir-block.40):
+; predecessors: %bb.14
+  successors: %bb.16(0x80000000); %bb.16(100.00%)
+
+  $r1 = LDRi12 $sp, 44, 14, $noreg, debug-location !43 :: (load (s32) from %stack.10); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:244:23
+  renamable $r0 = LDRi12 renamable $r1, 64, 14, $noreg, debug-location !43 :: (load (s32) from %ir.42); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:244:23
+  renamable $r0 = ORRri killed renamable $r0, 4096, 14, $noreg, $noreg, debug-location !43; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:244:23
+  STRi12 killed renamable $r0, renamable $r1, 64, 14, $noreg, debug-location !43 :: (store (s32) into %ir.42); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:244:23
+  B %bb.16, debug-location !44; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:245:5
+
+bb.16 (%ir-block.45):
+; predecessors: %bb.14, %bb.15
+  successors: %bb.18, %bb.17
+
+  $r0 = LDRi12 $sp, 40, 14, $noreg, debug-location !45 :: (load (s32) from %stack.11); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:247:13
+  renamable $r0 = LDRi12 renamable $r0, 4, 14, $noreg, debug-location !45 :: (load (s32) from %ir.46); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:247:13
+  CMPri killed renamable $r0, 0, 14, $noreg, implicit-def $cpsr, debug-location !46; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:247:7
+  Bcc %bb.18, 0, killed $cpsr, debug-location !46; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:247:7
+  B %bb.17, debug-location !46; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:247:7
+
+bb.17 (%ir-block.48):
+; predecessors: %bb.16
+  successors: %bb.19(0x80000000); %bb.19(100.00%)
+
+  $r0 = LDRi12 $sp, 44, 14, $noreg, debug-location !48 :: (load (s32) from %stack.10); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:251:58
+  $r2 = LDRi12 $sp, 40, 14, $noreg, debug-location !48 :: (load (s32) from %stack.11); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:251:58
+  renamable $r1 = LDRi12 renamable $r2, 4, 14, $noreg, debug-location !48 :: (load (s32) from %ir.50); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:251:58
+  renamable $r2 = LDRi12 renamable $r2, 8, 14, $noreg, debug-location !49 :: (load (s32) from %ir.52); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:252:32
+  BL @up_use_stack, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, implicit-def $r0, debug-location !50; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:251:13
+  STRi12 killed $r0, $sp, 32, 14, $noreg :: (store (s32) into %stack.13)
+  B %bb.19, debug-location !51; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:253:5
+
+bb.18 (%ir-block.55):
+; predecessors: %bb.16
+  successors: %bb.19(0x80000000); %bb.19(100.00%)
+
+  $r0 = LDRi12 $sp, 44, 14, $noreg, debug-location !53 :: (load (s32) from %stack.10); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:258:61
+  $r1 = LDRi12 $sp, 40, 14, $noreg, debug-location !53 :: (load (s32) from %stack.11); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:258:61
+  renamable $r1 = LDRi12 renamable $r1, 8, 14, $noreg, debug-location !53 :: (load (s32) from %ir.57); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:258:61
+  renamable $r2 = MOVi 1, 14, $noreg, $noreg
+  BL @up_create_stack, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, implicit-def $r0, debug-location !54; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:258:13
+  STRi12 killed $r0, $sp, 32, 14, $noreg :: (store (s32) into %stack.13)
+  B %bb.19
+
+bb.19 (%ir-block.60):
+; predecessors: %bb.17, %bb.18
+  successors: %bb.21, %bb.20
+
+  $r0 = LDRi12 $sp, 32, 14, $noreg, debug-location !55 :: (load (s32) from %stack.13); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:0
+  CMPri killed renamable $r0, 0, 14, $noreg, implicit-def $cpsr, debug-location !57; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:262:7
+  Bcc %bb.21, 0, killed $cpsr, debug-location !57; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:262:7
+  B %bb.20, debug-location !57; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:262:7
+
+bb.20 (%ir-block.61):
+; predecessors: %bb.19
+  successors: %bb.41(0x80000000); %bb.41(100.00%)
+
+  renamable $r0 = MOVi 12, 14, $noreg, $noreg
+  STRi12 killed $r0, $sp, 28, 14, $noreg :: (store (s32) into %stack.14)
+  B %bb.41, debug-location !58; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:265:7
+
+bb.21 (%ir-block.62):
+; predecessors: %bb.19
+  successors: %bb.23, %bb.22
+
+  $r0 = LDRi12 $sp, 44, 14, $noreg, debug-location !60 :: (load (s32) from %stack.10); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:282:9
+  BL @tls_init_info, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit-def $sp, implicit-def $r0, debug-location !60; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:282:9
+  $r1 = MOVr $r0, 14, $noreg, $noreg, debug-location !60; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:282:9
+  STRi12 killed $r1, $sp, 24, 14, $noreg :: (store (s32) into %stack.15)
+  CMPri killed renamable $r0, 0, 14, $noreg, implicit-def $cpsr, debug-location !62; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:283:7
+  Bcc %bb.23, 0, killed $cpsr, debug-location !62; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:283:7
+  B %bb.22, debug-location !62; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:283:7
+
+bb.22 (%ir-block.65):
+; predecessors: %bb.21
+  successors: %bb.41(0x80000000); %bb.41(100.00%)
+
+  $r0 = LDRi12 $sp, 24, 14, $noreg, debug-location !63 :: (load (s32) from %stack.15); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:285:17
+  renamable $r0 = nsw RSBri renamable $r0, 0, 14, $noreg, $noreg, debug-location !63; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:285:17
+  STRi12 killed $r0, $sp, 28, 14, $noreg :: (store (s32) into %stack.14)
+  B %bb.41, debug-location !64; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:286:7
+
+bb.23 (%ir-block.67):
+; predecessors: %bb.21
+  successors: %bb.24, %bb.29
+
+  $r0 = LDRi12 $sp, 40, 14, $noreg, debug-location !65 :: (load (s32) from %stack.11); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:294:13
+  renamable $r0 = LDRBi12 renamable $r0, 2, 14, $noreg, debug-location !65 :: (load (s8) from %ir.68, align 2); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:294:13
+  CMPri killed renamable $r0, 0, 14, $noreg, implicit-def $cpsr, debug-location !67; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:294:7
+  Bcc %bb.29, 1, killed $cpsr, debug-location !67; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:294:7
+  B %bb.24, debug-location !67; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:294:7
+
+bb.24 (%ir-block.71):
+; predecessors: %bb.23
+  successors: %bb.25, %bb.26
+
+  renamable $r0 = MOVi 0, 14, $noreg, $noreg
+  renamable $r1 = SUBri $r11, 16, 14, $noreg, $noreg
+  BL @nxsched_get_param, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit-def $sp, implicit-def $r0, debug-location !68; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:300:13
+  $r1 = MOVr $r0, 14, $noreg, $noreg, debug-location !68; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:300:13
+  STRi12 killed $r1, $sp, 20, 14, $noreg :: (store (s32) into %stack.16)
+  CMNri killed renamable $r0, 1, 14, $noreg, implicit-def $cpsr, debug-location !70; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:301:11
+  Bcc %bb.26, 12, killed $cpsr, debug-location !70; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:301:11
+  B %bb.25, debug-location !70; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:301:11
+
+bb.25 (%ir-block.74):
+; predecessors: %bb.24
+  successors: %bb.41(0x80000000); %bb.41(100.00%)
+
+  $r0 = LDRi12 $sp, 20, 14, $noreg, debug-location !71 :: (load (s32) from %stack.16); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:303:21
+  renamable $r0 = nsw RSBri renamable $r0, 0, 14, $noreg, $noreg, debug-location !71; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:303:21
+  STRi12 killed $r0, $sp, 28, 14, $noreg :: (store (s32) into %stack.14)
+  B %bb.41, debug-location !72; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:304:11
+
+bb.26 (%ir-block.76):
+; predecessors: %bb.24
+  successors: %bb.27, %bb.28
+
+  renamable $r0 = MOVi 0, 14, $noreg, $noreg
+  BL @nxsched_get_scheduler, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit-def $sp, implicit-def $r0, debug-location !73; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:309:16
+  $r1 = MOVr $r0, 14, $noreg, $noreg, debug-location !73; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:309:16
+  STRi12 killed $r1, $sp, 16, 14, $noreg :: (store (s32) into %stack.17)
+  CMNri killed renamable $r0, 1, 14, $noreg, implicit-def $cpsr, debug-location !75; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:310:11
+  Bcc %bb.28, 12, killed $cpsr, debug-location !75; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:310:11
+  B %bb.27, debug-location !75; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:310:11
+
+bb.27 (%ir-block.79):
+; predecessors: %bb.26
+  successors: %bb.41(0x80000000); %bb.41(100.00%)
+
+  $r0 = LDRi12 $sp, 16, 14, $noreg, debug-location !76 :: (load (s32) from %stack.17); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:312:21
+  renamable $r0 = nsw RSBri renamable $r0, 0, 14, $noreg, $noreg, debug-location !76; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:312:21
+  STRi12 killed $r0, $sp, 28, 14, $noreg :: (store (s32) into %stack.14)
+  B %bb.41, debug-location !77; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:313:11
+
+bb.28 (%ir-block.81):
+; predecessors: %bb.26
+  successors: %bb.30(0x80000000); %bb.30(100.00%)
+
+  $r0 = LDRi12 $sp, 16, 14, $noreg :: (load (s32) from %stack.17)
+  STRi12 killed $r0, $sp, 12, 14, $noreg :: (store (s32) into %stack.18)
+  B %bb.30, debug-location !78; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:315:5
+
+bb.29 (%ir-block.82):
+; predecessors: %bb.23
+  successors: %bb.30(0x80000000); %bb.30(100.00%)
+
+  $r0 = LDRi12 $sp, 40, 14, $noreg, debug-location !81 :: (load (s32) from %stack.11); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:321:50
+  renamable $r1 = LDRBi12 renamable $r0, 0, 14, $noreg, debug-location !81 :: (load (s8) from %ir.86, align 4); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:321:50
+  renamable $r0 = LDRBi12 renamable $r0, 1, 14, $noreg, debug-location !79 :: (load (s8) from %ir.83); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:320:50
+  STRi12 killed renamable $r1, $r11, -16, 14, $noreg, debug-location !84 :: (store (s32) into %ir.89); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:321:42
+  STRi12 killed $r0, $sp, 12, 14, $noreg :: (store (s32) into %stack.18)
+  B %bb.30
+
+bb.30 (%ir-block.90):
+; predecessors: %bb.29, %bb.28
+  successors: %bb.32, %bb.31
+
+  $r3 = LDRi12 $r11, -36, 14, $noreg, debug-location !55 :: (load (s32) from %stack.6); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:0
+  $r0 = LDRi12 $sp, 48, 14, $noreg, debug-location !55 :: (load (s32) from %stack.9); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:0
+  $r1 = LDRi12 $sp, 12, 14, $noreg, debug-location !55 :: (load (s32) from %stack.18); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:0
+  STRi12 killed $r1, $sp, 8, 14, $noreg :: (store (s32) into %stack.19)
+  renamable $r1 = LDRi12 $r11, -16, 14, $noreg, debug-location !85 :: (dereferenceable load (s32) from %ir.91); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:388:45
+  $r2 = MOVi16 target-flags(arm-lo16) @pthread_start, 14, $noreg, debug-location !86; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:388:9
+  $r2 = MOVTi16 $r2(tied-def 0), target-flags(arm-hi16) @pthread_start, 14, $noreg, debug-location !86; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:388:9
+  BL @pthread_setup_scheduler, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit killed $r3, implicit-def $sp, implicit-def $r0, debug-location !86; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:388:9
+  CMPri killed renamable $r0, 0, 14, $noreg, implicit-def $cpsr, debug-location !88; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:390:7
+  Bcc %bb.32, 0, killed $cpsr, debug-location !88; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:390:7
+  B %bb.31, debug-location !88; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:390:7
+
+bb.31 (%ir-block.94):
+; predecessors: %bb.30
+  successors: %bb.41(0x80000000); %bb.41(100.00%)
+
+  renamable $r0 = MOVi 16, 14, $noreg, $noreg
+  STRi12 killed $r0, $sp, 28, 14, $noreg :: (store (s32) into %stack.14)
+  B %bb.41, debug-location !89; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:393:7
+
+bb.32 (%ir-block.95):
+; predecessors: %bb.30
+  successors: %bb.37, %bb.33
+
+  $r0 = LDRi12 $sp, 48, 14, $noreg, debug-location !90 :: (load (s32) from %stack.9); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:414:3
+  $r3 = LDRi12 $r11, -20, 14, $noreg, debug-location !90 :: (load (s32) from %stack.2); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:414:3
+  $r2 = LDRi12 $r11, -24, 14, $noreg, debug-location !90 :: (load (s32) from %stack.3); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:414:3
+  $r1 = LDRi12 $r11, -40, 14, $noreg, debug-location !90 :: (load (s32) from %stack.7); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:414:3
+  BL_pred @pthread_tcb_setup, 14, $noreg, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit killed $r3, implicit-def $sp, debug-location !90; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:414:3
+  $r0 = LDRi12 $sp, 48, 14, $noreg, debug-location !90 :: (load (s32) from %stack.9); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:414:3
+  BL @group_join, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit-def $sp, debug-location !91; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:418:3
+  $r2 = LDRi12 $sp, 44, 14, $noreg, debug-location !91 :: (load (s32) from %stack.10); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:418:3
+  $r0 = LDRi12 $sp, 8, 14, $noreg, debug-location !91 :: (load (s32) from %stack.19); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:418:3
+  renamable $r1 = LDRi12 renamable $r2, 64, 14, $noreg, debug-location !93 :: (load (s32) from %ir.97); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:422:19
+  renamable $r1 = BICri killed renamable $r1, 24, 14, $noreg, $noreg, debug-location !93; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:422:19
+  STRi12 killed renamable $r1, renamable $r2, 64, 14, $noreg, debug-location !93 :: (store (s32) into %ir.97); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:422:19
+  CMPri renamable $r0, 0, 14, $noreg, implicit-def $cpsr, debug-location !94; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:423:3
+  Bcc %bb.37, 0, killed $cpsr, debug-location !94; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:423:3
+  B %bb.33, debug-location !94; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:423:3
+
+bb.33 (%ir-block.95):
+; predecessors: %bb.32
+  successors: %bb.36, %bb.34
+
+  $r0 = LDRi12 $sp, 8, 14, $noreg, debug-location !94 :: (load (s32) from %stack.19); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:423:3
+  CMPri renamable $r0, 1, 14, $noreg, implicit-def $cpsr, debug-location !94; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:423:3
+  Bcc %bb.36, 0, killed $cpsr, debug-location !94; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:423:3
+  B %bb.34, debug-location !94; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:423:3
+
+bb.34 (%ir-block.95):
+; predecessors: %bb.33
+  successors: %bb.37, %bb.35
+
+  $r0 = LDRi12 $sp, 8, 14, $noreg, debug-location !94 :: (load (s32) from %stack.19); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:423:3
+  CMPri renamable $r0, 2, 14, $noreg, implicit-def $cpsr, debug-location !94; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:423:3
+  Bcc %bb.37, 0, killed $cpsr, debug-location !94; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:423:3
+  B %bb.35, debug-location !94; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:423:3
+
+bb.35 (%ir-block.100):
+; predecessors: %bb.34
+  successors: %bb.36(0x80000000); %bb.36(100.00%)
+
+  B %bb.36, debug-location !95; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:424:5
+
+bb.36 (%ir-block.101):
+; predecessors: %bb.33, %bb.35
+  successors: %bb.38(0x80000000); %bb.38(100.00%)
+
+  B %bb.38, debug-location !96; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:428:9
+
+bb.37 (%ir-block.102):
+; predecessors: %bb.32, %bb.34
+  successors: %bb.38(0x80000000); %bb.38(100.00%)
+
+  $r1 = LDRi12 $sp, 44, 14, $noreg, debug-location !98 :: (load (s32) from %stack.10); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:433:28
+  renamable $r0 = LDRi12 renamable $r1, 64, 14, $noreg, debug-location !98 :: (load (s32) from %ir.104); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:433:28
+  renamable $r0 = ORRri killed renamable $r0, 8, 14, $noreg, $noreg, debug-location !98; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:433:28
+  STRi12 killed renamable $r0, renamable $r1, 64, 14, $noreg, debug-location !98 :: (store (s32) into %ir.104); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:433:28
+  renamable $r0 = MOVi 2000, 14, $noreg, $noreg
+  STRi12 killed renamable $r0, renamable $r1, 72, 14, $noreg, debug-location !100 :: (store (s32) into %ir.108); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:434:29
+  B %bb.38, debug-location !101; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:435:9
+
+bb.38 (%ir-block.109):
+; predecessors: %bb.37, %bb.36
+  successors: %bb.40, %bb.39
+
+  $r0 = LDRi12 $r11, -28, 14, $noreg, debug-location !103 :: (load (s32) from %stack.4); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:447:7
+  CMPri renamable $r0, 0, 14, $noreg, implicit-def $cpsr, debug-location !103; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:447:7
+  Bcc %bb.40, 0, killed $cpsr, debug-location !103; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:447:7
+  B %bb.39, debug-location !103; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:447:7
+
+bb.39 (%ir-block.110):
+; predecessors: %bb.38
+  successors: %bb.40(0x80000000); %bb.40(100.00%)
+
+  $r1 = LDRi12 $r11, -28, 14, $noreg, debug-location !104 :: (load (s32) from %stack.4); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:449:38
+  $r0 = LDRi12 $sp, 44, 14, $noreg, debug-location !104 :: (load (s32) from %stack.10); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:449:38
+  renamable $r0 = LDRi12 renamable $r0, 44, 14, $noreg, debug-location !104 :: (load (s32) from %ir.112); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:449:38
+  STRi12 killed renamable $r0, renamable $r1, 0, 14, $noreg, debug-location !105 :: (store (s32) into %ir.1); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:449:15
+  B %bb.40, debug-location !106; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:450:5
+
+bb.40 (%ir-block.114):
+; predecessors: %bb.38, %bb.39
+  successors: %bb.42(0x80000000); %bb.42(100.00%)
+
+  $r0 = LDRi12 $sp, 44, 14, $noreg, debug-location !108 :: (load (s32) from %stack.10); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:454:3
+  BL @nxtask_activate, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit-def $sp, debug-location !108; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:454:3
+  renamable $r0 = MOVi 0, 14, $noreg, $noreg
+  STRi12 killed $r0, $sp, 36, 14, $noreg :: (store (s32) into %stack.12)
+  B %bb.42, debug-location !109; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:456:3
+
+bb.41 (%ir-block.116):
+; predecessors: %bb.20, %bb.22, %bb.31, %bb.27, %bb.25
+  successors: %bb.42(0x80000000); %bb.42(100.00%)
+
+  $r0 = LDRi12 $sp, 44, 14, $noreg, debug-location !55 :: (load (s32) from %stack.10); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:0
+  $r1 = LDRi12 $sp, 28, 14, $noreg, debug-location !55 :: (load (s32) from %stack.14); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:0
+  STRi12 $r1, $sp, 4, 14, $noreg :: (store (s32) into %stack.20)
+  renamable $r1 = MOVi 0, 14, $noreg, $noreg
+  STRi12 killed renamable $r1, renamable $r0, 8, 14, $noreg, debug-location !111 :: (store (s32) into %ir.118); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:462:19
+  renamable $r1 = MOVi 1, 14, $noreg, $noreg
+  BL @nxsched_release_tcb, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit-def $sp, implicit-def $r0, debug-location !113; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:464:3
+  dead renamable $r1 = KILL $r0, debug-location !113; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:464:3
+  $r0 = LDRi12 $sp, 4, 14, $noreg :: (load (s32) from %stack.20)
+  STRi12 killed $r0, $sp, 36, 14, $noreg :: (store (s32) into %stack.12)
+  B %bb.42, debug-location !114; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:465:3
+
+bb.42 (%ir-block.121):
+; predecessors: %bb.40, %bb.41, %bb.13
+
+  $r0 = LDRi12 $sp, 36, 14, $noreg, debug-location !55 :: (load (s32) from %stack.12); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:0
+  $sp = frame-destroy MOVr $r11, 14, $noreg, $noreg, debug-location !115; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:466:1
+  $sp = frame-destroy LDMIA_RET $sp(tied-def 0), 14, $noreg, def $r11, def $pc, implicit killed $r0, debug-location !115; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:466:1
+
+# End machine code for function nx_pthread_create.
+
+# Machine code for function pthread_start: NoPHIs, TracksLiveness, NoVRegs, TiedOpsRewritten
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP-12]
+  fi#1: size=4, align=4, at location [SP-16]
+  fi#2: size=4, align=4, at location [SP-4]
+  fi#3: size=4, align=4, at location [SP-8]
+
+bb.0 (%ir-block.0):
+  successors: %bb.1, %bb.5
+  liveins: $lr
+  $sp = frame-setup STMDB_UPD $sp(tied-def 0), 14, $noreg, killed $r11, killed $lr
+  frame-setup CFI_INSTRUCTION def_cfa_offset 8
+  frame-setup CFI_INSTRUCTION offset $lr, -4
+  frame-setup CFI_INSTRUCTION offset $r11, -8
+  $r11 = frame-setup MOVr killed $sp, 14, $noreg, $noreg
+  frame-setup CFI_INSTRUCTION def_cfa_register $r11
+  $sp = frame-setup SUBri killed $sp, 8, 14, $noreg, $noreg
+  $r0 = MOVi16 target-flags(arm-lo16) @g_readytorun, 14, $noreg, debug-location !117; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:122:64
+  $r0 = MOVTi16 $r0(tied-def 0), target-flags(arm-hi16) @g_readytorun, 14, $noreg, debug-location !117; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:122:64
+  renamable $r1 = LDRi12 killed renamable $r0, 0, 14, $noreg, debug-location !117 :: (dereferenceable load (s32) from `%struct.pthread_tcb_s** bitcast (%struct.dq_entry_s* @g_readytorun to %struct.pthread_tcb_s**)`); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:122:64
+  STRi12 $r1, $sp, 4, 14, $noreg :: (store (s32) into %stack.0)
+  renamable $r0 = LDRBi12 renamable $r1, 48, 14, $noreg, debug-location !118 :: (load (s8) from %ir.2, align 4); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:129:17
+  renamable $r1 = LDRBi12 renamable $r1, 49, 14, $noreg, debug-location !119 :: (load (s8) from %ir.4); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:129:44
+  CMPrr killed renamable $r0, killed renamable $r1, 14, $noreg, implicit-def $cpsr, debug-location !121; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:129:7
+  Bcc %bb.5, 9, killed $cpsr, debug-location !121; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:129:7
+  B %bb.1, debug-location !121; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:129:7
+
+bb.1 (%ir-block.7):
+; predecessors: %bb.0
+  successors: %bb.2, %bb.3
+
+  $r0 = LDRi12 $sp, 4, 14, $noreg, debug-location !122 :: (load (s32) from %stack.0); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:131:7
+  renamable $r1 = LDRBi12 renamable $r0, 49, 14, $noreg, debug-location !122 :: (load (s8) from %ir.9); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:131:7
+  BL @nxsched_set_priority, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit-def $sp, implicit-def $r0, debug-location !122; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:131:7
+  CMNri killed renamable $r0, 1, 14, $noreg, implicit-def $cpsr, debug-location !122; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:131:7
+  Bcc %bb.3, 12, killed $cpsr, debug-location !122; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:131:7
+  B %bb.2, debug-location !122; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:131:7
+
+bb.2 (%ir-block.14):
+; predecessors: %bb.1
+
+  $r0 = MOVi16 target-flags(arm-lo16) @.str, 14, $noreg, debug-location !122; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:131:7
+  $r0 = MOVTi16 $r0(tied-def 0), target-flags(arm-hi16) @.str, 14, $noreg, debug-location !122; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:131:7
+  renamable $r1 = MOVi 131, 14, $noreg, $noreg
+  renamable $r2 = MOVi 0, 14, $noreg, $noreg
+  BL @__assert, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, debug-location !122; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:131:7
+
+bb.3 (%ir-block.15):
+; predecessors: %bb.1
+  successors: %bb.4(0x80000000); %bb.4(100.00%)
+
+  B %bb.4, debug-location !122; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:131:7
+
+bb.4 (%ir-block.16):
+; predecessors: %bb.3
+  successors: %bb.5(0x80000000); %bb.5(100.00%)
+
+  B %bb.5, debug-location !123; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:132:5
+
+bb.5 (%ir-block.17):
+; predecessors: %bb.0, %bb.4
+  successors: %bb.7, %bb.6
+
+  $r0 = LDRi12 $sp, 4, 14, $noreg, debug-location !124 :: (load (s32) from %stack.0); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:139:3
+  renamable $r1 = LDRi12 renamable $r0, 196, 14, $noreg, debug-location !124 :: (load (s32) from %ir.18); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:139:3
+  renamable $r0 = MOVi 1, 14, $noreg, $noreg
+  CMPri killed renamable $r1, 0, 14, $noreg, implicit-def $cpsr, debug-location !124; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:139:3
+  STRi12 killed $r0, $sp, 0, 14, $noreg :: (store (s32) into %stack.1)
+  Bcc %bb.7, 0, killed $cpsr, debug-location !124; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:139:3
+  B %bb.6, debug-location !124; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:139:3
+
+bb.6 (%ir-block.20):
+; predecessors: %bb.5
+  successors: %bb.7(0x80000000); %bb.7(100.00%)
+
+  $r0 = LDRi12 $sp, 4, 14, $noreg, debug-location !124 :: (load (s32) from %stack.0); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:139:3
+  renamable $r0 = LDRi12 renamable $r0, 56, 14, $noreg, debug-location !124 :: (load (s32) from %ir.21); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:139:3
+  renamable $r0 = CLZ killed renamable $r0, 14, $noreg, debug-location !124; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:139:3
+  renamable $r0 = MOVsi killed renamable $r0, 43, 14, $noreg, $noreg, debug-location !124; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:139:3
+  STRi12 killed $r0, $sp, 0, 14, $noreg :: (store (s32) into %stack.1)
+  B %bb.7
+
+bb.7 (%ir-block.24):
+; predecessors: %bb.5, %bb.6
+  successors: %bb.8, %bb.9
+
+  $r0 = LDRi12 $sp, 0, 14, $noreg :: (load (s32) from %stack.1)
+  TSTri killed renamable $r0, 1, 14, $noreg, implicit-def $cpsr, debug-location !124; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:139:3
+  Bcc %bb.9, 0, killed $cpsr, debug-location !124; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:139:3
+  B %bb.8, debug-location !124; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:139:3
+
+bb.8 (%ir-block.26):
+; predecessors: %bb.7
+
+  $r0 = MOVi16 target-flags(arm-lo16) @.str, 14, $noreg, debug-location !124; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:139:3
+  $r0 = MOVTi16 $r0(tied-def 0), target-flags(arm-hi16) @.str, 14, $noreg, debug-location !124; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:139:3
+  renamable $r1 = MOVi 139, 14, $noreg, $noreg
+  renamable $r2 = MOVi 0, 14, $noreg, $noreg
+  BL @__assert, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, debug-location !124; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:139:3
+
+bb.9 (%ir-block.27):
+; predecessors: %bb.7
+  successors: %bb.10(0x80000000); %bb.10(100.00%)
+
+  B %bb.10, debug-location !124; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:139:3
+
+bb.10 (%ir-block.28):
+; predecessors: %bb.9
+
+  $r1 = LDRi12 $sp, 4, 14, $noreg, debug-location !126 :: (load (s32) from %stack.0); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:142:36
+  renamable $r0 = LDRi12 renamable $r1, 56, 14, $noreg, debug-location !126 :: (load (s32) from %ir.31); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:142:36
+  renamable $r2 = LDRi12 renamable $r1, 196, 14, $noreg, debug-location !125 :: (load (s32) from %ir.29); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:142:9
+  renamable $r1 = LDRi12 killed renamable $r1, 200, 14, $noreg, debug-location !127 :: (load (s32) from %ir.33); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:142:51
+  BLX killed renamable $r2, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit-def $sp, debug-location !128; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:142:3
+  $r0 = MOVi16 target-flags(arm-lo16) @.str, 14, $noreg, debug-location !129; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:149:3
+  $r0 = MOVTi16 $r0(tied-def 0), target-flags(arm-hi16) @.str, 14, $noreg, debug-location !129; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:149:3
+  $r2 = MOVi16 target-flags(arm-lo16) @.str.1, 14, $noreg, debug-location !129; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:149:3
+  $r2 = MOVTi16 $r2(tied-def 0), target-flags(arm-hi16) @.str.1, 14, $noreg, debug-location !129; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:149:3
+  renamable $r1 = MOVi 149, 14, $noreg, $noreg
+  BL @__assert, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, debug-location !129; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:149:3
+
+# End machine code for function pthread_start.
+
+# Machine code for function pthread_tcb_setup: NoPHIs, TracksLiveness, NoVRegs, TiedOpsRewritten
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP-12]
+  fi#1: size=4, align=4, at location [SP-16]
+  fi#2: size=4, align=4, at location [SP-20]
+  fi#3: size=4, align=4, at location [SP-4]
+  fi#4: size=4, align=4, at location [SP-8]
+Function Live Ins: $r0, $r1, $r2, $r3
+
+bb.0 (%ir-block.4):
+  liveins: $r0, $r1, $r2, $r3, $lr
+  $sp = frame-setup STMDB_UPD $sp(tied-def 0), 14, $noreg, killed $r11, killed $lr
+  frame-setup CFI_INSTRUCTION def_cfa_offset 8
+  frame-setup CFI_INSTRUCTION offset $lr, -4
+  frame-setup CFI_INSTRUCTION offset $r11, -8
+  $r11 = frame-setup MOVr killed $sp, 14, $noreg, $noreg
+  frame-setup CFI_INSTRUCTION def_cfa_register $r11
+  $sp = frame-setup SUBri killed $sp, 16, 14, $noreg, $noreg
+  STRi12 $r3, $sp, 8, 14, $noreg :: (store (s32) into %stack.1)
+  STRi12 $r2, $sp, 4, 14, $noreg :: (store (s32) into %stack.2)
+  STRi12 $r0, $r11, -4, 14, $noreg :: (store (s32) into %stack.0)
+  renamable $r0 = nuw ADDri renamable $r0, 164, 14, $noreg, $noreg, debug-location !131; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:98:11
+  renamable $r1 = nuw ADDri killed renamable $r1, 164, 14, $noreg, $noreg, debug-location !132; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:98:27
+  renamable $r2 = MOVi 31, 14, $noreg, $noreg
+  BL @strlcpy, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, implicit-def $r0, debug-location !133; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:98:3
+  $r2 = LDRi12 $sp, 4, 14, $noreg, debug-location !133 :: (load (s32) from %stack.2); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:98:3
+  $r3 = LDRi12 $sp, 8, 14, $noreg, debug-location !133 :: (load (s32) from %stack.1); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:98:3
+  dead renamable $r1 = KILL $r0, debug-location !133; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:98:3
+  $r0 = LDRi12 $r11, -4, 14, $noreg, debug-location !135 :: (load (s32) from %stack.0); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:105:20
+  STRi12 killed renamable $r2, renamable $r0, 196, 14, $noreg, debug-location !135 :: (store (s32) into %ir.8); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:105:20
+  STRi12 killed renamable $r3, killed renamable $r0, 200, 14, $noreg, debug-location !137 :: (store (s32) into %ir.9); 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:106:20
+  $sp = frame-destroy MOVr $r11, 14, $noreg, $noreg, debug-location !138; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:107:1
+  $sp = frame-destroy LDMIA_RET $sp(tied-def 0), 14, $noreg, def $r11, def $pc, debug-location !138; 1_WCETSpace/vela-opensource/nuttx/sched/pthread/pthread_create.c:107:1
+
+# End machine code for function pthread_tcb_setup.
+

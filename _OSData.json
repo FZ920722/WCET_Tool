@@ -1,25 +1,25 @@
 {
     "aio.h": [
-        "aio_cancel",
-        "aio_fsync",
-        "aio_read",
-        "aio_write"
+        ["aio_cancel",  "/fs/aio/aio_cancel.c"],
+        ["aio_fsync",   "/fs/aio/aio_fsync.c"],
+        ["aio_write",   "/fs/aio/aio_write.c"],
+        ["aio_read",    "/fs/aio/aio_read.c"]
     ],
     "fcntl.h": [
-        "fcntl",
-        "open"
+        ["fcntl",       "/fs/vfs/fs_fcntl.c"],
+        ["open",        "/fs/vfs/fs_open.c"]
     ],
     "mqueue.h": [
-        "mq_close",
-        "mq_getattr",
-        "mq_notify",
-        "mq_open",
-        "mq_receive",
-        "mq_send",
-        "mq_setattr",
-        "mq_timedreceive",
-        "mq_timedsend",
-        "mq_unlink"
+        ["mq_close",        "/fs/mqueue/mq_close.c"],
+        ["mq_getattr",      "/sched/mqueue/mq_getattr.c"],
+        ["mq_notify",       "/sched/mqueue/mq_notify.c"],
+        ["mq_open",         "/fs/mqueue/mq_open.c"],
+        ["mq_receive",      "/sched/mqueue/mq_receive.c"],
+        ["mq_send",         "/sched/mqueue/mq_send.c"],
+        ["mq_setattr",      "/sched/mqueue/mq_setattr.c"],
+        ["mq_timedreceive", "/sched/mqueue/mq_receive.c"],
+        ["mq_timedsend",    "/sched/mqueue/mq_send.c"],
+        ["mq_unlink",       "/fs/mqueue/mq_unlink.c"]    
     ],
     "nuttx/arch.h": [
         "pgalloc",
@@ -44,8 +44,8 @@
         "perf_event_open"
     ],
     "nuttx/pthread.h": [
-        "nx_pthread_create",
-        "nx_pthread_exit"
+        ["nx_pthread_create",   ""],
+        ["nx_pthread_exit",     ""]
     ],
     "nuttx/sched.h": [
         "nxsched_get_stackinfo"
@@ -83,15 +83,15 @@
         "ppoll"
     ],
     "pthread.h": [
-        "pthread_cancel",
-        "pthread_detach",
-        "pthread_getaffinity_np",
-        "pthread_getschedparam",
-        "pthread_join",
-        "pthread_setaffinity_np",
-        "pthread_setschedparam",
-        "pthread_setschedprio",
-        "pthread_sigmask"
+        ["pthread_cancel",          ""],
+        ["pthread_detach",          ""],
+        ["pthread_getaffinity_np",  ""],
+        ["pthread_getschedparam",   ""],
+        ["pthread_join",            ""],
+        ["pthread_setaffinity_np",  ""],
+        ["pthread_setschedparam",   ""],
+        ["pthread_setschedprio",    ""],
+        ["pthread_sigmask",         ""]
     ],
     "sched.h": [
         "sched_backtrace",
