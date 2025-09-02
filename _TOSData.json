@@ -1,0 +1,91 @@
+{
+    "aio.h": [
+        ["aio_cancel",  "fs/aio",  "aio_cancel.c"],
+        ["aio_fsync",   "fs/aio",  "aio_fsync.c"],
+        ["aio_write",   "fs/aio",  "aio_write.c"],
+        ["aio_read",    "fs/aio",  "aio_read.c"]
+    ],
+    "fcntl.h": [
+        ["fcntl",   "fs/vfs",  "fs_fcntl.c"],
+        ["open",    "fs/vfs",  "fs_open.c"]
+    ],
+    "mqueue.h": [
+        ["mq_open",         "fs/mqueue",    "mq_open.c"],
+        ["mq_close",        "fs/mqueue",    "mq_close.c"],
+        ["mq_unlink",       "fs/mqueue",    "mq_unlink.c"],
+        ["mq_send",         "sched/mqueue", "mq_send.c"],
+        ["mq_timedsend",    "sched/mqueue", "mq_send.c"],
+        ["mq_notify",       "sched/mqueue", "mq_notify.c"],
+        ["mq_setattr",      "sched/mqueue", "mq_setattr.c"],
+        ["mq_timedreceive", "sched/mqueue", "mq_receive.c"],
+        ["mq_getattr",      "sched/mqueue", "mq_getattr.c"],
+        ["mq_receive",      "sched/mqueue", "mq_receive.c"]
+    ],
+    "poll.h": [
+        ["poll",    "fs/vfs",       "fs_poll.c"],
+        ["ppoll",   "sched/signal", "sig_ppoll.c"]
+    ],
+    "pthread.h": [
+        ["pthread_cancel",          "sched/pthread",    "pthread_cancel.c"],
+        ["pthread_detach",          "sched/pthread",    "pthread_detach.c"],
+        ["pthread_getaffinity_np",  "sched/pthread",    "pthread_getaffinity.c"],
+        ["pthread_getschedparam",   "sched/pthread",    "pthread_getschedparam.c"],
+        ["pthread_join",            "sched/pthread",    "pthread_join.c"],
+        ["pthread_setaffinity_np",  "sched/pthread",    "pthread_setaffinity.c"],
+        ["pthread_setschedparam",   "sched/pthread",    "pthread_setschedparam.c"],
+        ["pthread_setschedprio",    "sched/pthread",    "pthread_setschedprio.c"],
+        ["pthread_sigmask",         "sched/pthread",    "pthread_sigmask.c"]
+    ],
+    "sched.h": [
+        ["sched_backtrace",         "sched/sched",  "sched_backtrace.c"],
+        ["sched_getaffinity",       "sched/sched",  "sched_getaffinity.c"],
+        ["sched_getcpu",            "sched/sched",  "sched_getcpu.c"],
+        ["sched_getparam",          "sched/sched",  "sched_getparam.c"],
+        ["sched_getscheduler",      "sched/sched",  "sched_getscheduler.c"],
+        ["sched_lock",              "sched/sched",  "sched_lock.c"],
+        ["sched_lockcount",         "sched/sched",  "sched_lockcount.c"],
+        ["sched_rr_get_interval",   "sched/sched",  "sched_rrgetinterval.c"],
+        ["sched_setaffinity",       "sched/sched",  "sched_setaffinity.c"],
+        ["sched_setparam",          "sched/sched",  "sched_setparam.c"],
+        ["sched_setscheduler",      "sched/sched",  "sched_setscheduler.c"],
+        ["sched_unlock",            "sched/sched",  "sched_unlock.c"],
+        ["sched_yield",             "sched/sched",  "sched_yield.c"],
+        ["task_create",             "sched/task",   "task_create.c"],
+        ["task_delete",             "sched/task",   "task_delete.c"],
+        ["task_restart",            "sched/task",   "task_restart.c"]
+    ],
+    "signal.h": [
+        ["kill",            "sched/signal", "sig_kill.c"],
+        ["sigaction",       "sched/signal", "sig_action.c"],
+        ["sigpending",      "sched/signal", "sig_pending.c"],
+        ["sigprocmask",     "sched/signal", "sig_procmask.c"],
+        ["sigqueue",        "sched/signal", "sig_queue.c"],
+        ["sigsuspend",      "sched/signal", "sig_suspend.c"],
+        ["sigtimedwait",    "sched/signal", "sig_timedwait.c"],
+        ["sigwaitinfo",     "sched/signal", "sig_waitinfo.c"],
+        ["tgkill",          "sched/signal", "sig_tgkill.c"]
+    ],
+    "spawn.h": [
+        ["posix_spawn",     "sched/task",   "task_posixspawn.c"]
+    ],
+    "stdlib.h": [
+        ["getenv",          "sched/environ",    "env_getenv.c"],
+        ["putenv",          "sched/environ",    "env_putenv.c"],
+        ["setenv",          "sched/environ",    "env_setenv.c"],
+        ["unsetenv",        "sched/environ",    "env_unsetenv.c"],
+        ["clearenv",        "sched/environ",    "env_clearenv.c"],
+        ["get_environ_ptr", "sched/environ",    "env_getenvironptr.c"]
+    ],
+    "time.h": [
+        ["clock",            "sched/clock",     "clock.c"],
+        ["clock_gettime",    "sched/clock",     "clock_gettime.c"],
+        ["clock_settime",    "sched/clock",     "clock_settime.c"],
+        ["clock_nanosleep",  "sched/signal",    "sig_nanosleep.c"],
+        ["timer_create",     "sched/timer",     "timer_create.c"],
+        ["timer_delete",     "sched/timer",     "timer_delete.c"],
+        ["timer_gettime",    "sched/timer",     "timer_gettime.c"],
+        ["timer_settime",    "sched/timer",     "timer_settime.c"],
+        ["timer_getoverrun", "sched/timer",     "timer_getoverrun.c"],
+        ["clock_getres",     "libs/libc/sched", "clock_getres.c"]
+    ]
+}
