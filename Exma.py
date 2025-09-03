@@ -99,7 +99,6 @@ LLVMTA_SOURCE = [
     "optimized.ll"
 ]
 
-
 def WCETAnalysis(_entry_point, _code_file, _head_dirs):
     global WORK_HOME, GSEMA
     # 1. work path
@@ -124,80 +123,96 @@ def WCETAnalysis(_entry_point, _code_file, _head_dirs):
     # 5 log txt
     _log_txt = os.path.join(_work_dir, "log.txt")
     with open(_log_txt, "a") as _f:    # w modle will cover old file
-        # S1. Compile
-        os.chdir(_comp_dir)
-        # (1) clang
-        if os.system(' '.join(CLANG_SOURCE + [
-                                ' '.join(f"-I{_hd}" for _hd in _head_dirs),
-                                _code_file, 
-                                f"| tee -a {_log_txt}",
-                                "> /dev/null 2>&1"
-                            ])) != 0:
-            return  # exit(1)
-        # (2) link
-        if os.system(' '.join([
-                                "llvm-link *.ll",
-                                "-o unoptimized.ll", 
-                                f"| tee -a {_log_txt}",
-                                "> /dev/null 2>&1"
-                            ])) != 0:
-            return
-        # (3) opt
-        if os.system(' '.join(OPT_SOURCE + [
-                                f"| tee -a {_log_txt}",
-                                " > /dev/null 2>&1"
-                            ])) != 0:
-            return
-        try:
-            shutil.copy(os.path.join(_comp_dir, "optimized.ll"), 
-                        os.path.join(_anal_dir, "optimized.ll"))
-        except:
-            os.system(f"echo Compile Error! (#define) | tee -a {_log_txt}")
-            
-        os.chdir(_anal_dir)
-        # (4) --ta-output-unknown-extfuncs
-        if os.system(' '.join(LLVMTA_SOURCE + [
-                                f"--core-info={_core_info}",
-                                f"--ta-analysis-entry-point={_entry_point}", 
-                                "--ta-output-unknown-extfuncs=true", 
-                                f"| tee -a {_log_txt}"
-                                " > /dev/null 2>&1"
-                            ])) != 0:
-            exit(1)
+        pass
+    # S1. Compile
+    os.chdir(_comp_dir)
+    # (1) clang
+    with open(_log_txt, "a") as _f: 
+        _f.write("\n# # # # S1_1_clang\n")
+    if os.system(' '.join(CLANG_SOURCE + [
+                        ' '.join(f"-I{_hd}" for _hd in _head_dirs),
+                        _code_file, 
+                        f"2>&1 | tee -a {_log_txt}",
+                        # "> /dev/null 2>&1"
+                    ])) != 0:
+        return
+
+    # (2) link
+    with open(_log_txt, "a") as _f: 
+        _f.write("\n# # # # S1_2_link\n")
+    if os.system(' '.join([
+                            "llvm-link *.ll",
+                            "-o unoptimized.ll", 
+                            f"2>&1 | tee -a {_log_txt}",
+                            # "> /dev/null 2>&1"
+                        ])) != 0:
+        return
+
+    # (3) opt
+    with open(_log_txt, "a") as _f: 
+        _f.write("\n# # # # S1_3_opt\n")
+    if os.system(' '.join(OPT_SOURCE + [
+                            f"2>&1 | tee -a {_log_txt}",
+                            # " > /dev/null 2>&1"
+                        ])) != 0:
+        return
+    
+    shutil.copy(os.path.join(_comp_dir, "optimized.ll"), 
+                os.path.join(_anal_dir, "optimized.ll"))
+
+    os.chdir(_anal_dir)
+    # (4) --ta-output-unknown-extfuncs
+    with open(_log_txt, "a") as _f: 
+        _f.write("\n# # # # S2_1_Ext\n")
+    if os.system(' '.join(LLVMTA_SOURCE + [
+                            f"--core-info={_core_info}",
+                            f"--ta-analysis-entry-point={_entry_point}", 
+                            "--ta-output-unknown-extfuncs=true", 
+                            f"2>&1 | tee -a {_log_txt}"
+                            # " > /dev/null 2>&1"
+                        ])) != 0:
+        exit(1)
+    if os.path.getsize('ExtFuncAnnotations.csv') > 0:
         df = pd.read_csv('ExtFuncAnnotations.csv', header=None)
         for index, row in df.iterrows():
             row[0] = row[0].replace("<start address>", "1")
             row[0] = row[0].replace("<max cycles/accesses/hits/misses>", "1/1/1/1")
         df.to_csv('ExtFuncAnnotations.csv', index=False, header=0)
 
-        # (5) --ta-output-unknown-loops
-        if os.system(' '.join(LLVMTA_SOURCE + [
-                                f"--core-info={_core_info}",
-                                f"--ta-analysis-entry-point={_entry_point}", 
-                                "--ta-output-unknown-loops",
-                                f"| tee -a {_log_txt}",
-                                " > /dev/null 2>&1"
-                            ])) != 0:
-            exit(1)
+    # (5) --ta-output-unknown-loops
+    with open(_log_txt, "a") as _f: 
+        _f.write("\n# # # # S2_2_Loop\n")
+    if os.system(' '.join(LLVMTA_SOURCE + [
+                            f"--core-info={_core_info}",
+                            f"--ta-analysis-entry-point={_entry_point}", 
+                            "--ta-output-unknown-loops",
+                            f"2>&1 | tee -a {_log_txt}",
+                            # " > /dev/null 2>&1"
+                        ])) != 0:
+        exit(1)
+    if os.path.getsize('LoopAnnotations.csv') > 0:
         df = pd.read_csv('LoopAnnotations.csv', header=None)
         for index, row in df.iterrows():
             row[0] = row[0].replace("|-1", "|1")
         df.to_csv('LoopAnnotations.csv', index=False, header=0)
-        shutil.copy("LoopAnnotations.csv", "LLoopAnnotations.csv")
+    shutil.copy("LoopAnnotations.csv", "LLoopAnnotations.csv")
 
-        # (6) bound
-        if os.system(' '.join(LLVMTA_SOURCE + [
-                                f"--core-info={_core_info}",
-                                f"--ta-analysis-entry-point={_entry_point}", 
-                                "--ta-loop-bounds-file=LoopAnnotations.csv",
-                                "--ta-loop-lowerbounds-file=LLoopAnnotations.csv",
-                                "--ta-restart-after-external",
-                                "--ta-extfunc-annotation-file=ExtFuncAnnotations.csv",
-                                f"| tee -a {_log_txt}",
-                                " > /dev/null 2>&1"
-                                # "2>&1 | grep 'Calculated Timing Bound' | awk '{print $NF}'"
-                                ])) != 0:
-            exit(1)
+    # (6) bound
+    with open(_log_txt, "a") as _f: 
+        _f.write("\n# # # # S2_3_Bound\n")
+    if os.system(' '.join(LLVMTA_SOURCE + [
+                            f"--core-info={_core_info}",
+                            f"--ta-analysis-entry-point={_entry_point}", 
+                            "--ta-loop-bounds-file=LoopAnnotations.csv",
+                            "--ta-loop-lowerbounds-file=LLoopAnnotations.csv",
+                            "--ta-restart-after-external",
+                            "--ta-extfunc-annotation-file=ExtFuncAnnotations.csv",
+                            f"2>&1 | tee -a {_log_txt}",
+                            # " > /dev/null 2>&1"
+                            # "2>&1 | grep 'Calculated Timing Bound' | awk '{print $NF}'"
+                            ])) != 0:
+        exit(1)
+
 
     # *. Core data
     with GSEMA:
@@ -219,6 +234,13 @@ if __name__ == "__main__":
     _code_list = []
     _head_list = []
     _entry_list = []
+
+    # WCETAnalysis("aio_cancel",  
+    #              os.path.join(NUTTX_HOME, "fs/aio", "aio_cancel.c"),  
+    #             [os.path.join(NUTTX_HOME, "fs"),
+    #              os.path.join(NUTTX_HOME, "sched"), 
+    #              os.path.join(NUTTX_HOME, "include")])
+    # """
     with open(os.path.join(SOUR_HOME, '_TOSData.json'), 'r') as _f:
         for _i, _d in json.load(_f).items():
             print(f"{_i}")
@@ -236,7 +258,8 @@ if __name__ == "__main__":
                 ]
                 _head_list.append(_head_dirs)
 
-                WCETAnalysis(_func, _code_file, _head_dirs)
+                # WCETAnalysis(_func, _code_file, _head_dirs)
 
-    # with Pool(processes=6) as pool:
-    #     pool.starmap(WCETAnalysis, zip(_entry_list, _code_list, _head_list))
+    with Pool(processes=6) as pool:
+        pool.starmap(WCETAnalysis, zip(_entry_list, _code_list, _head_list))
+    # """

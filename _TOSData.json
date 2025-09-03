@@ -1,4 +1,10 @@
 {
+    "aio.h": [
+        ["aio_cancel",  "fs/aio",  "aio_cancel.c"],
+        ["aio_fsync",   "fs/aio",  "aio_fsync.c"],
+        ["aio_write",   "fs/aio",  "aio_write.c"],
+        ["aio_read",    "fs/aio",  "aio_read.c"]
+    ],
     "fcntl.h": [
         ["fcntl",   "fs/vfs",   "fs_fcntl.c"],
         ["open",    "fs/vfs",   "fs_open.c"]
