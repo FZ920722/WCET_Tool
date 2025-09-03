@@ -1,0 +1,4 @@
+Timing Analysis for Core: 0
+Timing Analysis for Core: 0
+ -> Finished Preprocessing Phase
+Timing Analysis for entry point: fcntl

@@ -1,0 +1,501 @@
+Textual Machine Code Representation
+------------------------------------
+
+# Machine code for function file_fcntl: NoPHIs, TracksLiveness, NoVRegs, TiedOpsRewritten
+Frame Objects:
+  fi#-1: size=8, align=8, fixed, at location [SP-8]
+  fi#0: size=4, align=4, at location [SP-20]
+  fi#1: size=4, align=4, at location [SP-12]
+  fi#2: size=4, align=4, at location [SP-16]
+Function Live Ins: $r0, $r1, $r2, $r3
+
+bb.0 (%ir-block.2):
+  liveins: $r0, $r1, $r2, $r3, $lr
+  $sp = frame-setup SUBri killed $sp, 8, 14, $noreg, $noreg
+  frame-setup CFI_INSTRUCTION def_cfa_offset 8
+  $sp = frame-setup STMDB_UPD $sp(tied-def 0), 14, $noreg, killed $r11, killed $lr
+  frame-setup CFI_INSTRUCTION def_cfa_offset 16
+  frame-setup CFI_INSTRUCTION offset $lr, -12
+  frame-setup CFI_INSTRUCTION offset $r11, -16
+  $r11 = frame-setup MOVr killed $sp, 14, $noreg, $noreg
+  frame-setup CFI_INSTRUCTION def_cfa_register $r11
+  $sp = frame-setup SUBri killed $sp, 8, 14, $noreg, $noreg
+  STRi12 killed renamable $r3, $r11, 12, 14, $noreg :: (store (s32) into %fixed-stack.0 + 4)
+  STRi12 killed renamable $r2, $r11, 8, 14, $noreg :: (store (s32) into %fixed-stack.0)
+  renamable $r2 = ADDri $r11, 8, 14, $noreg, $noreg
+  STRi12 killed renamable $r2, $sp, 4, 14, $noreg, debug-location !16 :: (store (s32) into %ir.4); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:305:3
+  renamable $r2 = LDRi12 $sp, 4, 14, $noreg, debug-location !17 :: (dereferenceable load (s32) from %ir.5); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:311:9
+  BL_pred @file_vfcntl, 14, $noreg, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, implicit-def $r0, debug-location !17; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:311:9
+  $sp = frame-destroy MOVr $r11, 14, $noreg, $noreg, debug-location !19; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:314:3
+  $sp = frame-destroy LDMIA_UPD $sp(tied-def 0), 14, $noreg, def $r11, def $lr, debug-location !19; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:314:3
+  $sp = frame-destroy ADDri killed $sp, 8, 14, $noreg, $noreg, debug-location !19; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:314:3
+  BX_RET 14, $noreg, implicit killed $r0, debug-location !19; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:314:3
+
+# End machine code for function file_fcntl.
+
+# Machine code for function file_vfcntl: NoPHIs, TracksLiveness, NoVRegs, TiedOpsRewritten
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP-12]
+  fi#1: size=4, align=4, at location [SP-16]
+  fi#2: size=4, align=4, at location [SP-20]
+  fi#3: size=4, align=4, at location [SP-24]
+  fi#4: size=4, align=4, at location [SP-28]
+  fi#5: size=4, align=4, at location [SP-32]
+  fi#6: size=4, align=4, at location [SP-36]
+  fi#7: size=4, align=4, at location [SP-40]
+  fi#8: size=4, align=4, at location [SP-44]
+  fi#9: size=4, align=4, at location [SP-48]
+  fi#10: size=4, align=4, at location [SP-52]
+  fi#11: size=4, align=4, at location [SP-56]
+  fi#12: size=4, align=4, at location [SP-60]
+  fi#13: size=4, align=4, at location [SP-4]
+  fi#14: size=4, align=4, at location [SP-8]
+Jump Tables:
+%jump-table.0: %bb.5 %bb.7 %bb.14 %bb.27 %bb.21 %bb.20 %bb.27 %bb.27 %bb.8 %bb.15 %bb.27 %bb.22 %bb.23 %bb.20 %bb.27 %bb.24 %bb.27 %bb.27 %bb.6 %bb.25 %bb.26
+
+Function Live Ins: $r0, $r1, $r2
+
+bb.0 (%ir-block.3):
+  successors: %bb.1, %bb.2
+  liveins: $r0, $r1, $r2, $lr
+  $sp = frame-setup STMDB_UPD $sp(tied-def 0), 14, $noreg, killed $r11, killed $lr
+  frame-setup CFI_INSTRUCTION def_cfa_offset 8
+  frame-setup CFI_INSTRUCTION offset $lr, -4
+  frame-setup CFI_INSTRUCTION offset $r11, -8
+  $r11 = frame-setup MOVr killed $sp, 14, $noreg, $noreg
+  frame-setup CFI_INSTRUCTION def_cfa_register $r11
+  $sp = frame-setup SUBri killed $sp, 56, 14, $noreg, $noreg
+  STRi12 killed $r1, $r11, -16, 14, $noreg :: (store (s32) into %stack.3)
+  STRi12 $r0, $r11, -12, 14, $noreg :: (store (s32) into %stack.2)
+  STRi12 killed renamable $r2, $r11, -4, 14, $noreg :: (store (s32) into %ir.7)
+  renamable $r0 = LDRi12 renamable $r0, 16, 14, $noreg, debug-location !21 :: (load (s32) from %ir.8, align 8); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:55:15
+  CMPri killed renamable $r0, 0, 14, $noreg, implicit-def $cpsr, debug-location !23; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:55:7
+  Bcc %bb.2, 1, killed $cpsr, debug-location !23; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:55:7
+  B %bb.1, debug-location !23; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:55:7
+
+bb.1 (%ir-block.10):
+; predecessors: %bb.0
+  successors: %bb.29(0x80000000); %bb.29(100.00%)
+
+  renamable $r0 = MVNi 8, 14, $noreg, $noreg
+  STRi12 killed $r0, $r11, -20, 14, $noreg :: (store (s32) into %stack.4)
+  B %bb.29, debug-location !24; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:57:7
+
+bb.2 (%ir-block.11):
+; predecessors: %bb.0
+  successors: %bb.27, %bb.3
+
+  $r0 = LDRi12 $r11, -16, 14, $noreg, debug-location !25 :: (load (s32) from %stack.3); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:60:3
+  $r1 = MOVr $r0, 14, $noreg, $noreg, debug-location !25; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:60:3
+  STRi12 killed $r1, $r11, -24, 14, $noreg :: (store (s32) into %stack.5)
+  CMPri renamable $r0, 20, 14, $noreg, implicit-def $cpsr, debug-location !25; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:60:3
+  Bcc %bb.27, 8, killed $cpsr, debug-location !25; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:60:3
+
+bb.3 (%ir-block.11):
+; predecessors: %bb.2
+  successors: %bb.5, %bb.7, %bb.14, %bb.27, %bb.21, %bb.20, %bb.8, %bb.15, %bb.22, %bb.23, %bb.24, %bb.6, %bb.25, %bb.26
+
+  $r1 = LDRi12 $r11, -24, 14, $noreg :: (load (s32) from %stack.5)
+  renamable $r0 = LEApcrelJT %jump-table.0, 14, $noreg
+  renamable $r0 = LDRrs killed renamable $r0, renamable $r1, 16386, 14, $noreg :: (load (s32) from jump-table)
+  BR_JTr killed renamable $r0, %jump-table.0
+
+bb.4:
+  JUMPTABLE_ADDRS 0, %jump-table.0, 84
+
+bb.5 (%ir-block.12):
+; predecessors: %bb.3
+  successors: %bb.28(0x80000000); %bb.28(100.00%)
+
+  $r0 = LDRi12 $r11, -12, 14, $noreg, debug-location !26 :: (load (s32) from %stack.2); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:76:33
+  renamable $r1 = LDRi12 $r11, -4, 14, $noreg, debug-location !26 :: (dereferenceable load (s32) from %ir.13); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:76:33
+  renamable $r2 = nuw ADDri renamable $r1, 4, 14, $noreg, $noreg, debug-location !26; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:76:33
+  STRi12 killed renamable $r2, $r11, -4, 14, $noreg, debug-location !26 :: (store (s32) into %ir.13); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:76:33
+  renamable $r1 = LDRi12 killed renamable $r1, 0, 14, $noreg, debug-location !26 :: (load (s32) from %ir.16); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:76:33
+  renamable $r2 = MOVi 0, 14, $noreg, $noreg
+  BL @file_dup, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, implicit-def $r0, debug-location !27; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:76:17
+  STRi12 killed $r0, $sp, 28, 14, $noreg :: (store (s32) into %stack.6)
+  B %bb.28, debug-location !28; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:78:9
+
+bb.6 (%ir-block.19):
+; predecessors: %bb.3
+  successors: %bb.28(0x80000000); %bb.28(100.00%)
+
+  $r0 = LDRi12 $r11, -12, 14, $noreg, debug-location !29 :: (load (s32) from %stack.2); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:82:33
+  renamable $r1 = LDRi12 $r11, -4, 14, $noreg, debug-location !29 :: (dereferenceable load (s32) from %ir.20); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:82:33
+  renamable $r2 = nuw ADDri renamable $r1, 4, 14, $noreg, $noreg, debug-location !29; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:82:33
+  STRi12 killed renamable $r2, $r11, -4, 14, $noreg, debug-location !29 :: (store (s32) into %ir.20); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:82:33
+  renamable $r1 = LDRi12 killed renamable $r1, 0, 14, $noreg, debug-location !29 :: (load (s32) from %ir.23); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:82:33
+  renamable $r2 = MOVi 1024, 14, $noreg, $noreg
+  BL @file_dup, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, implicit-def $r0, debug-location !30; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:82:17
+  STRi12 killed $r0, $sp, 28, 14, $noreg :: (store (s32) into %stack.6)
+  B %bb.28, debug-location !31; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:84:9
+
+bb.7 (%ir-block.26):
+; predecessors: %bb.3
+  successors: %bb.28(0x80000000); %bb.28(100.00%)
+
+  $r0 = LDRi12 $r11, -12, 14, $noreg, debug-location !32 :: (load (s32) from %stack.2); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:94:24
+  renamable $r0 = LDRi12 renamable $r0, 0, 14, $noreg, debug-location !32 :: (load (s32) from %ir.27, align 8); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:94:24
+  renamable $r0 = UBFX killed renamable $r0, 10, 0, 14, $noreg, debug-location !33; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:94:17
+  STRi12 killed $r0, $sp, 28, 14, $noreg :: (store (s32) into %stack.6)
+  B %bb.28, debug-location !34; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:96:9
+
+bb.8 (%ir-block.30):
+; predecessors: %bb.3
+  successors: %bb.10, %bb.9
+
+  renamable $r0 = LDRi12 $r11, -4, 14, $noreg, debug-location !35 :: (dereferenceable load (s32) from %ir.31); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:107:24
+  renamable $r1 = nuw ADDri renamable $r0, 4, 14, $noreg, $noreg, debug-location !35; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:107:24
+  STRi12 killed renamable $r1, $r11, -4, 14, $noreg, debug-location !35 :: (store (s32) into %ir.31); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:107:24
+  renamable $r0 = LDRi12 killed renamable $r0, 0, 14, $noreg, debug-location !35 :: (load (s32) from %ir.34); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:107:24
+  STRi12 $r0, $sp, 24, 14, $noreg :: (store (s32) into %stack.7)
+  CMPri renamable $r0, 2, 14, $noreg, implicit-def $cpsr, debug-location !37; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:109:15
+  Bcc %bb.10, 3, killed $cpsr, debug-location !37; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:109:15
+  B %bb.9, debug-location !37; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:109:15
+
+bb.9 (%ir-block.36):
+; predecessors: %bb.8
+  successors: %bb.28(0x80000000); %bb.28(100.00%)
+
+  renamable $r0 = MVNi 37, 14, $noreg, $noreg
+  STRi12 killed $r0, $sp, 28, 14, $noreg :: (store (s32) into %stack.6)
+  B %bb.28, debug-location !38; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:112:15
+
+bb.10 (%ir-block.37):
+; predecessors: %bb.8
+  successors: %bb.12, %bb.11
+
+  $r0 = LDRi12 $sp, 24, 14, $noreg, debug-location !40 :: (load (s32) from %stack.7); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:115:15
+  TSTri renamable $r0, 1, 14, $noreg, implicit-def $cpsr, debug-location !40; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:115:15
+  Bcc %bb.12, 0, killed $cpsr, debug-location !40; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:115:15
+  B %bb.11, debug-location !40; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:115:15
+
+bb.11 (%ir-block.39):
+; predecessors: %bb.10
+  successors: %bb.13(0x80000000); %bb.13(100.00%)
+
+  $r0 = LDRi12 $r11, -12, 14, $noreg, debug-location !41 :: (load (s32) from %stack.2); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:117:21
+  renamable $r1 = MOVi16 779, 14, $noreg
+  renamable $r2 = MOVi 0, 14, $noreg, $noreg
+  BL @file_ioctl, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, implicit-def $r0, debug-location !41; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:117:21
+  STRi12 killed $r0, $sp, 20, 14, $noreg :: (store (s32) into %stack.8)
+  B %bb.13, debug-location !42; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:118:13
+
+bb.12 (%ir-block.41):
+; predecessors: %bb.10
+  successors: %bb.13(0x80000000); %bb.13(100.00%)
+
+  $r0 = LDRi12 $r11, -12, 14, $noreg, debug-location !43 :: (load (s32) from %stack.2); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:121:21
+  renamable $r1 = MOVi 780, 14, $noreg, $noreg
+  renamable $r2 = MOVi 0, 14, $noreg, $noreg
+  BL @file_ioctl, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, implicit-def $r0, debug-location !43; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:121:21
+  STRi12 killed $r0, $sp, 20, 14, $noreg :: (store (s32) into %stack.8)
+  B %bb.13
+
+bb.13 (%ir-block.43):
+; predecessors: %bb.11, %bb.12
+  successors: %bb.28(0x80000000); %bb.28(100.00%)
+
+  $r0 = LDRi12 $sp, 20, 14, $noreg, debug-location !44 :: (load (s32) from %stack.8); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:0
+  STRi12 killed $r0, $sp, 28, 14, $noreg :: (store (s32) into %stack.6)
+  B %bb.28, debug-location !45; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:124:9
+
+bb.14 (%ir-block.44):
+; predecessors: %bb.3
+  successors: %bb.28(0x80000000); %bb.28(100.00%)
+
+  $r0 = LDRi12 $r11, -12, 14, $noreg, debug-location !46 :: (load (s32) from %stack.2); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:137:24
+  renamable $r0 = LDRi12 renamable $r0, 0, 14, $noreg, debug-location !46 :: (load (s32) from %ir.45, align 8); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:137:24
+  STRi12 killed $r0, $sp, 28, 14, $noreg :: (store (s32) into %stack.6)
+  B %bb.28, debug-location !47; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:139:9
+
+bb.15 (%ir-block.47):
+; predecessors: %bb.3
+  successors: %bb.16, %bb.19
+
+  $r0 = LDRi12 $r11, -12, 14, $noreg, debug-location !48 :: (load (s32) from %stack.2); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:152:24
+  renamable $r1 = LDRi12 $r11, -4, 14, $noreg, debug-location !48 :: (dereferenceable load (s32) from %ir.48); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:152:24
+  renamable $r2 = nuw ADDri renamable $r1, 4, 14, $noreg, $noreg, debug-location !48; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:152:24
+  STRi12 killed renamable $r2, $r11, -4, 14, $noreg, debug-location !48 :: (store (s32) into %ir.48); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:152:24
+  renamable $r1 = LDRi12 killed renamable $r1, 0, 14, $noreg, debug-location !48 :: (load (s32) from %ir.51); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:152:24
+  STRi12 $r1, $sp, 8, 14, $noreg :: (store (s32) into %stack.11)
+  renamable $r1 = UBFX renamable $r1, 6, 0, 14, $noreg, debug-location !49; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:153:26
+  STRi12 killed renamable $r1, $r11, -8, 14, $noreg, debug-location !50 :: (store (s32) into %ir.5); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:153:15
+  renamable $r1 = MOVi16 778, 14, $noreg
+  renamable $r2 = SUBri $r11, 8, 14, $noreg, $noreg
+  BL @file_ioctl, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, implicit-def $r0, debug-location !51; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:155:17
+  $r1 = MOVr killed $r0, 14, $noreg, $noreg, debug-location !51; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:155:17
+  $r0 = MOVr $r1, 14, $noreg, $noreg, debug-location !51; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:155:17
+  STRi12 $r0, $sp, 12, 14, $noreg :: (store (s32) into %stack.10)
+  CMPri killed renamable $r1, 0, 14, $noreg, implicit-def $cpsr, debug-location !53; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:156:15
+  STRi12 killed $r0, $sp, 16, 14, $noreg :: (store (s32) into %stack.9)
+  Bcc %bb.19, 1, killed $cpsr, debug-location !53; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:156:15
+  B %bb.16, debug-location !53; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:156:15
+
+bb.16 (%ir-block.56):
+; predecessors: %bb.15
+  successors: %bb.18, %bb.17
+
+  $r0 = LDRi12 $sp, 12, 14, $noreg, debug-location !54 :: (load (s32) from %stack.10); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:158:31
+  $r1 = LDRi12 $sp, 8, 14, $noreg, debug-location !54 :: (load (s32) from %stack.11); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:158:31
+  $r3 = LDRi12 $r11, -12, 14, $noreg, debug-location !54 :: (load (s32) from %stack.2); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:158:31
+  renamable $r12 = ANDri renamable $r1, 144, 14, $noreg, $noreg, debug-location !54; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:158:31
+  renamable $r2 = LDRi12 renamable $r3, 0, 14, $noreg, debug-location !56 :: (load (s32) from %ir.58, align 8); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:159:31
+  renamable $r2 = BICri killed renamable $r2, 144, 14, $noreg, $noreg, debug-location !56; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:159:31
+  renamable $r2 = ORRrr killed renamable $r2, killed renamable $r12, 14, $noreg, $noreg, debug-location !58; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:160:31
+  STRi12 killed renamable $r2, renamable $r3, 0, 14, $noreg, debug-location !58 :: (store (s32) into %ir.61, align 8); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:160:31
+  TSTri renamable $r1, 16, 14, $noreg, implicit-def $cpsr, debug-location !61; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:162:19
+  STRi12 killed $r0, $sp, 4, 14, $noreg :: (store (s32) into %stack.12)
+  Bcc %bb.18, 0, killed $cpsr, debug-location !61; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:162:19
+  B %bb.17, debug-location !61; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:162:19
+
+bb.17 (%ir-block.64):
+; predecessors: %bb.16
+  successors: %bb.18(0x80000000); %bb.18(100.00%)
+
+  $r0 = LDRi12 $r11, -12, 14, $noreg, debug-location !62 :: (load (s32) from %stack.2); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:164:25
+  $r2 = MOVr $sp, 14, $noreg, $noreg, debug-location !62; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:164:25
+  renamable $r1 = MOVi 2, 14, $noreg, $noreg
+  STRi12 killed renamable $r1, killed renamable $r2, 0, 14, $noreg, debug-location !62 :: (store (s32) into stack); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:164:25
+  renamable $r3 = MOVi 0, 14, $noreg, $noreg
+  $r2 = MOVr $r3, 14, $noreg, $noreg, debug-location !62; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:164:25
+  BL @file_seek, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r2, implicit killed $r3, implicit-def $sp, implicit-def $r0, implicit-def $r1, debug-location !62; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:164:25
+  STRi12 killed $r0, $sp, 4, 14, $noreg :: (store (s32) into %stack.12)
+  B %bb.18, debug-location !63; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:165:17
+
+bb.18 (%ir-block.67):
+; predecessors: %bb.16, %bb.17
+  successors: %bb.19(0x80000000); %bb.19(100.00%)
+
+  $r0 = LDRi12 $sp, 4, 14, $noreg, debug-location !44 :: (load (s32) from %stack.12); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:0
+  STRi12 killed $r0, $sp, 16, 14, $noreg :: (store (s32) into %stack.9)
+  B %bb.19, debug-location !64; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:166:13
+
+bb.19 (%ir-block.68):
+; predecessors: %bb.15, %bb.18
+  successors: %bb.28(0x80000000); %bb.28(100.00%)
+
+  $r0 = LDRi12 $sp, 16, 14, $noreg, debug-location !44 :: (load (s32) from %stack.9); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:0
+  STRi12 killed $r0, $sp, 28, 14, $noreg :: (store (s32) into %stack.6)
+  B %bb.28, debug-location !65; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:168:9
+
+bb.20 (%ir-block.69):
+; predecessors: %bb.3
+  successors: %bb.28(0x80000000); %bb.28(100.00%)
+
+  renamable $r0 = MVNi 8, 14, $noreg, $noreg
+  STRi12 killed $r0, $sp, 28, 14, $noreg :: (store (s32) into %stack.6)
+  B %bb.28, debug-location !66; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:188:9
+
+bb.21 (%ir-block.70):
+; predecessors: %bb.3
+  successors: %bb.28(0x80000000); %bb.28(100.00%)
+
+  $r0 = LDRi12 $r11, -12, 14, $noreg, debug-location !67 :: (load (s32) from %stack.2); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:202:28
+  renamable $r1 = LDRi12 $r11, -4, 14, $noreg, debug-location !67 :: (dereferenceable load (s32) from %ir.71); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:202:28
+  renamable $r2 = nuw ADDri renamable $r1, 4, 14, $noreg, $noreg, debug-location !67; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:202:28
+  STRi12 killed renamable $r2, $r11, -4, 14, $noreg, debug-location !67 :: (store (s32) into %ir.71); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:202:28
+  renamable $r2 = LDRi12 killed renamable $r1, 0, 14, $noreg, debug-location !67 :: (load (s32) from %ir.74); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:202:28
+  renamable $r1 = MOVi16 787, 14, $noreg
+  BL @file_ioctl, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, implicit-def $r0, debug-location !68; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:201:17
+  STRi12 killed $r0, $sp, 28, 14, $noreg :: (store (s32) into %stack.6)
+  B %bb.28, debug-location !69; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:205:9
+
+bb.22 (%ir-block.77):
+; predecessors: %bb.3
+  successors: %bb.28(0x80000000); %bb.28(100.00%)
+
+  $r0 = LDRi12 $r11, -12, 14, $noreg, debug-location !70 :: (load (s32) from %stack.2); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:219:28
+  renamable $r1 = LDRi12 $r11, -4, 14, $noreg, debug-location !70 :: (dereferenceable load (s32) from %ir.78); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:219:28
+  renamable $r2 = nuw ADDri renamable $r1, 4, 14, $noreg, $noreg, debug-location !70; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:219:28
+  STRi12 killed renamable $r2, $r11, -4, 14, $noreg, debug-location !70 :: (store (s32) into %ir.78); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:219:28
+  renamable $r2 = LDRi12 killed renamable $r1, 0, 14, $noreg, debug-location !70 :: (load (s32) from %ir.81); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:219:28
+  renamable $r1 = MOVi16 786, 14, $noreg
+  BL @file_ioctl, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, implicit-def $r0, debug-location !71; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:218:17
+  STRi12 killed $r0, $sp, 28, 14, $noreg :: (store (s32) into %stack.6)
+  B %bb.28, debug-location !72; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:222:9
+
+bb.23 (%ir-block.84):
+; predecessors: %bb.3
+  successors: %bb.28(0x80000000); %bb.28(100.00%)
+
+  $r0 = LDRi12 $r11, -12, 14, $noreg, debug-location !73 :: (load (s32) from %stack.2); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:235:28
+  renamable $r1 = LDRi12 $r11, -4, 14, $noreg, debug-location !73 :: (dereferenceable load (s32) from %ir.85); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:235:28
+  renamable $r2 = nuw ADDri renamable $r1, 4, 14, $noreg, $noreg, debug-location !73; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:235:28
+  STRi12 killed renamable $r2, $r11, -4, 14, $noreg, debug-location !73 :: (store (s32) into %ir.85); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:235:28
+  renamable $r2 = LDRi12 killed renamable $r1, 0, 14, $noreg, debug-location !73 :: (load (s32) from %ir.88); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:235:28
+  renamable $r1 = MOVi 788, 14, $noreg, $noreg
+  BL @file_ioctl, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, implicit-def $r0, debug-location !74; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:234:17
+  STRi12 killed $r0, $sp, 28, 14, $noreg :: (store (s32) into %stack.6)
+  B %bb.28, debug-location !75; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:238:9
+
+bb.24 (%ir-block.91):
+; predecessors: %bb.3
+  successors: %bb.28(0x80000000); %bb.28(100.00%)
+
+  $r0 = LDRi12 $r11, -12, 14, $noreg, debug-location !76 :: (load (s32) from %stack.2); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:245:50
+  renamable $r1 = LDRi12 $r11, -4, 14, $noreg, debug-location !76 :: (dereferenceable load (s32) from %ir.92); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:245:50
+  renamable $r2 = nuw ADDri renamable $r1, 4, 14, $noreg, $noreg, debug-location !76; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:245:50
+  STRi12 killed renamable $r2, $r11, -4, 14, $noreg, debug-location !76 :: (store (s32) into %ir.92); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:245:50
+  renamable $r2 = LDRi12 killed renamable $r1, 0, 14, $noreg, debug-location !76 :: (load (s32) from %ir.95); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:245:50
+  renamable $r1 = MOVi16 771, 14, $noreg
+  BL @file_ioctl, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, implicit-def $r0, debug-location !77; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:245:17
+  STRi12 killed $r0, $sp, 28, 14, $noreg :: (store (s32) into %stack.6)
+  B %bb.28, debug-location !78; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:248:9
+
+bb.25 (%ir-block.98):
+; predecessors: %bb.3
+  successors: %bb.28(0x80000000); %bb.28(100.00%)
+
+  $r0 = LDRi12 $r11, -12, 14, $noreg, debug-location !79 :: (load (s32) from %stack.2); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:255:52
+  renamable $r1 = LDRi12 $r11, -4, 14, $noreg, debug-location !79 :: (dereferenceable load (s32) from %ir.99); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:255:52
+  renamable $r2 = nuw ADDri renamable $r1, 4, 14, $noreg, $noreg, debug-location !79; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:255:52
+  STRi12 killed renamable $r2, $r11, -4, 14, $noreg, debug-location !79 :: (store (s32) into %ir.99); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:255:52
+  renamable $r2 = LDRi12 killed renamable $r1, 0, 14, $noreg, debug-location !79 :: (load (s32) from %ir.102); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:255:52
+  renamable $r1 = MOVi16 6149, 14, $noreg
+  BL @file_ioctl, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, implicit-def $r0, debug-location !80; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:255:17
+  STRi12 killed $r0, $sp, 28, 14, $noreg :: (store (s32) into %stack.6)
+  B %bb.28, debug-location !81; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:258:9
+
+bb.26 (%ir-block.105):
+; predecessors: %bb.3
+  successors: %bb.28(0x80000000); %bb.28(100.00%)
+
+  $r0 = LDRi12 $r11, -12, 14, $noreg, debug-location !82 :: (load (s32) from %stack.2); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:264:17
+  renamable $r1 = MOVi16 6150, 14, $noreg
+  BL @file_ioctl, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit-def $sp, implicit-def $r0, debug-location !82; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:264:17
+  STRi12 killed $r0, $sp, 28, 14, $noreg :: (store (s32) into %stack.6)
+  B %bb.28, debug-location !83; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:267:9
+
+bb.27 (%ir-block.107):
+; predecessors: %bb.3, %bb.2
+  successors: %bb.28(0x80000000); %bb.28(100.00%)
+
+  renamable $r0 = MVNi 21, 14, $noreg, $noreg
+  STRi12 killed $r0, $sp, 28, 14, $noreg :: (store (s32) into %stack.6)
+  B %bb.28, debug-location !84; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:269:9
+
+bb.28 (%ir-block.108):
+; predecessors: %bb.26, %bb.25, %bb.24, %bb.23, %bb.22, %bb.21, %bb.20, %bb.19, %bb.14, %bb.9, %bb.13, %bb.7, %bb.6, %bb.5, %bb.27
+  successors: %bb.29(0x80000000); %bb.29(100.00%)
+
+  $r0 = LDRi12 $sp, 28, 14, $noreg, debug-location !44 :: (load (s32) from %stack.6); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:0
+  STRi12 killed $r0, $r11, -20, 14, $noreg :: (store (s32) into %stack.4)
+  B %bb.29, debug-location !85; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:272:3
+
+bb.29 (%ir-block.109):
+; predecessors: %bb.28, %bb.1
+
+  $r0 = LDRi12 $r11, -20, 14, $noreg, debug-location !44 :: (load (s32) from %stack.4); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:0
+  $sp = frame-destroy MOVr $r11, 14, $noreg, $noreg, debug-location !86; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:273:1
+  $sp = frame-destroy LDMIA_RET $sp(tied-def 0), 14, $noreg, def $r11, def $pc, implicit killed $r0, debug-location !86; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:273:1
+
+# End machine code for function file_vfcntl.
+
+# Machine code for function fcntl: NoPHIs, TracksLiveness, NoVRegs, TiedOpsRewritten
+Frame Objects:
+  fi#-1: size=8, align=8, fixed, at location [SP-8]
+  fi#0: size=4, align=4, at location [SP-20]
+  fi#1: size=4, align=4, at location [SP-24]
+  fi#2: size=4, align=4, at location [SP-28]
+  fi#3: size=4, align=4, at location [SP-32]
+  fi#4: size=4, align=4, at location [SP-36]
+  fi#5: size=4, align=4, at location [SP-40]
+  fi#6: size=4, align=4, at location [SP-44]
+  fi#7: size=4, align=4, at location [SP-48]
+  fi#8: size=4, align=4, at location [SP-12]
+  fi#9: size=4, align=4, at location [SP-16]
+Function Live Ins: $r0, $r1, $r2, $r3
+
+bb.0 (%ir-block.2):
+  successors: %bb.1, %bb.2
+  liveins: $r0, $r1, $r2, $r3, $lr
+  $sp = frame-setup SUBri killed $sp, 8, 14, $noreg, $noreg
+  frame-setup CFI_INSTRUCTION def_cfa_offset 8
+  $sp = frame-setup STMDB_UPD $sp(tied-def 0), 14, $noreg, killed $r11, killed $lr
+  frame-setup CFI_INSTRUCTION def_cfa_offset 16
+  frame-setup CFI_INSTRUCTION offset $lr, -12
+  frame-setup CFI_INSTRUCTION offset $r11, -16
+  $r11 = frame-setup MOVr killed $sp, 14, $noreg, $noreg
+  frame-setup CFI_INSTRUCTION def_cfa_register $r11
+  $sp = frame-setup SUBri killed $sp, 32, 14, $noreg, $noreg
+  STRi12 killed $r1, $sp, 16, 14, $noreg :: (store (s32) into %stack.3)
+  STRi12 killed renamable $r3, $r11, 12, 14, $noreg :: (store (s32) into %fixed-stack.0 + 4)
+  STRi12 killed renamable $r2, $r11, 8, 14, $noreg :: (store (s32) into %fixed-stack.0)
+  renamable $r1 = ADDri $r11, 8, 14, $noreg, $noreg
+  STRi12 killed renamable $r1, $r11, -8, 14, $noreg, debug-location !88 :: (store (s32) into %ir.5); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:348:3
+  renamable $r1 = SUBri $r11, 4, 14, $noreg, $noreg
+  BL @fs_getfilep, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit-def $sp, implicit-def $r0, debug-location !89; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:352:9
+  $r1 = MOVr killed $r0, 14, $noreg, $noreg, debug-location !89; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:352:9
+  $r0 = MOVr $r1, 14, $noreg, $noreg, debug-location !89; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:352:9
+  CMPri killed renamable $r1, 0, 14, $noreg, implicit-def $cpsr, debug-location !91; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:353:7
+  STRi12 killed $r0, $r11, -12, 14, $noreg :: (store (s32) into %stack.2)
+  Bcc %bb.2, 4, killed $cpsr, debug-location !91; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:353:7
+  B %bb.1, debug-location !91; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:353:7
+
+bb.1 (%ir-block.8):
+; predecessors: %bb.0
+  successors: %bb.2(0x80000000); %bb.2(100.00%)
+
+  $r1 = LDRi12 $sp, 16, 14, $noreg, debug-location !92 :: (load (s32) from %stack.3); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:359:25
+  renamable $r0 = LDRi12 $r11, -4, 14, $noreg, debug-location !92 :: (dereferenceable load (s32) from %ir.3); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:359:25
+  renamable $r2 = LDRi12 $r11, -8, 14, $noreg, debug-location !93 :: (dereferenceable load (s32) from %ir.10); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:359:13
+  BL_pred @file_vfcntl, 14, $noreg, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, implicit-def $r0, debug-location !93; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:359:13
+  STRi12 $r0, $sp, 12, 14, $noreg :: (store (s32) into %stack.4)
+  renamable $r0 = LDRi12 $r11, -4, 14, $noreg, debug-location !94 :: (dereferenceable load (s32) from %ir.3); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:360:19
+  BL @fs_putfilep, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit-def $sp, implicit-def $r0, debug-location !95; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:360:7
+  dead renamable $r1 = KILL $r0, debug-location !95; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:360:7
+  $r0 = LDRi12 $sp, 12, 14, $noreg :: (load (s32) from %stack.4)
+  STRi12 killed $r0, $r11, -12, 14, $noreg :: (store (s32) into %stack.2)
+  B %bb.2, debug-location !96; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:361:5
+
+bb.2 (%ir-block.15):
+; predecessors: %bb.0, %bb.1
+  successors: %bb.3, %bb.6
+
+  $r0 = LDRi12 $r11, -12, 14, $noreg, debug-location !97 :: (load (s32) from %stack.2); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:0
+  STRi12 $r0, $sp, 4, 14, $noreg :: (store (s32) into %stack.6)
+  CMNri renamable $r0, 1, 14, $noreg, implicit-def $cpsr, debug-location !99; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:363:7
+  STRi12 killed $r0, $sp, 8, 14, $noreg :: (store (s32) into %stack.5)
+  Bcc %bb.6, 12, killed $cpsr, debug-location !99; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:363:7
+  B %bb.3, debug-location !99; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:363:7
+
+bb.3 (%ir-block.17):
+; predecessors: %bb.2
+  successors: %bb.4(0x80000000); %bb.4(100.00%)
+
+  B %bb.4, debug-location !100; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:365:7
+
+bb.4 (%ir-block.18):
+; predecessors: %bb.3
+  successors: %bb.5(0x80000000); %bb.5(100.00%)
+
+  $r0 = LDRi12 $sp, 4, 14, $noreg, debug-location !100 :: (load (s32) from %stack.6); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:365:7
+  renamable $r0 = nsw RSBri renamable $r0, 0, 14, $noreg, $noreg, debug-location !100; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:365:7
+  STRi12 $r0, $sp, 0, 14, $noreg :: (store (s32) into %stack.7)
+  BL @__errno, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit-def $sp, implicit-def $r0, debug-location !100; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:365:7
+  $r1 = MOVr $r0, 14, $noreg, $noreg, debug-location !100; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:365:7
+  $r0 = LDRi12 $sp, 0, 14, $noreg, debug-location !100 :: (load (s32) from %stack.7); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:365:7
+  STRi12 killed renamable $r0, killed renamable $r1, 0, 14, $noreg, debug-location !100 :: (store (s32) into %ir.20); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:365:7
+  B %bb.5, debug-location !100; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:365:7
+
+bb.5 (%ir-block.21):
+; predecessors: %bb.4
+  successors: %bb.6(0x80000000); %bb.6(100.00%)
+
+  renamable $r0 = MVNi 0, 14, $noreg, $noreg
+  STRi12 killed $r0, $sp, 8, 14, $noreg :: (store (s32) into %stack.5)
+  B %bb.6, debug-location !101; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:367:5
+
+bb.6 (%ir-block.22):
+; predecessors: %bb.2, %bb.5
+
+  $r0 = LDRi12 $sp, 8, 14, $noreg, debug-location !97 :: (load (s32) from %stack.5); 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:0
+  $sp = frame-destroy MOVr $r11, 14, $noreg, $noreg, debug-location !103; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:372:3
+  $sp = frame-destroy LDMIA_UPD $sp(tied-def 0), 14, $noreg, def $r11, def $lr, debug-location !103; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:372:3
+  $sp = frame-destroy ADDri killed $sp, 8, 14, $noreg, $noreg, debug-location !103; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:372:3
+  BX_RET 14, $noreg, implicit killed $r0, debug-location !103; 1_WCETSpace/vela-opensource/nuttx/fs/vfs/fs_fcntl.c:372:3
+
+# End machine code for function fcntl.
+

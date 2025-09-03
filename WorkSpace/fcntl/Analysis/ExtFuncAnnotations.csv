@@ -1,0 +1,6 @@
+__errno|1|1/1/1/1
+file_dup|1|1/1/1/1
+file_ioctl|1|1/1/1/1
+file_seek|1|1/1/1/1
+fs_getfilep|1|1/1/1/1
+fs_putfilep|1|1/1/1/1
