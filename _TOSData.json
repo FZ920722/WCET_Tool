@@ -1,6 +1,0 @@
-{
-    "sys/stat.h": [
-        ["stat",     "fs/vfs", "fs_stat.c"],
-        ["lstat",    "fs/vfs", "fs_stat.c"]
-    ]
-}

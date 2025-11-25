@@ -127,7 +127,7 @@
     "nuttx/arch.h": [
         ["pgalloc", ""],
         ["up_fork", ""]
-    ],
+    ], 
     "nuttx/binfmt/binfmt.h": [
         ["exec", ""]
     ],
