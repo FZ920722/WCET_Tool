@@ -10,9 +10,9 @@
         ["open",    "fs/vfs",   "fs_open.c"]
     ],
     "mqueue.h": [
-        ["mq_open",     "fs/mqueue",    "mq_open.c"],
-        ["mq_close",    "fs/mqueue",    "mq_close.c"],
-        ["mq_unlink",   "fs/mqueue",    "mq_unlink.c"], 
+        ["mq_open",         "fs/mqueue",    "mq_open.c"],
+        ["mq_close",        "fs/mqueue",    "mq_close.c"],
+        ["mq_unlink",       "fs/mqueue",    "mq_unlink.c"], 
         ["mq_send",         "sched/mqueue", "mq_send.c"],
         ["mq_notify",       "sched/mqueue", "mq_notify.c"],
         ["mq_getattr",      "sched/mqueue", "mq_getattr.c"],

@@ -1,0 +1,17 @@
+Textual Machine Code Representation
+------------------------------------
+
+# Machine code for function clock: NoPHIs, TracksLiveness, NoVRegs, TiedOpsRewritten
+Constant Pool:
+  cp#0: @g_system_ticks, align=4
+
+bb.0.entry:
+  renamable $r0 = LDRi12 %const.0, 0, 14, $noreg, debug-location !16 :: (load (s32) from constant-pool); WCET_Tool/WorkSpace/f2/clock.c:65:19
+  renamable $r0 = LDRi12 killed renamable $r0, 0, 14, $noreg, debug-location !16 :: (volatile dereferenceable load (s32) from @g_system_ticks); WCET_Tool/WorkSpace/f2/clock.c:65:19
+  BX_RET 14, $noreg, implicit killed $r0, debug-location !17; WCET_Tool/WorkSpace/f2/clock.c:65:3
+
+bb.1 (align 4):
+  CONSTPOOL_ENTRY 0, %const.0, 4
+
+# End machine code for function clock.
+

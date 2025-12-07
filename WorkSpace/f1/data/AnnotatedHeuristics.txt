@@ -1,0 +1,33 @@
+##################################
+## Directives Machine Functions ##
+##################################
+Before fstatfs, Directive of Type CREATE for the following tokens:{
+	Call of function fstatfs}
+After fstatfs, Directive of Type MERGE for the following tokens:{
+	Call of function fstatfs}
+#############################
+## Directives Basic Blocks ##
+#############################
+#############################
+## Directives Instructions ##
+#############################
+Before fstatfs_BB0_I9, Directive of Type CREATE for the following tokens:{
+	Function call at location fstatfs_BB0_I9}
+Before fstatfs_BB5_I3, Directive of Type CREATE for the following tokens:{
+	Function call at location fstatfs_BB5_I3}
+Before fstatfs_BB7_I4, Directive of Type CREATE for the following tokens:{
+	Function call at location fstatfs_BB7_I4}
+Before fstatfs_BB8_I3, Directive of Type CREATE for the following tokens:{
+	Function call at location fstatfs_BB8_I3}
+Before fstatfs_BB12_I3, Directive of Type CREATE for the following tokens:{
+	Function call at location fstatfs_BB12_I3}
+After fstatfs_BB0_I9, Directive of Type MERGE for the following tokens:{
+	Function call at location fstatfs_BB0_I9}
+After fstatfs_BB5_I3, Directive of Type MERGE for the following tokens:{
+	Function call at location fstatfs_BB5_I3}
+After fstatfs_BB7_I4, Directive of Type MERGE for the following tokens:{
+	Function call at location fstatfs_BB7_I4}
+After fstatfs_BB8_I3, Directive of Type MERGE for the following tokens:{
+	Function call at location fstatfs_BB8_I3}
+After fstatfs_BB12_I3, Directive of Type MERGE for the following tokens:{
+	Function call at location fstatfs_BB12_I3}

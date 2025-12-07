@@ -8,6 +8,22 @@ import pandas as pd
 
 from multiprocessing import Semaphore, Pool
 
+# -fuse-ld=lld
+# --target=arm-none-eabi
+# SOURCE = 123
+# FILECACHES = dict()
+# LINES_TO_SEARCH = 3
+# FILERE = re.compile(r'Loop in file (.*) near line (.*)')
+# LOOPRE = re.compile(r'\w*_Pragma\(\s*\"loopbound\s*min\s*(\d+)\s*max\s*(\d+)\s*\"\s*\).*')
+# os.makedirs("/home/fyj/WCET_Tool/IRFile", exist_ok=False)
+# --sysroot=/opt/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/arm-none-eabi  
+# -I /opt/arm-gnu-toolchain-14.2.rel1-x86_64-arm-none-eabi/arm-none-eabi/include 
+# if _tdx == "-DLV_ASSERT_HANDLER=ASSERT(0);":
+#     _tdata.append( "-DLV_ASSERT_HANDLER='ASSERT(0);'" )
+# else:
+# " >/dev/null 2>&1"
+# if not os.path.exists( os.path.join(data['directory'], data['file']) ):
+#     assert False
 
 global GSEMA
 global SOUR_HEMO, WORK_HOME, NUTTX_HOME
@@ -99,27 +115,41 @@ LLVMTA_SOURCE = [
     "optimized.ll"
 ]
 
+def inst_tran(_pinst):
+    _t1_inst = _pinst[0].split('-')
+    _new_inst = " -w -S -emit-llvm -Xclang -disable-O0-optnone -gline-tables-only "
+    if _pinst[0] == 'cc':
+        return 'clang' + _new_inst + " ".join(_pinst[1:])
+    else:
+        return f'clang' \
+                + _new_inst \
+                + f'--target={"-".join(_t1_inst[:-1])} ' + " ".join(_pinst[1:])
+
+
 def WCETAnalysis(_entry_point, _code_file, _head_dirs):
-    global WORK_HOME, GSEMA
     # 1. work path
-    _work_dir=os.path.join(WORK_HOME, _entry_point)
-    if os.path.exists(_work_dir):
-        shutil.rmtree(_work_dir)
-    os.mkdir(_work_dir)
+    # _work_dir=os.path.join(WORK_HOME, _entry_point)
+    # if os.path.exists(_work_dir):
+    #     shutil.rmtree(_work_dir)
+    # os.mkdir(_work_dir)
+
     # 2. comp path
-    _comp_dir = os.path.join(_work_dir, "Compile")
-    if os.path.exists(_comp_dir):
-        shutil.rmtree(_comp_dir)
-    os.mkdir(_comp_dir)
+    # _comp_dir = os.path.join(_work_dir, "Compile")
+    # if os.path.exists(_comp_dir):
+    #     shutil.rmtree(_comp_dir)
+    # os.mkdir(_comp_dir)
+
     # 3. anal path
-    _anal_dir=os.path.join(_work_dir, "Analysis")
-    if os.path.exists(_anal_dir):
-        shutil.rmtree(_anal_dir)
-    os.mkdir(_anal_dir)
+    # _anal_dir=os.path.join(_work_dir, "Analysis")
+    # if os.path.exists(_anal_dir):
+    #     shutil.rmtree(_anal_dir)
+    # os.mkdir(_anal_dir)
+
     # 4. Core data
-    _core_info=os.path.join(_work_dir, "CoreInfo.json")
-    with open(_core_info, 'w') as _f:
-        json.dump([{"core": 0, "tasks": [{"function": _entry_point}]}], _f, indent=4)
+    # _core_info=os.path.join(_work_dir, "CoreInfo.json")
+    # with open(_core_info, 'w') as _f:
+    #     json.dump([{"core": 0, "tasks": [{"function": _entry_point}]}], _f, indent=4)
+
     # 5 log txt
     _log_txt = os.path.join(_work_dir, "log.txt")
     with open(_log_txt, "a") as _f:    # w modle will cover old file
@@ -212,54 +242,3 @@ def WCETAnalysis(_entry_point, _code_file, _head_dirs):
                             # "2>&1 | grep 'Calculated Timing Bound' | awk '{print $NF}'"
                             ])) != 0:
         exit(1)
-
-
-    # *. Core data
-    with GSEMA:
-        print(f"\tEntry_Point:\t{_entry_point}")
-        print(f"\t\tWork_DIR:\t{_work_dir}")
-        print(f"\t\tComp_DIR:\t{_comp_dir}")
-        print(f"\t\tAnal_DIR:\t{_anal_dir}")
-        print(f"\t\tCore_Info:\t{_core_info}")
-        print(f"\t\tCode_FILE:\t{_code_file}")
-        print(f"\t\tHead_DIRS:\t{' '.join(_head_dirs)}")
-
-
-if __name__ == "__main__":
-    # update work space
-    if os.path.exists(WORK_HOME):
-        shutil.rmtree(WORK_HOME)
-    os.mkdir(WORK_HOME)
-
-    _code_list = []
-    _head_list = []
-    _entry_list = []
-
-    # WCETAnalysis("aio_cancel",  
-    #              os.path.join(NUTTX_HOME, "fs/aio", "aio_cancel.c"),  
-    #             [os.path.join(NUTTX_HOME, "fs"),
-    #              os.path.join(NUTTX_HOME, "sched"), 
-    #              os.path.join(NUTTX_HOME, "include")])
-    # """
-    with open(os.path.join(SOUR_HOME, '_TOSData.json'), 'r') as _f:
-        for _i, _d in json.load(_f).items():
-            print(f"{_i}")
-            for _func, _caddr, _cfile in _d:
-                # 1. entry point
-                _entry_list.append(_func)
-                # 2. code addr
-                _code_file = os.path.join(NUTTX_HOME, _caddr, _cfile)
-                _code_list.append(_code_file)
-                # 3. head addr
-                _head_dirs = [
-                    os.path.join(NUTTX_HOME, "fs"),
-                    os.path.join(NUTTX_HOME, "sched"), 
-                    os.path.join(NUTTX_HOME, "include"),
-                ]
-                _head_list.append(_head_dirs)
-
-                # WCETAnalysis(_func, _code_file, _head_dirs)
-
-    with Pool(processes=6) as pool:
-        pool.starmap(WCETAnalysis, zip(_entry_list, _code_list, _head_list))
-    # """

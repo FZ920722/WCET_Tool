@@ -1,5 +1,37 @@
-# !/bin/bash 
+# !/bin/bash
 set -e -u -o pipefail
+
+# 1 —— 区域地址；
+export ROOT_DIR=$1
+
+# export LOG_ADDR="$ROOT_DIR/examx.log"
+# for CLASS in "$ROOT_DIR"*; do
+#     if find "$CLASS" -maxdepth 1 -type f -iname "changelog*" | grep -q .; then
+#         # *. 工程的名称；
+#         printf "$CLASS\n"
+#         PROJECT="${CLASS##*/}"
+#         printf "\tProject:${CLASS##*/}\n"
+#         ./run.sh $CLASS $CLASS     # & 
+#     fi
+# done
+
+# wait
+# ./test.sh \
+# /workspaces/llvmta/testcases/singletest/
+# /workspaces/llvmta/testcases/tacle-bench/bench/
+# /workspaces/llvmta/testcases/Benchmarks/loopexamples/nested/
+
+# for PROJECT in $(find "$CLASS" -type d); do
+#   STime=$(date +%s)
+#   ...
+#   ETime=$(date +%s)
+#   echo "$WORK_DIR:$bound:$((ETime - STime))" >> $LOG_ADDR
+# done
+
+# export LOG_ADDR="$ROOT_DIR/examx.log"
+# export LOG_ADDR="/workspaces/llvmta/testcases/examx.log"
+# > $LOG_ADDR
+
 
 export WORK_DIR=$1  # /workspaces/llvmta/workspace/test
 export SOUR_DIR=$2  # /workspaces/llvmta/workspace/test/code
@@ -42,3 +74,4 @@ mkdir $ANAL_DIR
 #   /workspaces/llvmta/workspace/test \
 #   /workspaces/llvmta/workspace/test/code \
 #   /workspaces/llvmta/workspace/test/head
+

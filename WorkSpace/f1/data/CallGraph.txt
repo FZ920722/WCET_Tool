@@ -1,0 +1,10 @@
+Call Graph for analysed program
+-------------------------------
+
+
+
+External Callee __errno can be called from (and return to) {fstatfs_BB12_I3}
+External Callee fs_getfilep can be called from (and return to) {fstatfs_BB0_I9}
+External Callee fs_putfilep can be called from (and return to) {fstatfs_BB8_I3}
+External Callee indirect_call_registerif.then7 can be called from (and return to) {fstatfs_BB5_I9}
+External Callee memset can be called from (and return to) {fstatfs_BB5_I3, fstatfs_BB7_I4}

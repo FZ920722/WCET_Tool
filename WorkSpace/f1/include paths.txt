@@ -1,0 +1,5 @@
+-I/home/fyj/DiskD/openvela/nuttx/fs 
+-I/home/fyj/DiskD/openvela/nuttx/sched 
+-I/home/fyj/DiskD/openvela/nuttx/include 
+-I/home/fyj/DiskD/openvela/nuttx/fs/fatfs 
+-I/home/fyj/DiskD/openvela/nuttx/fs/fatfs/fatfs/source 
