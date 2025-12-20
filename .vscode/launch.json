@@ -13,8 +13,7 @@
             "console": "integratedTerminal",
             "args":[
                 "-s", "/home/fyj/DiskN/openvela/nuttx",
-                "-c", "/home/fyj/DiskN/WCET_Tool/compile_commands.json"
-                
+                "-c", "/home/fyj/DiskN/WCET_Tool/Data/compile_commands_armv7a.json"
             ]
         }
     ]

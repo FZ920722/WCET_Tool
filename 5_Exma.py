@@ -115,17 +115,6 @@ LLVMTA_SOURCE = [
     "optimized.ll"
 ]
 
-def inst_tran(_pinst):
-    _t1_inst = _pinst[0].split('-')
-    _new_inst = " -w -S -emit-llvm -Xclang -disable-O0-optnone -gline-tables-only "
-    if _pinst[0] == 'cc':
-        return 'clang' + _new_inst + " ".join(_pinst[1:])
-    else:
-        return f'clang' \
-                + _new_inst \
-                + f'--target={"-".join(_t1_inst[:-1])} ' + " ".join(_pinst[1:])
-
-
 def WCETAnalysis(_entry_point, _code_file, _head_dirs):
     # 1. work path
     # _work_dir=os.path.join(WORK_HOME, _entry_point)
@@ -242,3 +231,24 @@ def WCETAnalysis(_entry_point, _code_file, _head_dirs):
                             # "2>&1 | grep 'Calculated Timing Bound' | awk '{print $NF}'"
                             ])) != 0:
         exit(1)
+
+
+    """
+    with open(os.path.join(SOUR_HOME, '_TOSData.json'), 'r') as _f:
+        for _i, _d in json.load(_f).items():
+            print(f"{_i}")
+            for _func, _caddr, _cfile in _d:
+                # 1. entry point
+                _entry_list.append(_func)
+                # 2. code addr
+                _code_file = os.path.join(NUTTX_HOME, _caddr, _cfile)
+                _code_list.append(_code_file)
+                # 3. head addr
+                _head_dirs = [
+                    os.path.join(NUTTX_HOME, "fs"),
+                    os.path.join(NUTTX_HOME, "sched"), 
+                    os.path.join(NUTTX_HOME, "include"),
+                ]
+                _head_list.append(_head_dirs)
+                # WCETAnalysis(_func, _code_file, _head_dirs)
+    """
