@@ -1,0 +1,1 @@
+savedcmd_/home/fyj/DiskN/kernel_test/helloworld.ko := ld -r -m elf_x86_64 -z noexecstack --build-id=sha1  -T scripts/module.lds -o /home/fyj/DiskN/kernel_test/helloworld.ko /home/fyj/DiskN/kernel_test/helloworld.o /home/fyj/DiskN/kernel_test/helloworld.mod.o

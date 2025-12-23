@@ -1,0 +1,1 @@
+savedcmd_/home/fyj/DiskN/kernel_test/Module.symvers :=  scripts/mod/modpost -M -m -a      -o /home/fyj/DiskN/kernel_test/Module.symvers -T /home/fyj/DiskN/kernel_test/modules.order -i Module.symvers -e 
