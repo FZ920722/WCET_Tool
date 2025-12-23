@@ -1,0 +1,93 @@
+Starting Scopes:
+We start scope 0 in function __dtoa_engine: Loop at depth 1 containing: %bb.4<header><exiting>,%bb.5,%bb.6<latch>
+ at (BB3, BB4)
+We start scope 1 in function __dtoa_engine: Loop at depth 1 containing: %bb.14<header><exiting>,%bb.15,%bb.16,%bb.17,%bb.18<latch>
+ at (BB13, BB14)
+We start scope 2 in function __dtoa_engine: Loop at depth 1 containing: %bb.21<header><exiting>,%bb.22,%bb.23,%bb.24,%bb.25<latch>
+ at (BB20, BB21)
+We start scope 3 in function vsprintf_internal: Loop at depth 2 containing: %bb.10<header>,%bb.11,%bb.12,%bb.13,%bb.14,%bb.15,%bb.21,%bb.16,%bb.24,%bb.17,%bb.22,%bb.18,%bb.19,%bb.25,%bb.20,%bb.26,%bb.27,%bb.28,%bb.29,%bb.30,%bb.34,%bb.43,%bb.47,%bb.48,%bb.49,%bb.50,%bb.51,%bb.53,%bb.54,%bb.59<exiting>,%bb.60,%bb.61,%bb.62,%bb.63,%bb.55,%bb.56,%bb.57,%bb.58,%bb.52,%bb.44<exiting>,%bb.46,%bb.35,%bb.36,%bb.37,%bb.38,%bb.39,%bb.40,%bb.41,%bb.42,%bb.31,%bb.32,%bb.33,%bb.23,%bb.65<latch><exiting>
+ at (BB9, BB10)
+We start scope 4 in function vsprintf_internal: Loop at depth 2 containing: %bb.114<header>,%bb.115,%bb.116<exiting>,%bb.117<latch>
+ at (BB113, BB114)
+We start scope 5 in function memset: Loop at depth 1 containing: %bb.1<header><exiting>,%bb.2<latch>
+ at (BB0, BB1)
+We start scope 6 in function lib_skipspace: Loop at depth 1 containing: %bb.1<header><exiting>,%bb.2<latch>
+ at (BB0, BB1)
+We start scope 7 in function strcmp: Loop at depth 1 containing: %bb.1<header><exiting>,%bb.2<exiting>,%bb.4<latch>
+ at (BB0, BB1)
+We start scope 8 in function strlen: Loop at depth 1 containing: %bb.1<header><exiting>,%bb.2,%bb.3<latch>
+ at (BB0, BB1)
+We start scope 9 in function strnlen: Loop at depth 1 containing: %bb.1<header>,%bb.2,%bb.3<exiting>,%bb.4,%bb.5<latch>
+ at (BB0, BB1)
+We start scope 11 in function strtoul: Loop at depth 1 containing: %bb.9<header><exiting>,%bb.10<exiting>,%bb.11,%bb.12<exiting>,%bb.16<latch>
+ at (BB8, BB9)
+We start scope 10 in function strtoul: Loop at depth 1 containing: %bb.19<header><exiting>,%bb.20<latch>
+ at (BB18, BB19)
+We start scope 12 in function nxsem_post: Loop at depth 1 containing: %bb.7<header><exiting>,%bb.8,%bb.9,%bb.10,%bb.11,%bb.12<exiting>,%bb.14,%bb.15<exiting>,%bb.17,%bb.18,%bb.19,%bb.20,%bb.21,%bb.22,%bb.23<exiting>,%bb.25<latch>
+    Loop at depth 2 containing: %bb.19<header><exiting>,%bb.20<latch><exiting>
+ at (BB6, BB7)
+We start scope 13 in function nxsem_post: Loop at depth 2 containing: %bb.19<header><exiting>,%bb.20<latch><exiting>
+ at (BB18, BB19)
+We start scope 14 in function symtab_findbyname: Loop at depth 1 containing: %bb.9<header><exiting>,%bb.10,%bb.15<exiting>,%bb.16,%bb.18,%bb.11,%bb.13,%bb.12,%bb.14,%bb.19<latch>
+ at (BB8, BB9)
+We start scope 15 in function symtab_findbyvalue: Loop at depth 1 containing: %bb.6<header><exiting>,%bb.7,%bb.8,%bb.9,%bb.10<exiting>,%bb.12,%bb.13,%bb.14,%bb.15<latch>
+ at (BB5, BB6)
+Ending Scopes:
+We end scope 0 in function __dtoa_engine: Loop at depth 1 containing: %bb.4<header><exiting>,%bb.5,%bb.6<latch>
+ at (BB4, BB7)
+We end scope 1 in function __dtoa_engine: Loop at depth 1 containing: %bb.14<header><exiting>,%bb.15,%bb.16,%bb.17,%bb.18<latch>
+ at (BB14, BB19)
+We end scope 2 in function __dtoa_engine: Loop at depth 1 containing: %bb.21<header><exiting>,%bb.22,%bb.23,%bb.24,%bb.25<latch>
+ at (BB21, BB26)
+We end scope 3 in function vsprintf_internal: Loop at depth 2 containing: %bb.10<header>,%bb.11,%bb.12,%bb.13,%bb.14,%bb.15,%bb.21,%bb.16,%bb.24,%bb.17,%bb.22,%bb.18,%bb.19,%bb.25,%bb.20,%bb.26,%bb.27,%bb.28,%bb.29,%bb.30,%bb.34,%bb.43,%bb.47,%bb.48,%bb.49,%bb.50,%bb.51,%bb.53,%bb.54,%bb.59<exiting>,%bb.60,%bb.61,%bb.62,%bb.63,%bb.55,%bb.56,%bb.57,%bb.58,%bb.52,%bb.44<exiting>,%bb.46,%bb.35,%bb.36,%bb.37,%bb.38,%bb.39,%bb.40,%bb.41,%bb.42,%bb.31,%bb.32,%bb.33,%bb.23,%bb.65<latch><exiting>
+ at (BB44, BB45)
+We end scope 3 in function vsprintf_internal: Loop at depth 2 containing: %bb.10<header>,%bb.11,%bb.12,%bb.13,%bb.14,%bb.15,%bb.21,%bb.16,%bb.24,%bb.17,%bb.22,%bb.18,%bb.19,%bb.25,%bb.20,%bb.26,%bb.27,%bb.28,%bb.29,%bb.30,%bb.34,%bb.43,%bb.47,%bb.48,%bb.49,%bb.50,%bb.51,%bb.53,%bb.54,%bb.59<exiting>,%bb.60,%bb.61,%bb.62,%bb.63,%bb.55,%bb.56,%bb.57,%bb.58,%bb.52,%bb.44<exiting>,%bb.46,%bb.35,%bb.36,%bb.37,%bb.38,%bb.39,%bb.40,%bb.41,%bb.42,%bb.31,%bb.32,%bb.33,%bb.23,%bb.65<latch><exiting>
+ at (BB59, BB64)
+We end scope 3 in function vsprintf_internal: Loop at depth 2 containing: %bb.10<header>,%bb.11,%bb.12,%bb.13,%bb.14,%bb.15,%bb.21,%bb.16,%bb.24,%bb.17,%bb.22,%bb.18,%bb.19,%bb.25,%bb.20,%bb.26,%bb.27,%bb.28,%bb.29,%bb.30,%bb.34,%bb.43,%bb.47,%bb.48,%bb.49,%bb.50,%bb.51,%bb.53,%bb.54,%bb.59<exiting>,%bb.60,%bb.61,%bb.62,%bb.63,%bb.55,%bb.56,%bb.57,%bb.58,%bb.52,%bb.44<exiting>,%bb.46,%bb.35,%bb.36,%bb.37,%bb.38,%bb.39,%bb.40,%bb.41,%bb.42,%bb.31,%bb.32,%bb.33,%bb.23,%bb.65<latch><exiting>
+ at (BB65, BB66)
+We end scope 4 in function vsprintf_internal: Loop at depth 2 containing: %bb.114<header>,%bb.115,%bb.116<exiting>,%bb.117<latch>
+ at (BB116, BB118)
+We end scope 5 in function memset: Loop at depth 1 containing: %bb.1<header><exiting>,%bb.2<latch>
+ at (BB1, BB3)
+We end scope 6 in function lib_skipspace: Loop at depth 1 containing: %bb.1<header><exiting>,%bb.2<latch>
+ at (BB1, BB3)
+We end scope 7 in function strcmp: Loop at depth 1 containing: %bb.1<header><exiting>,%bb.2<exiting>,%bb.4<latch>
+ at (BB1, BB3)
+We end scope 7 in function strcmp: Loop at depth 1 containing: %bb.1<header><exiting>,%bb.2<exiting>,%bb.4<latch>
+ at (BB2, BB3)
+We end scope 8 in function strlen: Loop at depth 1 containing: %bb.1<header><exiting>,%bb.2,%bb.3<latch>
+ at (BB1, BB4)
+We end scope 9 in function strnlen: Loop at depth 1 containing: %bb.1<header>,%bb.2,%bb.3<exiting>,%bb.4,%bb.5<latch>
+ at (BB3, BB6)
+We end scope 11 in function strtoul: Loop at depth 1 containing: %bb.9<header><exiting>,%bb.10<exiting>,%bb.11,%bb.12<exiting>,%bb.16<latch>
+ at (BB9, BB17)
+We end scope 11 in function strtoul: Loop at depth 1 containing: %bb.9<header><exiting>,%bb.10<exiting>,%bb.11,%bb.12<exiting>,%bb.16<latch>
+ at (BB10, BB13)
+We end scope 11 in function strtoul: Loop at depth 1 containing: %bb.9<header><exiting>,%bb.10<exiting>,%bb.11,%bb.12<exiting>,%bb.16<latch>
+ at (BB12, BB13)
+We end scope 10 in function strtoul: Loop at depth 1 containing: %bb.19<header><exiting>,%bb.20<latch>
+ at (BB19, BB21)
+We end scope 12 in function nxsem_post: Loop at depth 1 containing: %bb.7<header><exiting>,%bb.8,%bb.9,%bb.10,%bb.11,%bb.12<exiting>,%bb.14,%bb.15<exiting>,%bb.17,%bb.18,%bb.19,%bb.20,%bb.21,%bb.22,%bb.23<exiting>,%bb.25<latch>
+    Loop at depth 2 containing: %bb.19<header><exiting>,%bb.20<latch><exiting>
+ at (BB7, BB26)
+We end scope 12 in function nxsem_post: Loop at depth 1 containing: %bb.7<header><exiting>,%bb.8,%bb.9,%bb.10,%bb.11,%bb.12<exiting>,%bb.14,%bb.15<exiting>,%bb.17,%bb.18,%bb.19,%bb.20,%bb.21,%bb.22,%bb.23<exiting>,%bb.25<latch>
+    Loop at depth 2 containing: %bb.19<header><exiting>,%bb.20<latch><exiting>
+ at (BB12, BB13)
+We end scope 12 in function nxsem_post: Loop at depth 1 containing: %bb.7<header><exiting>,%bb.8,%bb.9,%bb.10,%bb.11,%bb.12<exiting>,%bb.14,%bb.15<exiting>,%bb.17,%bb.18,%bb.19,%bb.20,%bb.21,%bb.22,%bb.23<exiting>,%bb.25<latch>
+    Loop at depth 2 containing: %bb.19<header><exiting>,%bb.20<latch><exiting>
+ at (BB15, BB16)
+We end scope 13 in function nxsem_post: Loop at depth 2 containing: %bb.19<header><exiting>,%bb.20<latch><exiting>
+ at (BB19, BB21)
+We end scope 13 in function nxsem_post: Loop at depth 2 containing: %bb.19<header><exiting>,%bb.20<latch><exiting>
+ at (BB20, BB21)
+We end scope 12 in function nxsem_post: Loop at depth 1 containing: %bb.7<header><exiting>,%bb.8,%bb.9,%bb.10,%bb.11,%bb.12<exiting>,%bb.14,%bb.15<exiting>,%bb.17,%bb.18,%bb.19,%bb.20,%bb.21,%bb.22,%bb.23<exiting>,%bb.25<latch>
+    Loop at depth 2 containing: %bb.19<header><exiting>,%bb.20<latch><exiting>
+ at (BB23, BB24)
+We end scope 14 in function symtab_findbyname: Loop at depth 1 containing: %bb.9<header><exiting>,%bb.10,%bb.15<exiting>,%bb.16,%bb.18,%bb.11,%bb.13,%bb.12,%bb.14,%bb.19<latch>
+ at (BB9, BB20)
+We end scope 14 in function symtab_findbyname: Loop at depth 1 containing: %bb.9<header><exiting>,%bb.10,%bb.15<exiting>,%bb.16,%bb.18,%bb.11,%bb.13,%bb.12,%bb.14,%bb.19<latch>
+ at (BB15, BB17)
+We end scope 15 in function symtab_findbyvalue: Loop at depth 1 containing: %bb.6<header><exiting>,%bb.7,%bb.8,%bb.9,%bb.10<exiting>,%bb.12,%bb.13,%bb.14,%bb.15<latch>
+ at (BB6, BB16)
+We end scope 15 in function symtab_findbyvalue: Loop at depth 1 containing: %bb.6<header><exiting>,%bb.7,%bb.8,%bb.9,%bb.10<exiting>,%bb.12,%bb.13,%bb.14,%bb.15<latch>
+ at (BB10, BB11)

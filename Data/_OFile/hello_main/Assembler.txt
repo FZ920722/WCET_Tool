@@ -1,0 +1,822 @@
+Textual Machine Code Representation
+------------------------------------
+
+# Machine code for function __aeabi_memclr: NoPHIs, TracksLiveness, NoVRegs, TiedOpsRewritten
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP-4]
+  fi#1: size=4, align=4, at location [SP-8]
+Function Live Ins: $r0, $r1
+
+bb.0.entry:
+  liveins: $r0, $r1, $r11, $lr
+  $sp = frame-setup STMDB_UPD $sp(tied-def 0), 14, $noreg, killed $r11, killed $lr
+  frame-setup CFI_INSTRUCTION def_cfa_offset 8
+  frame-setup CFI_INSTRUCTION offset $lr, -4
+  frame-setup CFI_INSTRUCTION offset $r11, -8
+  $r2 = MOVr killed $r1, 14, $noreg, $noreg
+  renamable $r1 = MOVi 0, 14, $noreg, $noreg
+  BL_pred @memset, 14, $noreg, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, implicit-def $r0, debug-location !2336; machine/arm/aeabi_memclr.c:33:3
+  $sp = frame-destroy LDMIA_RET $sp(tied-def 0), 14, $noreg, def $r11, def $pc, debug-location !2337; machine/arm/aeabi_memclr.c:34:1
+
+# End machine code for function __aeabi_memclr.
+
+# Machine code for function __aeabi_memclr4: NoPHIs, TracksLiveness, NoVRegs, TiedOpsRewritten
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP-4]
+  fi#1: size=4, align=4, at location [SP-8]
+Function Live Ins: $r0, $r1
+
+bb.0.entry:
+  liveins: $r0, $r1, $r11, $lr
+  $sp = frame-setup STMDB_UPD $sp(tied-def 0), 14, $noreg, killed $r11, killed $lr
+  frame-setup CFI_INSTRUCTION def_cfa_offset 8
+  frame-setup CFI_INSTRUCTION offset $lr, -4
+  frame-setup CFI_INSTRUCTION offset $r11, -8
+  $r2 = MOVr killed $r1, 14, $noreg, $noreg
+  renamable $r1 = MOVi 0, 14, $noreg, $noreg
+  BL_pred @memset, 14, $noreg, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, implicit-def $r0, debug-location !2339; machine/arm/aeabi_memclr4.c:33:3
+  $sp = frame-destroy LDMIA_RET $sp(tied-def 0), 14, $noreg, def $r11, def $pc, debug-location !2340; machine/arm/aeabi_memclr4.c:34:1
+
+# End machine code for function __aeabi_memclr4.
+
+# Machine code for function __aeabi_memclr8: NoPHIs, TracksLiveness, NoVRegs, TiedOpsRewritten
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP-4]
+  fi#1: size=4, align=4, at location [SP-8]
+Function Live Ins: $r0, $r1
+
+bb.0.entry:
+  liveins: $r0, $r1, $r11, $lr
+  $sp = frame-setup STMDB_UPD $sp(tied-def 0), 14, $noreg, killed $r11, killed $lr
+  frame-setup CFI_INSTRUCTION def_cfa_offset 8
+  frame-setup CFI_INSTRUCTION offset $lr, -4
+  frame-setup CFI_INSTRUCTION offset $r11, -8
+  $r2 = MOVr killed $r1, 14, $noreg, $noreg
+  renamable $r1 = MOVi 0, 14, $noreg, $noreg
+  BL_pred @memset, 14, $noreg, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, implicit-def $r0, debug-location !2342; machine/arm/aeabi_memclr8.c:33:3
+  $sp = frame-destroy LDMIA_RET $sp(tied-def 0), 14, $noreg, def $r11, def $pc, debug-location !2343; machine/arm/aeabi_memclr8.c:34:1
+
+# End machine code for function __aeabi_memclr8.
+
+# Machine code for function __aeabi_memcpy: NoPHIs, TracksLiveness, NoVRegs, TiedOpsRewritten
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP-4]
+  fi#1: size=4, align=4, at location [SP-8]
+Function Live Ins: $r0, $r1, $r2
+
+bb.0.entry:
+  liveins: $r0, $r1, $r2, $r11, $lr
+  $sp = frame-setup STMDB_UPD $sp(tied-def 0), 14, $noreg, killed $r11, killed $lr
+  frame-setup CFI_INSTRUCTION def_cfa_offset 8
+  frame-setup CFI_INSTRUCTION offset $lr, -4
+  frame-setup CFI_INSTRUCTION offset $r11, -8
+  BL_pred @memcpy, 14, $noreg, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, implicit-def $r0, debug-location !2345; machine/arm/aeabi_memcpy.c:34:3
+  $sp = frame-destroy LDMIA_RET $sp(tied-def 0), 14, $noreg, def $r11, def $pc, debug-location !2346; machine/arm/aeabi_memcpy.c:35:1
+
+# End machine code for function __aeabi_memcpy.
+
+# Machine code for function __aeabi_memcpy4: NoPHIs, TracksLiveness, NoVRegs, TiedOpsRewritten
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP-4]
+  fi#1: size=4, align=4, at location [SP-8]
+Function Live Ins: $r0, $r1, $r2
+
+bb.0.entry:
+  liveins: $r0, $r1, $r2, $r11, $lr
+  $sp = frame-setup STMDB_UPD $sp(tied-def 0), 14, $noreg, killed $r11, killed $lr
+  frame-setup CFI_INSTRUCTION def_cfa_offset 8
+  frame-setup CFI_INSTRUCTION offset $lr, -4
+  frame-setup CFI_INSTRUCTION offset $r11, -8
+  BL_pred @memcpy, 14, $noreg, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, implicit-def $r0, debug-location !2348; machine/arm/aeabi_memcpy4.c:34:3
+  $sp = frame-destroy LDMIA_RET $sp(tied-def 0), 14, $noreg, def $r11, def $pc, debug-location !2349; machine/arm/aeabi_memcpy4.c:35:1
+
+# End machine code for function __aeabi_memcpy4.
+
+# Machine code for function __aeabi_memcpy8: NoPHIs, TracksLiveness, NoVRegs, TiedOpsRewritten
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP-4]
+  fi#1: size=4, align=4, at location [SP-8]
+Function Live Ins: $r0, $r1, $r2
+
+bb.0.entry:
+  liveins: $r0, $r1, $r2, $r11, $lr
+  $sp = frame-setup STMDB_UPD $sp(tied-def 0), 14, $noreg, killed $r11, killed $lr
+  frame-setup CFI_INSTRUCTION def_cfa_offset 8
+  frame-setup CFI_INSTRUCTION offset $lr, -4
+  frame-setup CFI_INSTRUCTION offset $r11, -8
+  BL_pred @memcpy, 14, $noreg, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, implicit-def $r0, debug-location !2351; machine/arm/aeabi_memcpy8.c:34:3
+  $sp = frame-destroy LDMIA_RET $sp(tied-def 0), 14, $noreg, def $r11, def $pc, debug-location !2352; machine/arm/aeabi_memcpy8.c:35:1
+
+# End machine code for function __aeabi_memcpy8.
+
+# Machine code for function __aeabi_memmove: NoPHIs, TracksLiveness, NoVRegs, TiedOpsRewritten
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP-4]
+  fi#1: size=4, align=4, at location [SP-8]
+Function Live Ins: $r0, $r1, $r2
+
+bb.0.entry:
+  liveins: $r0, $r1, $r2, $r11, $lr
+  $sp = frame-setup STMDB_UPD $sp(tied-def 0), 14, $noreg, killed $r11, killed $lr
+  frame-setup CFI_INSTRUCTION def_cfa_offset 8
+  frame-setup CFI_INSTRUCTION offset $lr, -4
+  frame-setup CFI_INSTRUCTION offset $r11, -8
+  BL_pred @memmove, 14, $noreg, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, implicit-def $r0, debug-location !2354; machine/arm/aeabi_memmove.c:34:3
+  $sp = frame-destroy LDMIA_RET $sp(tied-def 0), 14, $noreg, def $r11, def $pc, debug-location !2355; machine/arm/aeabi_memmove.c:35:1
+
+# End machine code for function __aeabi_memmove.
+
+# Machine code for function __aeabi_memmove4: NoPHIs, TracksLiveness, NoVRegs, TiedOpsRewritten
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP-4]
+  fi#1: size=4, align=4, at location [SP-8]
+Function Live Ins: $r0, $r1, $r2
+
+bb.0.entry:
+  liveins: $r0, $r1, $r2, $r11, $lr
+  $sp = frame-setup STMDB_UPD $sp(tied-def 0), 14, $noreg, killed $r11, killed $lr
+  frame-setup CFI_INSTRUCTION def_cfa_offset 8
+  frame-setup CFI_INSTRUCTION offset $lr, -4
+  frame-setup CFI_INSTRUCTION offset $r11, -8
+  BL_pred @memmove, 14, $noreg, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, implicit-def $r0, debug-location !2357; machine/arm/aeabi_memmove4.c:34:3
+  $sp = frame-destroy LDMIA_RET $sp(tied-def 0), 14, $noreg, def $r11, def $pc, debug-location !2358; machine/arm/aeabi_memmove4.c:35:1
+
+# End machine code for function __aeabi_memmove4.
+
+# Machine code for function __aeabi_memmove8: NoPHIs, TracksLiveness, NoVRegs, TiedOpsRewritten
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP-4]
+  fi#1: size=4, align=4, at location [SP-8]
+Function Live Ins: $r0, $r1, $r2
+
+bb.0.entry:
+  liveins: $r0, $r1, $r2, $r11, $lr
+  $sp = frame-setup STMDB_UPD $sp(tied-def 0), 14, $noreg, killed $r11, killed $lr
+  frame-setup CFI_INSTRUCTION def_cfa_offset 8
+  frame-setup CFI_INSTRUCTION offset $lr, -4
+  frame-setup CFI_INSTRUCTION offset $r11, -8
+  BL_pred @memmove, 14, $noreg, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, implicit-def $r0, debug-location !2360; machine/arm/aeabi_memmove8.c:34:3
+  $sp = frame-destroy LDMIA_RET $sp(tied-def 0), 14, $noreg, def $r11, def $pc, debug-location !2361; machine/arm/aeabi_memmove8.c:35:1
+
+# End machine code for function __aeabi_memmove8.
+
+# Machine code for function __aeabi_memset: NoPHIs, TracksLiveness, NoVRegs, TiedOpsRewritten
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP-12]
+  fi#1: size=4, align=4, at location [SP-4]
+  fi#2: size=4, align=4, at location [SP-8]
+Function Live Ins: $r0, $r1, $r2
+
+bb.0.entry:
+  liveins: $r0, $r1, $r2, $r11, $lr
+  $sp = frame-setup STMDB_UPD $sp(tied-def 0), 14, $noreg, killed $r11, killed $lr
+  frame-setup CFI_INSTRUCTION def_cfa_offset 8
+  frame-setup CFI_INSTRUCTION offset $lr, -4
+  frame-setup CFI_INSTRUCTION offset $r11, -8
+  $sp = frame-setup SUBri killed $sp, 8, 14, $noreg, $noreg
+  frame-setup CFI_INSTRUCTION def_cfa_offset 16
+  STRi12 $r2, $sp, 4, 14, $noreg :: (store (s32) into %stack.0)
+  $r2 = MOVr $r1, 14, $noreg, $noreg
+  $r1 = LDRi12 $sp, 4, 14, $noreg :: (load (s32) from %stack.0)
+  BL_pred @memset, 14, $noreg, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, implicit-def $r0, debug-location !2363; machine/arm/aeabi_memset.c:33:3
+  $sp = frame-destroy ADDri killed $sp, 8, 14, $noreg, $noreg, debug-location !2364; machine/arm/aeabi_memset.c:34:1
+  $sp = frame-destroy LDMIA_RET $sp(tied-def 0), 14, $noreg, def $r11, def $pc, debug-location !2364; machine/arm/aeabi_memset.c:34:1
+
+# End machine code for function __aeabi_memset.
+
+# Machine code for function __aeabi_memset4: NoPHIs, TracksLiveness, NoVRegs, TiedOpsRewritten
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP-12]
+  fi#1: size=4, align=4, at location [SP-4]
+  fi#2: size=4, align=4, at location [SP-8]
+Function Live Ins: $r0, $r1, $r2
+
+bb.0.entry:
+  liveins: $r0, $r1, $r2, $r11, $lr
+  $sp = frame-setup STMDB_UPD $sp(tied-def 0), 14, $noreg, killed $r11, killed $lr
+  frame-setup CFI_INSTRUCTION def_cfa_offset 8
+  frame-setup CFI_INSTRUCTION offset $lr, -4
+  frame-setup CFI_INSTRUCTION offset $r11, -8
+  $sp = frame-setup SUBri killed $sp, 8, 14, $noreg, $noreg
+  frame-setup CFI_INSTRUCTION def_cfa_offset 16
+  STRi12 $r2, $sp, 4, 14, $noreg :: (store (s32) into %stack.0)
+  $r2 = MOVr $r1, 14, $noreg, $noreg
+  $r1 = LDRi12 $sp, 4, 14, $noreg :: (load (s32) from %stack.0)
+  BL_pred @memset, 14, $noreg, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, implicit-def $r0, debug-location !2366; machine/arm/aeabi_memset4.c:33:3
+  $sp = frame-destroy ADDri killed $sp, 8, 14, $noreg, $noreg, debug-location !2367; machine/arm/aeabi_memset4.c:34:1
+  $sp = frame-destroy LDMIA_RET $sp(tied-def 0), 14, $noreg, def $r11, def $pc, debug-location !2367; machine/arm/aeabi_memset4.c:34:1
+
+# End machine code for function __aeabi_memset4.
+
+# Machine code for function __aeabi_memset8: NoPHIs, TracksLiveness, NoVRegs, TiedOpsRewritten
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP-12]
+  fi#1: size=4, align=4, at location [SP-4]
+  fi#2: size=4, align=4, at location [SP-8]
+Function Live Ins: $r0, $r1, $r2
+
+bb.0.entry:
+  liveins: $r0, $r1, $r2, $r11, $lr
+  $sp = frame-setup STMDB_UPD $sp(tied-def 0), 14, $noreg, killed $r11, killed $lr
+  frame-setup CFI_INSTRUCTION def_cfa_offset 8
+  frame-setup CFI_INSTRUCTION offset $lr, -4
+  frame-setup CFI_INSTRUCTION offset $r11, -8
+  $sp = frame-setup SUBri killed $sp, 8, 14, $noreg, $noreg
+  frame-setup CFI_INSTRUCTION def_cfa_offset 16
+  STRi12 $r2, $sp, 4, 14, $noreg :: (store (s32) into %stack.0)
+  $r2 = MOVr $r1, 14, $noreg, $noreg
+  $r1 = LDRi12 $sp, 4, 14, $noreg :: (load (s32) from %stack.0)
+  BL_pred @memset, 14, $noreg, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, implicit-def $r0, debug-location !2369; machine/arm/aeabi_memset8.c:33:3
+  $sp = frame-destroy ADDri killed $sp, 8, 14, $noreg, $noreg, debug-location !2370; machine/arm/aeabi_memset8.c:34:1
+  $sp = frame-destroy LDMIA_RET $sp(tied-def 0), 14, $noreg, def $r11, def $pc, debug-location !2370; machine/arm/aeabi_memset8.c:34:1
+
+# End machine code for function __aeabi_memset8.
+
+# Machine code for function up_mdelay: NoPHIs, TracksLiveness, NoVRegs, TiedOpsRewritten
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP-4]
+  fi#1: size=4, align=4, at location [SP-8]
+Function Live Ins: $r0
+
+bb.0.entry:
+  liveins: $r0, $r11, $lr
+  $sp = frame-setup STMDB_UPD $sp(tied-def 0), 14, $noreg, killed $r11, killed $lr
+  frame-setup CFI_INSTRUCTION def_cfa_offset 8
+  frame-setup CFI_INSTRUCTION offset $lr, -4
+  frame-setup CFI_INSTRUCTION offset $r11, -8
+  renamable $r1 = MOVi 1000, 14, $noreg, $noreg
+  renamable $r0 = MUL killed renamable $r0, killed renamable $r1, 14, $noreg, $noreg, debug-location !2372; timers/arch_alarm.c:159:27
+  BL @up_udelay, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit-def $sp, debug-location !2373; timers/arch_alarm.c:159:3
+  $sp = frame-destroy LDMIA_RET $sp(tied-def 0), 14, $noreg, def $r11, def $pc, debug-location !2374; timers/arch_alarm.c:160:1
+
+# End machine code for function up_mdelay.
+
+# Machine code for function up_udelay: NoPHIs, TracksLiveness, NoVRegs, TiedOpsRewritten
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP-4]
+  fi#1: size=4, align=4, at location [SP-8]
+Function Live Ins: $r0
+
+bb.0.entry:
+  liveins: $r0, $r11, $lr
+  $sp = frame-setup STMDB_UPD $sp(tied-def 0), 14, $noreg, killed $r11, killed $lr
+  frame-setup CFI_INSTRUCTION def_cfa_offset 8
+  frame-setup CFI_INSTRUCTION offset $lr, -4
+  frame-setup CFI_INSTRUCTION offset $r11, -8
+  renamable $r1 = MOVi 1000, 14, $noreg, $noreg
+  renamable $r0 = MUL killed renamable $r0, killed renamable $r1, 14, $noreg, $noreg, debug-location !2376; timers/arch_alarm.c:173:27
+  BL @up_ndelay, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit-def $sp, debug-location !2377; timers/arch_alarm.c:173:3
+  $sp = frame-destroy LDMIA_RET $sp(tied-def 0), 14, $noreg, def $r11, def $pc, debug-location !2378; timers/arch_alarm.c:174:1
+
+# End machine code for function up_udelay.
+
+# Machine code for function up_ndelay: NoPHIs, TracksLiveness, NoVRegs, TiedOpsRewritten
+Frame Objects:
+  fi#0: size=4, align=4, at location [SP-12]
+  fi#1: size=4, align=4, at location [SP-4]
+  fi#2: size=4, align=4, at location [SP-8]
+Function Live Ins: $r0
+
+bb.0.entry:
+  successors: %bb.2, %bb.1
+  liveins: $r0, $r11, $lr
+  $sp = frame-setup STMDB_UPD $sp(tied-def 0), 14, $noreg, killed $r11, killed $lr
+  frame-setup CFI_INSTRUCTION def_cfa_offset 8
+  frame-setup CFI_INSTRUCTION offset $lr, -4
+  frame-setup CFI_INSTRUCTION offset $r11, -8
+  $sp = frame-setup SUBri killed $sp, 8, 14, $noreg, $noreg
+  frame-setup CFI_INSTRUCTION def_cfa_offset 16
+  STRi12 killed $r0, $sp, 4, 14, $noreg :: (store (s32) into %stack.0)
+  $r0 = MOVi16 target-flags(arm-lo16) @g_oneshot_lower, 14, $noreg, debug-location !2380; timers/arch_alarm.c:187:7
+  $r0 = MOVTi16 $r0(tied-def 0), target-flags(arm-hi16) @g_oneshot_lower, 14, $noreg, debug-location !2380; timers/arch_alarm.c:187:7
+  renamable $r0 = LDRi12 killed renamable $r0, 0, 14, $noreg, debug-location !2380 :: (dereferenceable load (s32) from @g_oneshot_lower); timers/arch_alarm.c:187:7
+  CMPri killed renamable $r0, 0, 14, $noreg, implicit-def $cpsr, debug-location !2380; timers/arch_alarm.c:187:7
+  Bcc %bb.2, 0, killed $cpsr, debug-location !2380; timers/arch_alarm.c:187:7
+  B %bb.1, debug-location !2380; timers/arch_alarm.c:187:7
+
+bb.1.if.then:
+; predecessors: %bb.0
+  successors: %bb.3(0x80000000); %bb.3(100.00%)
+
+  $r0 = LDRi12 $sp, 4, 14, $noreg, debug-location !2382 :: (load (s32) from %stack.0); timers/arch_alarm.c:189:7
+  BL_pred @ndelay_accurate, 14, $noreg, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit-def $sp, debug-location !2382; timers/arch_alarm.c:189:7
+  B %bb.3, debug-location !2383; timers/arch_alarm.c:190:5
+
+bb.2.if.else:
+; predecessors: %bb.0
+  successors: %bb.3(0x80000000); %bb.3(100.00%)
+
+  $r0 = LDRi12 $sp, 4, 14, $noreg :: (load (s32) from %stack.0)
+  renamable $r1 = MOVi16 999, 14, $noreg
+  renamable $r0 = ADDrr renamable $r0, killed renamable $r1, 14, $noreg, $noreg, debug-location !2384; timers/arch_alarm.c:193:50
+  $r1 = MOVi16 19923, 14, $noreg
+  $r1 = MOVTi16 $r1(tied-def 0), 4194, 14, $noreg
+  dead renamable $r1, renamable $r0 = UMULL killed renamable $r0, killed renamable $r1, 14, $noreg, $noreg, debug-location !2385; timers/arch_alarm.c:193:55
+  renamable $r0 = MOVsi killed renamable $r0, 51, 14, $noreg, $noreg, debug-location !2385; timers/arch_alarm.c:193:55
+  BL_pred @udelay_coarse, 14, $noreg, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit-def $sp, debug-location !2386; timers/arch_alarm.c:193:7
+  B %bb.3
+
+bb.3.if.end:
+; predecessors: %bb.1, %bb.2
+
+  $sp = frame-destroy ADDri killed $sp, 8, 14, $noreg, $noreg, debug-location !2387; timers/arch_alarm.c:195:1
+  $sp = frame-destroy LDMIA_RET $sp(tied-def 0), 14, $noreg, def $r11, def $pc, debug-location !2387; timers/arch_alarm.c:195:1
+
+# End machine code for function up_ndelay.
+
+# Machine code for function ndelay_accurate: NoPHIs, TracksLiveness, NoVRegs, TiedOpsRewritten
+Frame Objects:
+  fi#0: size=8, align=4, at location [SP-32]
+  fi#1: size=8, align=4, at location [SP-40]
+  fi#2: size=8, align=4, at location [SP-48]
+  fi#3: size=4, align=4, at location [SP-52]
+  fi#4: size=4, align=4, at location [SP-56]
+  fi#5: size=4, align=4, at location [SP-60]
+  fi#6: size=4, align=4, at location [SP-64]
+  fi#7: size=4, align=4, at location [SP-68]
+  fi#8: size=4, align=4, at location [SP-72]
+  fi#9: size=4, align=4, at location [SP-76]
+  fi#10: size=4, align=4, at location [SP-80]
+  fi#11: size=4, align=4, at location [SP-84]
+  fi#12: size=4, align=4, at location [SP-88]
+  fi#13: size=4, align=4, at location [SP-92]
+  fi#14: size=4, align=4, at location [SP-96]
+  fi#15: size=4, align=4, at location [SP-100]
+  fi#16: size=4, align=4, at location [SP-104]
+  fi#17: size=4, align=4, at location [SP-108]
+  fi#18: size=4, align=4, at location [SP-112]
+  fi#19: size=4, align=4, at location [SP-116]
+  fi#20: size=4, align=4, at location [SP-120]
+  fi#21: size=4, align=4, at location [SP-124]
+  fi#22: size=4, align=4, at location [SP-128]
+  fi#23: size=4, align=4, at location [SP-132]
+  fi#24: size=4, align=4, at location [SP-136]
+  fi#25: size=4, align=4, at location [SP-140]
+  fi#26: size=4, align=4, at location [SP-144]
+  fi#27: size=4, align=4, at location [SP-148]
+  fi#28: size=4, align=4, at location [SP-4]
+  fi#29: size=4, align=4, at location [SP-8]
+  fi#30: size=4, align=4, at location [SP-12]
+  fi#31: size=4, align=4, at location [SP-16]
+  fi#32: size=4, align=4, at location [SP-20]
+  fi#33: size=4, align=4, at location [SP-24]
+Function Live Ins: $r0
+
+bb.0.entry:
+  successors: %bb.1, %bb.2
+  liveins: $r0, $r4, $r5, $r6, $r7, $r8, $lr
+  $sp = frame-setup STMDB_UPD $sp(tied-def 0), 14, $noreg, killed $r4, killed $r5, killed $r6, killed $r7, killed $r8, killed $lr
+  frame-setup CFI_INSTRUCTION def_cfa_offset 24
+  frame-setup CFI_INSTRUCTION offset $lr, -4
+  frame-setup CFI_INSTRUCTION offset $r8, -8
+  frame-setup CFI_INSTRUCTION offset $r7, -12
+  frame-setup CFI_INSTRUCTION offset $r6, -16
+  frame-setup CFI_INSTRUCTION offset $r5, -20
+  frame-setup CFI_INSTRUCTION offset $r4, -24
+  $sp = frame-setup SUBri killed $sp, 128, 14, $noreg, $noreg
+  frame-setup CFI_INSTRUCTION def_cfa_offset 152
+  STRi12 killed $r0, $sp, 80, 14, $noreg :: (store (s32) into %stack.8)
+  $r0 = MOVi16 target-flags(arm-lo16) @g_oneshot_lower, 14, $noreg, debug-location !2389; timers/arch_alarm.c:108:3
+  $r0 = MOVTi16 $r0(tied-def 0), target-flags(arm-hi16) @g_oneshot_lower, 14, $noreg, debug-location !2389; timers/arch_alarm.c:108:3
+  renamable $r0 = LDRi12 killed renamable $r0, 0, 14, $noreg, debug-location !2389 :: (dereferenceable load (s32) from @g_oneshot_lower); timers/arch_alarm.c:108:3
+  STRi12 $r0, $sp, 84, 14, $noreg :: (store (s32) into %stack.7)
+  renamable $r1 = LDRi12 renamable $r0, 0, 14, $noreg, debug-location !2390 :: (load (s32) from %ir.ops.i41, align 8); include/nuttx/timers/oneshot.h:403:26 @[ timers/arch_alarm.c:108:3 ]
+  renamable $r1 = LDRi12 killed renamable $r1, 0, 14, $noreg, debug-location !2394 :: (load (s32) from %ir.current.i42); include/nuttx/timers/oneshot.h:403:31 @[ timers/arch_alarm.c:108:3 ]
+  BLX killed renamable $r1, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit-def $sp, implicit-def $r0, implicit-def $r1, debug-location !2395; include/nuttx/timers/oneshot.h:403:19 @[ timers/arch_alarm.c:108:3 ]
+  $r2 = MOVr $r0, 14, $noreg, $noreg, debug-location !2395; include/nuttx/timers/oneshot.h:403:19 @[ timers/arch_alarm.c:108:3 ]
+  $r0 = LDRi12 $sp, 84, 14, $noreg :: (load (s32) from %stack.7)
+  STRi12 $r2, $sp, 88, 14, $noreg :: (store (s32) into %stack.6)
+  $r2 = MOVr $r1, 14, $noreg, $noreg, debug-location !2395; include/nuttx/timers/oneshot.h:403:19 @[ timers/arch_alarm.c:108:3 ]
+  $r1 = LDRi12 $sp, 88, 14, $noreg, debug-location !2395 :: (load (s32) from %stack.6); include/nuttx/timers/oneshot.h:403:19 @[ timers/arch_alarm.c:108:3 ]
+  STRi12 killed $r2, $sp, 92, 14, $noreg :: (store (s32) into %stack.5)
+  STRi12 killed $r1, $sp, 96, 14, $noreg :: (store (s32) into %stack.4)
+  renamable $r0 = LDRi12 renamable $r0, 12, 14, $noreg, debug-location !2396 :: (load (s32) from %ir.frequency.i44); include/nuttx/timers/oneshot.h:404:26 @[ timers/arch_alarm.c:108:3 ]
+  STRi12 killed $r0, $sp, 100, 14, $noreg :: (store (s32) into %stack.3)
+  renamable $r0 = MOVi 1, 14, $noreg, $noreg
+  CMPri killed renamable $r0, 0, 14, $noreg, implicit-def $cpsr, debug-location !2397; include/nuttx/timers/clkcnt.h:354:3 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:108:3 ] ] ]
+  Bcc %bb.2, 1, killed $cpsr, debug-location !2397; include/nuttx/timers/clkcnt.h:354:3 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:108:3 ] ] ]
+  B %bb.1, debug-location !2397; include/nuttx/timers/clkcnt.h:354:3 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:108:3 ] ] ]
+
+bb.1.cond.true.i84:
+; predecessors: %bb.0
+
+
+bb.2.clkcnt_delta_cnt2time_invdiv.exit88:
+; predecessors: %bb.0
+  successors: %bb.3, %bb.4
+
+  $r0 = LDRi12 $sp, 92, 14, $noreg, debug-location !2436 :: (load (s32) from %stack.5); include/nuttx/timers/oneshot.h:321:3 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:108:3 ] ]
+  $r2 = LDRi12 $sp, 96, 14, $noreg, debug-location !2436 :: (load (s32) from %stack.4); include/nuttx/timers/oneshot.h:321:3 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:108:3 ] ]
+  $lr = LDRi12 $sp, 100, 14, $noreg, debug-location !2436 :: (load (s32) from %stack.3); include/nuttx/timers/oneshot.h:321:3 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:108:3 ] ]
+  $r12 = LDRi12 $sp, 84, 14, $noreg, debug-location !2436 :: (load (s32) from %stack.7); include/nuttx/timers/oneshot.h:321:3 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:108:3 ] ]
+  renamable $r1 = LDRi12 renamable $r12, 12, 14, $noreg, debug-location !2436 :: (load (s32) from %ir.frequency.i145); include/nuttx/timers/oneshot.h:321:3 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:108:3 ] ]
+  renamable $r3 = LDRi12 renamable $r12, 24, 14, $noreg, debug-location !2403 :: (load (s32) from %ir.mult.i, align 8); include/nuttx/lib/math32.h:575:25 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:108:3 ] ] ] ]
+  renamable $r6 = LDRi12 renamable $r12, 28, 14, $noreg, debug-location !2403 :: (load (s32) from %ir.mult.i + 4, basealign 8); include/nuttx/lib/math32.h:575:25 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:108:3 ] ] ] ]
+  renamable $r5 = LDRBi12 renamable $r12, 32, 14, $noreg, debug-location !2407 :: (load (s8) from %ir.shift.i, align 8); include/nuttx/lib/math32.h:577:25 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:108:3 ] ] ] ]
+  dead renamable $r12, renamable $r4 = UMULL renamable $r2, renamable $r3, 14, $noreg, $noreg, debug-location !2414; include/nuttx/lib/math32.h:482:20 @[ include/nuttx/lib/math32.h:584:8 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:108:3 ] ] ] ] ]
+  renamable $r7, renamable $r12 = UMULL renamable $r0, killed renamable $r3, 14, $noreg, $noreg, debug-location !2415; include/nuttx/lib/math32.h:483:20 @[ include/nuttx/lib/math32.h:584:8 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:108:3 ] ] ] ] ]
+  renamable $r8, renamable $r3 = UMULL renamable $r2, renamable $r6, 14, $noreg, $noreg, debug-location !2416; include/nuttx/lib/math32.h:484:20 @[ include/nuttx/lib/math32.h:584:8 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:108:3 ] ] ] ] ]
+  renamable $r7 = ADDrr killed renamable $r4, killed renamable $r7, 14, $noreg, def $cpsr, debug-location !2420; include/nuttx/lib/math32.h:487:27 @[ include/nuttx/lib/math32.h:584:8 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:108:3 ] ] ] ] ]
+  renamable $r4 = MOVi 0, 14, $noreg, $noreg
+  renamable $r4 = ADCri killed renamable $r4, 0, 14, $noreg, $noreg, implicit killed $cpsr, debug-location !2420; include/nuttx/lib/math32.h:487:27 @[ include/nuttx/lib/math32.h:584:8 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:108:3 ] ] ] ] ]
+  dead renamable $r7 = ADDrr killed renamable $r7, killed renamable $r8, 14, $noreg, def $cpsr, debug-location !2422; include/nuttx/lib/math32.h:487:47 @[ include/nuttx/lib/math32.h:584:8 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:108:3 ] ] ] ] ]
+  renamable $r12, renamable $r3 = UMAAL renamable $r0, killed renamable $r6, renamable $r12(tied-def 0), renamable $r3(tied-def 1), 14, $noreg, debug-location !2426; include/nuttx/lib/math32.h:489:26 @[ include/nuttx/lib/math32.h:584:8 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:108:3 ] ] ] ] ]
+  renamable $r12 = ADCrr killed renamable $r12, killed renamable $r4, 14, $noreg, def $cpsr, implicit killed $cpsr, debug-location !2428; include/nuttx/lib/math32.h:489:39 @[ include/nuttx/lib/math32.h:584:8 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:108:3 ] ] ] ] ]
+  renamable $r3 = ADCri killed renamable $r3, 0, 14, $noreg, $noreg, implicit killed $cpsr, debug-location !2428; include/nuttx/lib/math32.h:489:39 @[ include/nuttx/lib/math32.h:584:8 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:108:3 ] ] ] ] ]
+  renamable $r6 = SUBrr renamable $r2, renamable $r12, 14, $noreg, def $cpsr, debug-location !2429; include/nuttx/lib/math32.h:585:11 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:108:3 ] ] ] ]
+  renamable $r4 = SBCrr renamable $r0, renamable $r3, 14, $noreg, $noreg, implicit killed $cpsr, debug-location !2429; include/nuttx/lib/math32.h:585:11 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:108:3 ] ] ] ]
+  $r4 = MOVsi killed renamable $r4, 11, 14, $noreg, def $cpsr, debug-location !2430; include/nuttx/lib/math32.h:585:17 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:108:3 ] ] ] ]
+  $r6 = MOVsi killed renamable $r6, 5, 14, $noreg, $noreg, implicit killed $cpsr, debug-location !2430; include/nuttx/lib/math32.h:585:17 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:108:3 ] ] ] ]
+  renamable $r12 = ADDrr killed renamable $r12, killed renamable $r6, 14, $noreg, def $cpsr, debug-location !2431; include/nuttx/lib/math32.h:587:14 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:108:3 ] ] ] ]
+  renamable $r3 = ADCrr killed renamable $r3, killed renamable $r4, 14, $noreg, $noreg, implicit killed $cpsr, debug-location !2431; include/nuttx/lib/math32.h:587:14 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:108:3 ] ] ] ]
+  renamable $r12 = MOVsr killed renamable $r12, renamable $r5, 3, 14, $noreg, $noreg, debug-location !2432; include/nuttx/lib/math32.h:587:20 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:108:3 ] ] ] ]
+  renamable $r4 = RSBri renamable $r5, 32, 14, $noreg, $noreg, debug-location !2432; include/nuttx/lib/math32.h:587:20 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:108:3 ] ] ] ]
+  renamable $r12 = ORRrsr killed renamable $r12, renamable $r3, killed renamable $r4, 2, 14, $noreg, $noreg, debug-location !2432; include/nuttx/lib/math32.h:587:20 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:108:3 ] ] ] ]
+  renamable $r4 = SUBri renamable $r5, 32, 14, $noreg, $noreg, debug-location !2432; include/nuttx/lib/math32.h:587:20 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:108:3 ] ] ] ]
+  CMPri renamable $r4, 0, 14, $noreg, implicit-def $cpsr, debug-location !2432; include/nuttx/lib/math32.h:587:20 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:108:3 ] ] ] ]
+  $r12 = MOVsr renamable $r3, renamable $r4, 3, 5, killed $cpsr, $noreg, implicit renamable $r12, debug-location !2432; include/nuttx/lib/math32.h:587:20 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:108:3 ] ] ] ]
+  STRi12 $r12, $sp, 68, 14, $noreg :: (store (s32) into %stack.11)
+  renamable $r3 = MOVsr killed renamable $r3, killed renamable $r5, 3, 14, $noreg, $noreg, debug-location !2432; include/nuttx/lib/math32.h:587:20 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:108:3 ] ] ] ]
+  CMPri killed renamable $r4, 0, 14, $noreg, implicit-def $cpsr, debug-location !2432; include/nuttx/lib/math32.h:587:20 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:108:3 ] ] ] ]
+  $r3 = MOVi16 0, 5, killed $cpsr, implicit renamable $r3, debug-location !2432; include/nuttx/lib/math32.h:587:20 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:108:3 ] ] ] ]
+  renamable $r12, renamable $r4 = UMULL renamable $r12, renamable $lr, 14, $noreg, $noreg, debug-location !2434; include/nuttx/timers/oneshot.h:407:23 @[ timers/arch_alarm.c:108:3 ]
+  renamable $r3 = MLA killed renamable $r3, renamable $lr, killed renamable $r4, 14, $noreg, $noreg, debug-location !2434; include/nuttx/timers/oneshot.h:407:23 @[ timers/arch_alarm.c:108:3 ]
+  renamable $r2 = SUBrr renamable $r2, killed renamable $r12, 14, $noreg, def $cpsr, debug-location !2435; include/nuttx/timers/oneshot.h:407:16 @[ timers/arch_alarm.c:108:3 ]
+  STRi12 $r2, $sp, 72, 14, $noreg :: (store (s32) into %stack.10)
+  renamable $r0 = SBCrr renamable $r0, killed renamable $r3, 14, $noreg, $noreg, implicit killed $cpsr, debug-location !2435; include/nuttx/timers/oneshot.h:407:16 @[ timers/arch_alarm.c:108:3 ]
+  STRi12 $r0, $sp, 76, 14, $noreg :: (store (s32) into %stack.9)
+  dead renamable $r1 = SUBrr killed renamable $r1, renamable $r2, 14, $noreg, def $cpsr, debug-location !2436; include/nuttx/timers/oneshot.h:321:3 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:108:3 ] ]
+  dead renamable $r0 = RSCri renamable $r0, 0, 14, $noreg, def $cpsr, implicit killed $cpsr, debug-location !2436; include/nuttx/timers/oneshot.h:321:3 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:108:3 ] ]
+  Bcc %bb.4, 2, killed $cpsr, debug-location !2436; include/nuttx/timers/oneshot.h:321:3 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:108:3 ] ]
+  B %bb.3, debug-location !2436; include/nuttx/timers/oneshot.h:321:3 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:108:3 ] ]
+
+bb.3.cond.true.i150:
+; predecessors: %bb.2
+
+  $r0 = MOVi16 target-flags(arm-lo16) @.str.1, 14, $noreg, debug-location !2436; include/nuttx/timers/oneshot.h:321:3 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:108:3 ] ]
+  $r0 = MOVTi16 $r0(tied-def 0), target-flags(arm-hi16) @.str.1, 14, $noreg, debug-location !2436; include/nuttx/timers/oneshot.h:321:3 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:108:3 ] ]
+  renamable $r1 = MOVi16 321, 14, $noreg
+  renamable $r2 = MOVi 0, 14, $noreg, $noreg
+  BMOVPCB_CALL @__assert, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, debug-location !2436; include/nuttx/timers/oneshot.h:321:3 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:108:3 ] ]
+
+bb.4.oneshot_delta_cnt2nsec.exit:
+; predecessors: %bb.2
+  successors: %bb.5, %bb.6
+
+  $r1 = LDRi12 $sp, 76, 14, $noreg, debug-location !2439 :: (load (s32) from %stack.9); include/nuttx/timers/oneshot.h:332:51 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:108:3 ] ]
+  $r2 = LDRi12 $sp, 72, 14, $noreg, debug-location !2439 :: (load (s32) from %stack.10); include/nuttx/timers/oneshot.h:332:51 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:108:3 ] ]
+  $r3 = LDRi12 $sp, 100, 14, $noreg, debug-location !2439 :: (load (s32) from %stack.3); include/nuttx/timers/oneshot.h:332:51 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:108:3 ] ]
+  $r0 = LDRi12 $sp, 68, 14, $noreg, debug-location !2439 :: (load (s32) from %stack.11); include/nuttx/timers/oneshot.h:332:51 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:108:3 ] ]
+  $r12 = LDRi12 $sp, 84, 14, $noreg, debug-location !2439 :: (load (s32) from %stack.7); include/nuttx/timers/oneshot.h:332:51 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:108:3 ] ]
+  renamable $lr = LDRi12 renamable $r12, 16, 14, $noreg, debug-location !2439 :: (load (s32) from %ir.cnt2nsec_mult.i, align 8); include/nuttx/timers/oneshot.h:332:51 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:108:3 ] ]
+  renamable $r4 = LDRBi12 renamable $r12, 20, 14, $noreg, debug-location !2440 :: (load (s8) from %ir.cnt2nsec_shift.i, align 4); include/nuttx/timers/oneshot.h:333:44 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:108:3 ] ]
+  renamable $r12, renamable $r5 = UMULL renamable $r2, renamable $lr, 14, $noreg, $noreg, debug-location !2444; include/nuttx/timers/clkcnt.h:382:16 @[ include/nuttx/timers/oneshot.h:332:10 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:108:3 ] ] ]
+  renamable $lr = MLA renamable $r1, killed renamable $lr, killed renamable $r5, 14, $noreg, $noreg, debug-location !2444; include/nuttx/timers/clkcnt.h:382:16 @[ include/nuttx/timers/oneshot.h:332:10 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:108:3 ] ] ]
+  renamable $r12 = MOVsr killed renamable $r12, renamable $r4, 3, 14, $noreg, $noreg, debug-location !2446; include/nuttx/timers/clkcnt.h:382:22 @[ include/nuttx/timers/oneshot.h:332:10 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:108:3 ] ] ]
+  renamable $r5 = RSBri renamable $r4, 32, 14, $noreg, $noreg, debug-location !2446; include/nuttx/timers/clkcnt.h:382:22 @[ include/nuttx/timers/oneshot.h:332:10 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:108:3 ] ] ]
+  renamable $r12 = ORRrsr killed renamable $r12, renamable $lr, killed renamable $r5, 2, 14, $noreg, $noreg, debug-location !2446; include/nuttx/timers/clkcnt.h:382:22 @[ include/nuttx/timers/oneshot.h:332:10 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:108:3 ] ] ]
+  renamable $r4 = SUBri killed renamable $r4, 32, 14, $noreg, $noreg, debug-location !2446; include/nuttx/timers/clkcnt.h:382:22 @[ include/nuttx/timers/oneshot.h:332:10 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:108:3 ] ] ]
+  CMPri renamable $r4, 0, 14, $noreg, implicit-def $cpsr, debug-location !2446; include/nuttx/timers/clkcnt.h:382:22 @[ include/nuttx/timers/oneshot.h:332:10 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:108:3 ] ] ]
+  $r12 = MOVsr killed renamable $lr, killed renamable $r4, 3, 5, killed $cpsr, $noreg, implicit renamable $r12, debug-location !2446; include/nuttx/timers/clkcnt.h:382:22 @[ include/nuttx/timers/oneshot.h:332:10 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:108:3 ] ] ]
+  STRi12 killed renamable $r12, $sp, 124, 14, $noreg, debug-location !2449 :: (store (s32) into %ir.tv_nsec.i50); include/nuttx/timers/oneshot.h:408:17 @[ timers/arch_alarm.c:108:3 ]
+  STRi12 renamable $r0, $sp, 120, 14, $noreg, debug-location !2452 :: (store (s32) into %ir.tv_sec.i52); include/nuttx/timers/oneshot.h:409:17 @[ timers/arch_alarm.c:108:3 ]
+  renamable $r0 = MOVi 1, 14, $noreg, $noreg
+  dead renamable $r2 = SUBrr renamable $r2, renamable $r3, 14, $noreg, def $cpsr, debug-location !2453; include/nuttx/timers/oneshot.h:411:3 @[ timers/arch_alarm.c:108:3 ]
+  dead renamable $r1 = SBCri renamable $r1, 0, 14, $noreg, def $cpsr, implicit killed $cpsr, debug-location !2453; include/nuttx/timers/oneshot.h:411:3 @[ timers/arch_alarm.c:108:3 ]
+  STRi12 killed $r0, $sp, 64, 14, $noreg :: (store (s32) into %stack.12)
+  Bcc %bb.6, 2, killed $cpsr, debug-location !2453; include/nuttx/timers/oneshot.h:411:3 @[ timers/arch_alarm.c:108:3 ]
+  B %bb.5, debug-location !2453; include/nuttx/timers/oneshot.h:411:3 @[ timers/arch_alarm.c:108:3 ]
+
+bb.5.land.rhs.i57:
+; predecessors: %bb.4
+  successors: %bb.6(0x80000000); %bb.6(100.00%)
+
+  renamable $r1 = LDRi12 $sp, 124, 14, $noreg, debug-location !2453 :: (dereferenceable load (s32) from %ir.tv_nsec6.i55); include/nuttx/timers/oneshot.h:411:3 @[ timers/arch_alarm.c:108:3 ]
+  $r2 = MOVi16 51711, 14, $noreg
+  $r2 = MOVTi16 $r2(tied-def 0), 15258, 14, $noreg
+  renamable $r0 = MOVi 0, 14, $noreg, $noreg
+  CMPrr killed renamable $r1, killed renamable $r2, 14, $noreg, implicit-def $cpsr, debug-location !2453; include/nuttx/timers/oneshot.h:411:3 @[ timers/arch_alarm.c:108:3 ]
+  $r0 = MOVi16 1, 8, killed $cpsr, implicit renamable $r0, debug-location !2453; include/nuttx/timers/oneshot.h:411:3 @[ timers/arch_alarm.c:108:3 ]
+  STRi12 killed $r0, $sp, 64, 14, $noreg :: (store (s32) into %stack.12)
+  B %bb.6
+
+bb.6.land.end.i60:
+; predecessors: %bb.4, %bb.5
+  successors: %bb.7, %bb.8
+
+  $r0 = LDRi12 $sp, 64, 14, $noreg :: (load (s32) from %stack.12)
+  TSTri killed renamable $r0, 1, 14, $noreg, implicit-def $cpsr, debug-location !2453; include/nuttx/timers/oneshot.h:411:3 @[ timers/arch_alarm.c:108:3 ]
+  Bcc %bb.8, 0, killed $cpsr, debug-location !2453; include/nuttx/timers/oneshot.h:411:3 @[ timers/arch_alarm.c:108:3 ]
+  B %bb.7, debug-location !2453; include/nuttx/timers/oneshot.h:411:3 @[ timers/arch_alarm.c:108:3 ]
+
+bb.7.cond.true.i61:
+; predecessors: %bb.6
+
+  $r0 = MOVi16 target-flags(arm-lo16) @.str.1, 14, $noreg, debug-location !2453; include/nuttx/timers/oneshot.h:411:3 @[ timers/arch_alarm.c:108:3 ]
+  $r0 = MOVTi16 $r0(tied-def 0), target-flags(arm-hi16) @.str.1, 14, $noreg, debug-location !2453; include/nuttx/timers/oneshot.h:411:3 @[ timers/arch_alarm.c:108:3 ]
+  renamable $r1 = MOVi16 411, 14, $noreg
+  renamable $r2 = MOVi 0, 14, $noreg, $noreg
+  BMOVPCB_CALL @__assert, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, debug-location !2453; include/nuttx/timers/oneshot.h:411:3 @[ timers/arch_alarm.c:108:3 ]
+
+bb.8.oneshot_current.exit62:
+; predecessors: %bb.6
+  successors: %bb.9(0x80000000); %bb.9(100.00%)
+
+  B %bb.9, debug-location !2454; timers/arch_alarm.c:109:3
+
+bb.9.do.body:
+; predecessors: %bb.8
+  successors: %bb.10(0x80000000); %bb.10(100.00%)
+
+  $r2 = LDRi12 $sp, 80, 14, $noreg, debug-location !2454 :: (load (s32) from %stack.8); timers/arch_alarm.c:109:3
+  renamable $r0 = MOVsi renamable $r2, 75, 14, $noreg, $noreg, debug-location !2454; timers/arch_alarm.c:109:3
+  $r1 = MOVi16 19331, 14, $noreg
+  $r1 = MOVTi16 $r1(tied-def 0), 4, 14, $noreg
+  dead renamable $r1, renamable $r0 = UMULL killed renamable $r0, killed renamable $r1, 14, $noreg, $noreg, debug-location !2454; timers/arch_alarm.c:109:3
+  renamable $r0 = MOVsi killed renamable $r0, 59, 14, $noreg, $noreg, debug-location !2454; timers/arch_alarm.c:109:3
+  STRi12 renamable $r0, $sp, 104, 14, $noreg, debug-location !2454 :: (store (s32) into %ir.tv_sec); timers/arch_alarm.c:109:3
+  $r1 = MOVi16 13824, 14, $noreg
+  $r1 = MOVTi16 $r1(tied-def 0), 50277, 14, $noreg
+  renamable $r0 = MLA killed renamable $r0, killed renamable $r1, renamable $r2, 14, $noreg, $noreg, debug-location !2454; timers/arch_alarm.c:109:3
+  STRi12 killed renamable $r0, $sp, 108, 14, $noreg, debug-location !2454 :: (store (s32) into %ir.tv_nsec); timers/arch_alarm.c:109:3
+  B %bb.10, debug-location !2454; timers/arch_alarm.c:109:3
+
+bb.10.do.end:
+; predecessors: %bb.9
+  successors: %bb.11(0x80000000); %bb.11(100.00%)
+
+  B %bb.11, debug-location !2455; timers/arch_alarm.c:110:3
+
+bb.11.do.body5:
+; predecessors: %bb.10
+  successors: %bb.12, %bb.13
+
+  renamable $r1 = LDRi12 $sp, 120, 14, $noreg, debug-location !2455 :: (dereferenceable load (s32) from %ir.tv_sec6); timers/arch_alarm.c:110:3
+  renamable $r0 = LDRi12 $sp, 124, 14, $noreg, debug-location !2455 :: (dereferenceable load (s32) from %ir.tv_nsec9); timers/arch_alarm.c:110:3
+  renamable $r3 = LDRi12 $sp, 104, 14, $noreg, debug-location !2455 :: (dereferenceable load (s32) from %ir.tv_sec7); timers/arch_alarm.c:110:3
+  renamable $r2 = LDRi12 $sp, 108, 14, $noreg, debug-location !2455 :: (dereferenceable load (s32) from %ir.tv_nsec10); timers/arch_alarm.c:110:3
+  renamable $r1 = ADDrr killed renamable $r1, killed renamable $r3, 14, $noreg, $noreg, debug-location !2455; timers/arch_alarm.c:110:3
+  STRi12 $r1, $sp, 48, 14, $noreg :: (store (s32) into %stack.16)
+  renamable $r0 = nsw ADDrr killed renamable $r0, killed renamable $r2, 14, $noreg, $noreg, debug-location !2455; timers/arch_alarm.c:110:3
+  STRi12 $r0, $sp, 52, 14, $noreg :: (store (s32) into %stack.15)
+  $r2 = MOVi16 51712, 14, $noreg
+  $r2 = MOVTi16 $r2(tied-def 0), 15258, 14, $noreg
+  CMPrr renamable $r0, killed renamable $r2, 14, $noreg, implicit-def $cpsr, debug-location !2455; timers/arch_alarm.c:110:3
+  STRi12 killed $r1, $sp, 56, 14, $noreg :: (store (s32) into %stack.14)
+  STRi12 killed $r0, $sp, 60, 14, $noreg :: (store (s32) into %stack.13)
+  Bcc %bb.13, 3, killed $cpsr, debug-location !2455; timers/arch_alarm.c:110:3
+  B %bb.12, debug-location !2455; timers/arch_alarm.c:110:3
+
+bb.12.if.then:
+; predecessors: %bb.11
+  successors: %bb.13(0x80000000); %bb.13(100.00%)
+
+  $r1 = LDRi12 $sp, 48, 14, $noreg :: (load (s32) from %stack.16)
+  $r0 = LDRi12 $sp, 52, 14, $noreg :: (load (s32) from %stack.15)
+  $r2 = MOVi16 13824, 14, $noreg
+  $r2 = MOVTi16 $r2(tied-def 0), 50277, 14, $noreg
+  renamable $r0 = ADDrr renamable $r0, killed renamable $r2, 14, $noreg, $noreg, debug-location !2455; timers/arch_alarm.c:110:3
+  renamable $r1 = ADDri renamable $r1, 1, 14, $noreg, $noreg, debug-location !2455; timers/arch_alarm.c:110:3
+  STRi12 killed $r1, $sp, 56, 14, $noreg :: (store (s32) into %stack.14)
+  STRi12 killed $r0, $sp, 60, 14, $noreg :: (store (s32) into %stack.13)
+  B %bb.13, debug-location !2455; timers/arch_alarm.c:110:3
+
+bb.13.if.end:
+; predecessors: %bb.11, %bb.12
+  successors: %bb.14(0x80000000); %bb.14(100.00%)
+
+  $r1 = LDRi12 $sp, 56, 14, $noreg, debug-location !2455 :: (load (s32) from %stack.14); timers/arch_alarm.c:110:3
+  $r0 = LDRi12 $sp, 60, 14, $noreg, debug-location !2455 :: (load (s32) from %stack.13); timers/arch_alarm.c:110:3
+  STRi12 killed renamable $r1, $sp, 112, 14, $noreg, debug-location !2455 :: (store (s32) into %ir.tv_sec14); timers/arch_alarm.c:110:3
+  STRi12 killed renamable $r0, $sp, 116, 14, $noreg, debug-location !2455 :: (store (s32) into %ir.tv_nsec15); timers/arch_alarm.c:110:3
+  B %bb.14, debug-location !2455; timers/arch_alarm.c:110:3
+
+bb.14.do.end16:
+; predecessors: %bb.13
+  successors: %bb.15(0x80000000); %bb.15(100.00%)
+
+  B %bb.15, debug-location !2456; timers/arch_alarm.c:112:3
+
+bb.15.while.cond:
+; predecessors: %bb.14, %bb.30
+  successors: %bb.16, %bb.17
+
+  renamable $r0 = LDRi12 $sp, 120, 14, $noreg, debug-location !2457 :: (dereferenceable load (s32) from %ir.tv_sec17); timers/arch_alarm.c:112:10
+  renamable $r1 = LDRi12 $sp, 112, 14, $noreg, debug-location !2457 :: (dereferenceable load (s32) from %ir.tv_sec18); timers/arch_alarm.c:112:10
+  CMPrr killed renamable $r0, killed renamable $r1, 14, $noreg, implicit-def $cpsr, debug-location !2457; timers/arch_alarm.c:112:10
+  Bcc %bb.17, 2, killed $cpsr, debug-location !2457; timers/arch_alarm.c:112:10
+  B %bb.16, debug-location !2457; timers/arch_alarm.c:112:10
+
+bb.16.cond.true:
+; predecessors: %bb.15
+  successors: %bb.21(0x80000000); %bb.21(100.00%)
+
+  renamable $r0 = MVNi 0, 14, $noreg, $noreg
+  STRi12 killed $r0, $sp, 44, 14, $noreg :: (store (s32) into %stack.17)
+  B %bb.21, debug-location !2457; timers/arch_alarm.c:112:10
+
+bb.17.cond.false:
+; predecessors: %bb.15
+  successors: %bb.18, %bb.19
+
+  renamable $r0 = LDRi12 $sp, 120, 14, $noreg, debug-location !2457 :: (dereferenceable load (s32) from %ir.tv_sec21); timers/arch_alarm.c:112:10
+  renamable $r1 = LDRi12 $sp, 112, 14, $noreg, debug-location !2457 :: (dereferenceable load (s32) from %ir.tv_sec22); timers/arch_alarm.c:112:10
+  CMPrr killed renamable $r0, killed renamable $r1, 14, $noreg, implicit-def $cpsr, debug-location !2457; timers/arch_alarm.c:112:10
+  Bcc %bb.19, 9, killed $cpsr, debug-location !2457; timers/arch_alarm.c:112:10
+  B %bb.18, debug-location !2457; timers/arch_alarm.c:112:10
+
+bb.18.cond.true25:
+; predecessors: %bb.17
+  successors: %bb.20(0x80000000); %bb.20(100.00%)
+
+  renamable $r0 = MOVi 1, 14, $noreg, $noreg
+  STRi12 killed $r0, $sp, 40, 14, $noreg :: (store (s32) into %stack.18)
+  B %bb.20, debug-location !2457; timers/arch_alarm.c:112:10
+
+bb.19.cond.false26:
+; predecessors: %bb.17
+  successors: %bb.20(0x80000000); %bb.20(100.00%)
+
+  renamable $r0 = LDRi12 $sp, 124, 14, $noreg, debug-location !2457 :: (dereferenceable load (s32) from %ir.tv_nsec27); timers/arch_alarm.c:112:10
+  renamable $r1 = LDRi12 $sp, 116, 14, $noreg, debug-location !2457 :: (dereferenceable load (s32) from %ir.tv_nsec28); timers/arch_alarm.c:112:10
+  renamable $r0 = nsw SUBrr killed renamable $r0, killed renamable $r1, 14, $noreg, $noreg, debug-location !2457; timers/arch_alarm.c:112:10
+  STRi12 killed $r0, $sp, 40, 14, $noreg :: (store (s32) into %stack.18)
+  B %bb.20, debug-location !2457; timers/arch_alarm.c:112:10
+
+bb.20.cond.end:
+; predecessors: %bb.19, %bb.18
+  successors: %bb.21(0x80000000); %bb.21(100.00%)
+
+  $r0 = LDRi12 $sp, 40, 14, $noreg, debug-location !2457 :: (load (s32) from %stack.18); timers/arch_alarm.c:112:10
+  STRi12 killed $r0, $sp, 44, 14, $noreg :: (store (s32) into %stack.17)
+  B %bb.21, debug-location !2457; timers/arch_alarm.c:112:10
+
+bb.21.cond.end30:
+; predecessors: %bb.20, %bb.16
+  successors: %bb.22, %bb.31
+
+  $r0 = LDRi12 $sp, 44, 14, $noreg, debug-location !2457 :: (load (s32) from %stack.17); timers/arch_alarm.c:112:10
+  CMNri killed renamable $r0, 1, 14, $noreg, implicit-def $cpsr, debug-location !2456; timers/arch_alarm.c:112:3
+  Bcc %bb.31, 12, killed $cpsr, debug-location !2456; timers/arch_alarm.c:112:3
+  B %bb.22, debug-location !2456; timers/arch_alarm.c:112:3
+
+bb.22.while.body:
+; predecessors: %bb.21
+  successors: %bb.23, %bb.24
+
+  $r0 = MOVi16 target-flags(arm-lo16) @g_oneshot_lower, 14, $noreg, debug-location !2459; timers/arch_alarm.c:114:7
+  $r0 = MOVTi16 $r0(tied-def 0), target-flags(arm-hi16) @g_oneshot_lower, 14, $noreg, debug-location !2459; timers/arch_alarm.c:114:7
+  renamable $r0 = LDRi12 killed renamable $r0, 0, 14, $noreg, debug-location !2459 :: (dereferenceable load (s32) from @g_oneshot_lower); timers/arch_alarm.c:114:7
+  STRi12 $r0, $sp, 20, 14, $noreg :: (store (s32) into %stack.23)
+  renamable $r1 = LDRi12 renamable $r0, 0, 14, $noreg, debug-location !2460 :: (load (s32) from %ir.ops.i, align 8); include/nuttx/timers/oneshot.h:403:26 @[ timers/arch_alarm.c:114:7 ]
+  renamable $r1 = LDRi12 killed renamable $r1, 0, 14, $noreg, debug-location !2462 :: (load (s32) from %ir.current.i); include/nuttx/timers/oneshot.h:403:31 @[ timers/arch_alarm.c:114:7 ]
+  BLX killed renamable $r1, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit-def $sp, implicit-def $r0, implicit-def $r1, debug-location !2463; include/nuttx/timers/oneshot.h:403:19 @[ timers/arch_alarm.c:114:7 ]
+  $r2 = MOVr $r0, 14, $noreg, $noreg, debug-location !2463; include/nuttx/timers/oneshot.h:403:19 @[ timers/arch_alarm.c:114:7 ]
+  $r0 = LDRi12 $sp, 20, 14, $noreg :: (load (s32) from %stack.23)
+  STRi12 $r2, $sp, 24, 14, $noreg :: (store (s32) into %stack.22)
+  $r2 = MOVr $r1, 14, $noreg, $noreg, debug-location !2463; include/nuttx/timers/oneshot.h:403:19 @[ timers/arch_alarm.c:114:7 ]
+  $r1 = LDRi12 $sp, 24, 14, $noreg, debug-location !2463 :: (load (s32) from %stack.22); include/nuttx/timers/oneshot.h:403:19 @[ timers/arch_alarm.c:114:7 ]
+  STRi12 killed $r2, $sp, 28, 14, $noreg :: (store (s32) into %stack.21)
+  STRi12 killed $r1, $sp, 32, 14, $noreg :: (store (s32) into %stack.20)
+  renamable $r0 = LDRi12 renamable $r0, 12, 14, $noreg, debug-location !2464 :: (load (s32) from %ir.frequency.i); include/nuttx/timers/oneshot.h:404:26 @[ timers/arch_alarm.c:114:7 ]
+  STRi12 killed $r0, $sp, 36, 14, $noreg :: (store (s32) into %stack.19)
+  renamable $r0 = MOVi 1, 14, $noreg, $noreg
+  CMPri killed renamable $r0, 0, 14, $noreg, implicit-def $cpsr, debug-location !2465; include/nuttx/timers/clkcnt.h:354:3 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:114:7 ] ] ]
+  Bcc %bb.24, 1, killed $cpsr, debug-location !2465; include/nuttx/timers/clkcnt.h:354:3 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:114:7 ] ] ]
+  B %bb.23, debug-location !2465; include/nuttx/timers/clkcnt.h:354:3 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:114:7 ] ] ]
+
+bb.23.cond.true.i72:
+; predecessors: %bb.22
+
+
+bb.24.clkcnt_delta_cnt2time_invdiv.exit:
+; predecessors: %bb.22
+  successors: %bb.25, %bb.26
+
+  $r0 = LDRi12 $sp, 28, 14, $noreg, debug-location !2498 :: (load (s32) from %stack.21); include/nuttx/timers/oneshot.h:321:3 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:114:7 ] ]
+  $r2 = LDRi12 $sp, 32, 14, $noreg, debug-location !2498 :: (load (s32) from %stack.20); include/nuttx/timers/oneshot.h:321:3 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:114:7 ] ]
+  $lr = LDRi12 $sp, 36, 14, $noreg, debug-location !2498 :: (load (s32) from %stack.19); include/nuttx/timers/oneshot.h:321:3 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:114:7 ] ]
+  $r12 = LDRi12 $sp, 20, 14, $noreg, debug-location !2498 :: (load (s32) from %stack.23); include/nuttx/timers/oneshot.h:321:3 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:114:7 ] ]
+  renamable $r1 = LDRi12 renamable $r12, 12, 14, $noreg, debug-location !2498 :: (load (s32) from %ir.frequency.i157); include/nuttx/timers/oneshot.h:321:3 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:114:7 ] ]
+  renamable $r3 = LDRi12 renamable $r12, 24, 14, $noreg, debug-location !2468 :: (load (s32) from %ir.mult.i99, align 8); include/nuttx/lib/math32.h:575:25 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:114:7 ] ] ] ]
+  renamable $r6 = LDRi12 renamable $r12, 28, 14, $noreg, debug-location !2468 :: (load (s32) from %ir.mult.i99 + 4, basealign 8); include/nuttx/lib/math32.h:575:25 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:114:7 ] ] ] ]
+  renamable $r5 = LDRBi12 renamable $r12, 32, 14, $noreg, debug-location !2470 :: (load (s8) from %ir.shift.i100, align 8); include/nuttx/lib/math32.h:577:25 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:114:7 ] ] ] ]
+  dead renamable $r12, renamable $r4 = UMULL renamable $r2, renamable $r3, 14, $noreg, $noreg, debug-location !2476; include/nuttx/lib/math32.h:482:20 @[ include/nuttx/lib/math32.h:584:8 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:114:7 ] ] ] ] ]
+  renamable $r7, renamable $r12 = UMULL renamable $r0, killed renamable $r3, 14, $noreg, $noreg, debug-location !2477; include/nuttx/lib/math32.h:483:20 @[ include/nuttx/lib/math32.h:584:8 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:114:7 ] ] ] ] ]
+  renamable $r8, renamable $r3 = UMULL renamable $r2, renamable $r6, 14, $noreg, $noreg, debug-location !2478; include/nuttx/lib/math32.h:484:20 @[ include/nuttx/lib/math32.h:584:8 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:114:7 ] ] ] ] ]
+  renamable $r7 = ADDrr killed renamable $r4, killed renamable $r7, 14, $noreg, def $cpsr, debug-location !2482; include/nuttx/lib/math32.h:487:27 @[ include/nuttx/lib/math32.h:584:8 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:114:7 ] ] ] ] ]
+  renamable $r4 = MOVi 0, 14, $noreg, $noreg
+  renamable $r4 = ADCri killed renamable $r4, 0, 14, $noreg, $noreg, implicit killed $cpsr, debug-location !2482; include/nuttx/lib/math32.h:487:27 @[ include/nuttx/lib/math32.h:584:8 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:114:7 ] ] ] ] ]
+  dead renamable $r7 = ADDrr killed renamable $r7, killed renamable $r8, 14, $noreg, def $cpsr, debug-location !2484; include/nuttx/lib/math32.h:487:47 @[ include/nuttx/lib/math32.h:584:8 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:114:7 ] ] ] ] ]
+  renamable $r12, renamable $r3 = UMAAL renamable $r0, killed renamable $r6, renamable $r12(tied-def 0), renamable $r3(tied-def 1), 14, $noreg, debug-location !2488; include/nuttx/lib/math32.h:489:26 @[ include/nuttx/lib/math32.h:584:8 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:114:7 ] ] ] ] ]
+  renamable $r12 = ADCrr killed renamable $r12, killed renamable $r4, 14, $noreg, def $cpsr, implicit killed $cpsr, debug-location !2490; include/nuttx/lib/math32.h:489:39 @[ include/nuttx/lib/math32.h:584:8 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:114:7 ] ] ] ] ]
+  renamable $r3 = ADCri killed renamable $r3, 0, 14, $noreg, $noreg, implicit killed $cpsr, debug-location !2490; include/nuttx/lib/math32.h:489:39 @[ include/nuttx/lib/math32.h:584:8 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:114:7 ] ] ] ] ]
+  renamable $r6 = SUBrr renamable $r2, renamable $r12, 14, $noreg, def $cpsr, debug-location !2491; include/nuttx/lib/math32.h:585:11 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:114:7 ] ] ] ]
+  renamable $r4 = SBCrr renamable $r0, renamable $r3, 14, $noreg, $noreg, implicit killed $cpsr, debug-location !2491; include/nuttx/lib/math32.h:585:11 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:114:7 ] ] ] ]
+  $r4 = MOVsi killed renamable $r4, 11, 14, $noreg, def $cpsr, debug-location !2492; include/nuttx/lib/math32.h:585:17 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:114:7 ] ] ] ]
+  $r6 = MOVsi killed renamable $r6, 5, 14, $noreg, $noreg, implicit killed $cpsr, debug-location !2492; include/nuttx/lib/math32.h:585:17 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:114:7 ] ] ] ]
+  renamable $r12 = ADDrr killed renamable $r12, killed renamable $r6, 14, $noreg, def $cpsr, debug-location !2493; include/nuttx/lib/math32.h:587:14 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:114:7 ] ] ] ]
+  renamable $r3 = ADCrr killed renamable $r3, killed renamable $r4, 14, $noreg, $noreg, implicit killed $cpsr, debug-location !2493; include/nuttx/lib/math32.h:587:14 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:114:7 ] ] ] ]
+  renamable $r12 = MOVsr killed renamable $r12, renamable $r5, 3, 14, $noreg, $noreg, debug-location !2494; include/nuttx/lib/math32.h:587:20 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:114:7 ] ] ] ]
+  renamable $r4 = RSBri renamable $r5, 32, 14, $noreg, $noreg, debug-location !2494; include/nuttx/lib/math32.h:587:20 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:114:7 ] ] ] ]
+  renamable $r12 = ORRrsr killed renamable $r12, renamable $r3, killed renamable $r4, 2, 14, $noreg, $noreg, debug-location !2494; include/nuttx/lib/math32.h:587:20 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:114:7 ] ] ] ]
+  renamable $r4 = SUBri renamable $r5, 32, 14, $noreg, $noreg, debug-location !2494; include/nuttx/lib/math32.h:587:20 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:114:7 ] ] ] ]
+  CMPri renamable $r4, 0, 14, $noreg, implicit-def $cpsr, debug-location !2494; include/nuttx/lib/math32.h:587:20 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:114:7 ] ] ] ]
+  $r12 = MOVsr renamable $r3, renamable $r4, 3, 5, killed $cpsr, $noreg, implicit renamable $r12, debug-location !2494; include/nuttx/lib/math32.h:587:20 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:114:7 ] ] ] ]
+  STRi12 $r12, $sp, 8, 14, $noreg :: (store (s32) into %stack.26)
+  renamable $r3 = MOVsr killed renamable $r3, killed renamable $r5, 3, 14, $noreg, $noreg, debug-location !2494; include/nuttx/lib/math32.h:587:20 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:114:7 ] ] ] ]
+  CMPri killed renamable $r4, 0, 14, $noreg, implicit-def $cpsr, debug-location !2494; include/nuttx/lib/math32.h:587:20 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:114:7 ] ] ] ]
+  $r3 = MOVi16 0, 5, killed $cpsr, implicit renamable $r3, debug-location !2494; include/nuttx/lib/math32.h:587:20 @[ include/nuttx/timers/clkcnt.h:356:10 @[ include/nuttx/timers/oneshot.h:360:10 @[ include/nuttx/timers/oneshot.h:405:19 @[ timers/arch_alarm.c:114:7 ] ] ] ]
+  renamable $r12, renamable $r4 = UMULL renamable $r12, renamable $lr, 14, $noreg, $noreg, debug-location !2496; include/nuttx/timers/oneshot.h:407:23 @[ timers/arch_alarm.c:114:7 ]
+  renamable $r3 = MLA killed renamable $r3, renamable $lr, killed renamable $r4, 14, $noreg, $noreg, debug-location !2496; include/nuttx/timers/oneshot.h:407:23 @[ timers/arch_alarm.c:114:7 ]
+  renamable $r2 = SUBrr renamable $r2, killed renamable $r12, 14, $noreg, def $cpsr, debug-location !2497; include/nuttx/timers/oneshot.h:407:16 @[ timers/arch_alarm.c:114:7 ]
+  STRi12 $r2, $sp, 12, 14, $noreg :: (store (s32) into %stack.25)
+  renamable $r0 = SBCrr renamable $r0, killed renamable $r3, 14, $noreg, $noreg, implicit killed $cpsr, debug-location !2497; include/nuttx/timers/oneshot.h:407:16 @[ timers/arch_alarm.c:114:7 ]
+  STRi12 $r0, $sp, 16, 14, $noreg :: (store (s32) into %stack.24)
+  dead renamable $r1 = SUBrr killed renamable $r1, renamable $r2, 14, $noreg, def $cpsr, debug-location !2498; include/nuttx/timers/oneshot.h:321:3 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:114:7 ] ]
+  dead renamable $r0 = RSCri renamable $r0, 0, 14, $noreg, def $cpsr, implicit killed $cpsr, debug-location !2498; include/nuttx/timers/oneshot.h:321:3 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:114:7 ] ]
+  Bcc %bb.26, 2, killed $cpsr, debug-location !2498; include/nuttx/timers/oneshot.h:321:3 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:114:7 ] ]
+  B %bb.25, debug-location !2498; include/nuttx/timers/oneshot.h:321:3 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:114:7 ] ]
+
+bb.25.cond.true.i162:
+; predecessors: %bb.24
+
+  $r0 = MOVi16 target-flags(arm-lo16) @.str.1, 14, $noreg, debug-location !2498; include/nuttx/timers/oneshot.h:321:3 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:114:7 ] ]
+  $r0 = MOVTi16 $r0(tied-def 0), target-flags(arm-hi16) @.str.1, 14, $noreg, debug-location !2498; include/nuttx/timers/oneshot.h:321:3 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:114:7 ] ]
+  renamable $r1 = MOVi16 321, 14, $noreg
+  renamable $r2 = MOVi 0, 14, $noreg, $noreg
+  BMOVPCB_CALL @__assert, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, debug-location !2498; include/nuttx/timers/oneshot.h:321:3 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:114:7 ] ]
+
+bb.26.oneshot_delta_cnt2nsec.exit172:
+; predecessors: %bb.24
+  successors: %bb.27, %bb.28
+
+  $r1 = LDRi12 $sp, 16, 14, $noreg, debug-location !2500 :: (load (s32) from %stack.24); include/nuttx/timers/oneshot.h:332:51 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:114:7 ] ]
+  $r2 = LDRi12 $sp, 12, 14, $noreg, debug-location !2500 :: (load (s32) from %stack.25); include/nuttx/timers/oneshot.h:332:51 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:114:7 ] ]
+  $r3 = LDRi12 $sp, 36, 14, $noreg, debug-location !2500 :: (load (s32) from %stack.19); include/nuttx/timers/oneshot.h:332:51 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:114:7 ] ]
+  $r0 = LDRi12 $sp, 8, 14, $noreg, debug-location !2500 :: (load (s32) from %stack.26); include/nuttx/timers/oneshot.h:332:51 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:114:7 ] ]
+  $r12 = LDRi12 $sp, 20, 14, $noreg, debug-location !2500 :: (load (s32) from %stack.23); include/nuttx/timers/oneshot.h:332:51 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:114:7 ] ]
+  renamable $lr = LDRi12 renamable $r12, 16, 14, $noreg, debug-location !2500 :: (load (s32) from %ir.cnt2nsec_mult.i163, align 8); include/nuttx/timers/oneshot.h:332:51 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:114:7 ] ]
+  renamable $r4 = LDRBi12 renamable $r12, 20, 14, $noreg, debug-location !2501 :: (load (s8) from %ir.cnt2nsec_shift.i164, align 4); include/nuttx/timers/oneshot.h:333:44 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:114:7 ] ]
+  renamable $r12, renamable $r5 = UMULL renamable $r2, renamable $lr, 14, $noreg, $noreg, debug-location !2504; include/nuttx/timers/clkcnt.h:382:16 @[ include/nuttx/timers/oneshot.h:332:10 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:114:7 ] ] ]
+  renamable $lr = MLA renamable $r1, killed renamable $lr, killed renamable $r5, 14, $noreg, $noreg, debug-location !2504; include/nuttx/timers/clkcnt.h:382:16 @[ include/nuttx/timers/oneshot.h:332:10 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:114:7 ] ] ]
+  renamable $r12 = MOVsr killed renamable $r12, renamable $r4, 3, 14, $noreg, $noreg, debug-location !2506; include/nuttx/timers/clkcnt.h:382:22 @[ include/nuttx/timers/oneshot.h:332:10 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:114:7 ] ] ]
+  renamable $r5 = RSBri renamable $r4, 32, 14, $noreg, $noreg, debug-location !2506; include/nuttx/timers/clkcnt.h:382:22 @[ include/nuttx/timers/oneshot.h:332:10 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:114:7 ] ] ]
+  renamable $r12 = ORRrsr killed renamable $r12, renamable $lr, killed renamable $r5, 2, 14, $noreg, $noreg, debug-location !2506; include/nuttx/timers/clkcnt.h:382:22 @[ include/nuttx/timers/oneshot.h:332:10 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:114:7 ] ] ]
+  renamable $r4 = SUBri killed renamable $r4, 32, 14, $noreg, $noreg, debug-location !2506; include/nuttx/timers/clkcnt.h:382:22 @[ include/nuttx/timers/oneshot.h:332:10 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:114:7 ] ] ]
+  CMPri renamable $r4, 0, 14, $noreg, implicit-def $cpsr, debug-location !2506; include/nuttx/timers/clkcnt.h:382:22 @[ include/nuttx/timers/oneshot.h:332:10 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:114:7 ] ] ]
+  $r12 = MOVsr killed renamable $lr, killed renamable $r4, 3, 5, killed $cpsr, $noreg, implicit renamable $r12, debug-location !2506; include/nuttx/timers/clkcnt.h:382:22 @[ include/nuttx/timers/oneshot.h:332:10 @[ include/nuttx/timers/oneshot.h:408:19 @[ timers/arch_alarm.c:114:7 ] ] ]
+  STRi12 killed renamable $r12, $sp, 124, 14, $noreg, debug-location !2509 :: (store (s32) into %ir.tv_nsec.i); include/nuttx/timers/oneshot.h:408:17 @[ timers/arch_alarm.c:114:7 ]
+  STRi12 renamable $r0, $sp, 120, 14, $noreg, debug-location !2512 :: (store (s32) into %ir.tv_sec.i); include/nuttx/timers/oneshot.h:409:17 @[ timers/arch_alarm.c:114:7 ]
+  renamable $r0 = MOVi 0, 14, $noreg, $noreg
+  dead renamable $r2 = SUBrr renamable $r2, renamable $r3, 14, $noreg, def $cpsr, debug-location !2513; include/nuttx/timers/oneshot.h:411:3 @[ timers/arch_alarm.c:114:7 ]
+  dead renamable $r1 = SBCri renamable $r1, 0, 14, $noreg, def $cpsr, implicit killed $cpsr, debug-location !2513; include/nuttx/timers/oneshot.h:411:3 @[ timers/arch_alarm.c:114:7 ]
+  STRi12 killed $r0, $sp, 4, 14, $noreg :: (store (s32) into %stack.27)
+  Bcc %bb.28, 2, killed $cpsr, debug-location !2513; include/nuttx/timers/oneshot.h:411:3 @[ timers/arch_alarm.c:114:7 ]
+  B %bb.27, debug-location !2513; include/nuttx/timers/oneshot.h:411:3 @[ timers/arch_alarm.c:114:7 ]
+
+bb.27.land.rhs.i:
+; predecessors: %bb.26
+  successors: %bb.28(0x80000000); %bb.28(100.00%)
+
+  renamable $r1 = LDRi12 $sp, 124, 14, $noreg, debug-location !2513 :: (dereferenceable load (s32) from %ir.tv_nsec6.i); include/nuttx/timers/oneshot.h:411:3 @[ timers/arch_alarm.c:114:7 ]
+  $r2 = MOVi16 51712, 14, $noreg
+  $r2 = MOVTi16 $r2(tied-def 0), 15258, 14, $noreg
+  renamable $r0 = MOVi 0, 14, $noreg, $noreg
+  CMPrr killed renamable $r1, killed renamable $r2, 14, $noreg, implicit-def $cpsr, debug-location !2513; include/nuttx/timers/oneshot.h:411:3 @[ timers/arch_alarm.c:114:7 ]
+  $r0 = MOVi16 1, 3, killed $cpsr, implicit renamable $r0, debug-location !2513; include/nuttx/timers/oneshot.h:411:3 @[ timers/arch_alarm.c:114:7 ]
+  STRi12 killed $r0, $sp, 4, 14, $noreg :: (store (s32) into %stack.27)
+  B %bb.28
+
+bb.28.land.end.i:
+; predecessors: %bb.26, %bb.27
+  successors: %bb.30, %bb.29
+
+  $r0 = LDRi12 $sp, 4, 14, $noreg, debug-location !2514 :: (load (s32) from %stack.27); include/nuttx/timers/oneshot.h:0 @[ timers/arch_alarm.c:114:7 ]
+  TSTri killed renamable $r0, 1, 14, $noreg, implicit-def $cpsr, debug-location !2513; include/nuttx/timers/oneshot.h:411:3 @[ timers/arch_alarm.c:114:7 ]
+  Bcc %bb.30, 1, killed $cpsr, debug-location !2513; include/nuttx/timers/oneshot.h:411:3 @[ timers/arch_alarm.c:114:7 ]
+  B %bb.29, debug-location !2513; include/nuttx/timers/oneshot.h:411:3 @[ timers/arch_alarm.c:114:7 ]
+
+bb.29.cond.true.i:
+; predecessors: %bb.28
+
+  $r0 = MOVi16 target-flags(arm-lo16) @.str.1, 14, $noreg, debug-location !2513; include/nuttx/timers/oneshot.h:411:3 @[ timers/arch_alarm.c:114:7 ]
+  $r0 = MOVTi16 $r0(tied-def 0), target-flags(arm-hi16) @.str.1, 14, $noreg, debug-location !2513; include/nuttx/timers/oneshot.h:411:3 @[ timers/arch_alarm.c:114:7 ]
+  renamable $r1 = MOVi16 411, 14, $noreg
+  renamable $r2 = MOVi 0, 14, $noreg, $noreg
+  BMOVPCB_CALL @__assert, <regmask $lr $d8 $d9 $d10 $d11 $d12 $d13 $d14 $d15 $q4 $q5 $q6 $q7 $r4 $r5 $r6 $r7 $r8 $r9 $r10 $r11 $s16 $s17 $s18 $s19 $s20 $s21 $s22 $s23 $s24 $s25 $s26 $s27 and 35 more...>, implicit-def dead $lr, implicit $sp, implicit killed $r0, implicit killed $r1, implicit killed $r2, implicit-def $sp, debug-location !2513; include/nuttx/timers/oneshot.h:411:3 @[ timers/arch_alarm.c:114:7 ]
+
+bb.30.oneshot_current.exit:
+; predecessors: %bb.28
+  successors: %bb.15(0x80000000); %bb.15(100.00%)
+
+  B %bb.15, debug-location !2456; timers/arch_alarm.c:112:3
+
+bb.31.while.end:
+; predecessors: %bb.21
+
+  $sp = frame-destroy ADDri killed $sp, 128, 14, $noreg, $noreg, debug-location !2518; timers/arch_alarm.c:116:1
+  $sp = frame-destroy LDMIA_RET $sp(tied-def 0), 14, $noreg, def $r4, def $r5, def $r6, def $r7, def $r8, def $pc, debug-location !2518; timers/arch_alarm.c:116:1
+
+# End machine code for function ndelay_accurate.
+
