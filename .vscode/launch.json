@@ -4,16 +4,16 @@
     // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
     "version": "0.2.0",
     "configurations": [
-
         {
-            "name": "Python Debugger: Current File",
+            "name": "Python Debugger: Nuttx_WCET_Analysis",
             "type": "debugpy",
             "request": "launch",
             "program": "${file}",
             "console": "integratedTerminal",
             "args":[
-                "-s", "/home/fyj/DiskN/openvela/nuttx",
-                "-c", "/home/fyj/DiskN/WCET_Tool/Data/compile_commands_armv7a.json"
+                "-s", "/home/fyj/work-space", 
+                "-n", "/home/fyj/nuttxspace/nuttx", 
+                "-p", "qemu-armv7a:nsh"
             ]
         }
     ]
