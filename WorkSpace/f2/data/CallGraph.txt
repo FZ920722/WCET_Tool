@@ -1,5 +1,0 @@
-Call Graph for analysed program
--------------------------------
-
-
-

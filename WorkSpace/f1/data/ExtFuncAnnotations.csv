@@ -1,5 +1,0 @@
-__errno|<start address>|<max cycles/accesses/hits/misses>
-fs_getfilep|<start address>|<max cycles/accesses/hits/misses>
-fs_putfilep|<start address>|<max cycles/accesses/hits/misses>
-indirect_call_registerif.then7|<start address>|<max cycles/accesses/hits/misses>
-memset|<start address>|<max cycles/accesses/hits/misses>
