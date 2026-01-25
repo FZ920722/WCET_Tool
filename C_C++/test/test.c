@@ -55,13 +55,9 @@ int main() {
 
     int y = 1;
     // _Pragma("loopbound min 1 max 1000")
-    while (1)
-    // for (;;)
-    // for(int i =1; i<100; i++)
-    {
-        y += 1;
-        y += 1;
-        y += 1;
+    // while (1) {
+    // for (;;) {
+    for(int i =1; i<100; i++) {
         y += 1;
     }
 
@@ -83,10 +79,10 @@ int main() {
 //             }
 //         );
 
-// clang test.c -w -S -emit-llvm -gline-tables-only -O0 -Xclang -disable-O0-optnone -fno-builtin -fno-jump-tables -fno-optimize-sibling-calls --target=arm -o test.ll
+// clang test.c -w -S -emit-llvm -gline-tables-only -O0 -Xclang -disable-O0-optnone -fno-builtin -fno-jump-tables -fno-optimize-sibling-calls --target=arm -o ./untest.ll
+
+// opt -S ./untest.ll -mem2reg -indvars -loop-simplify -inline -instcombine -globaldce -dce -lowerswitch -simplifycfg -o ./test.ll
 
 // llvmta -O0 -float-abi=hard -mattr=-neon,+vfp2 -disable-tail-calls --ta-output-unknown-extfuncs test.ll
 
 // llvmta -O0 -float-abi=hard -mattr=-neon,+vfp2 -disable-tail-calls --ta-output-unknown-loops --core-info=CoreInfo.json test.ll
-
-// llvmta -O0 -float-abi=hard -mattr=-neon,+vfp2 -disable-tail-calls -debug-only= --core-info=CoreInfo.json --ta-output-unknown-loops test.ll

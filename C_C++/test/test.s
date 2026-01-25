@@ -24,7 +24,7 @@
 	.code	32                              @ @say_hello
 say_hello:
 .Lfunc_begin0:
-	.file	0 "/home/fyj/DiskN/WCET_Tool/C_C++" "test.c" md5 0x824931c9fe6fa521db0735be2a80bd43
+	.file	0 "/home/fyj/DiskN/WCET_Tool/C_C++/test" "test.c" md5 0x1728bdf09d5cf58858ed5e3ffba0d7ce
 	.loc	0 3 0                           @ test.c:3:0
 	.fnstart
 	.cfi_sections .debug_frame
@@ -65,20 +65,9 @@ Func1:
 	.fnstart
 	.cfi_startproc
 @ %bb.0:                                @ %entry
-	sub	sp, sp, #4
-	.cfi_def_cfa_offset 4
-	str	r0, [sp]
-.Ltmp2:
-	.loc	0 8 9 prologue_end              @ test.c:8:9
-	ldr	r0, [sp]
-	.loc	0 8 11 is_stmt 0                @ test.c:8:11
-	add	r0, r0, #10
-	.loc	0 8 7                           @ test.c:8:7
-	str	r0, [sp]
-	.loc	0 12 1 is_stmt 1                @ test.c:12:1
-	add	sp, sp, #4
+	.loc	0 12 1 prologue_end             @ test.c:12:1
 	bx	lr
-.Ltmp3:
+.Ltmp2:
 .Lfunc_end1:
 	.size	Func1, .Lfunc_end1-Func1
 	.cfi_endproc
@@ -95,22 +84,17 @@ Func2:
 	.fnstart
 	.cfi_startproc
 @ %bb.0:                                @ %entry
-	sub	sp, sp, #4
-	.cfi_def_cfa_offset 4
-	str	r0, [sp]
-.Ltmp4:
-	.loc	0 15 16 prologue_end            @ test.c:15:16
-	ldr	r1, [sp]
-	.loc	0 15 14 is_stmt 0               @ test.c:15:14
+	mov	r1, r0
+.Ltmp3:
+	.loc	0 15 14 prologue_end            @ test.c:15:14
 	ldr	r0, [r1]
-	.loc	0 15 19                         @ test.c:15:19
+	.loc	0 15 19 is_stmt 0               @ test.c:15:19
 	add	r0, r0, #10
 	.loc	0 15 11                         @ test.c:15:11
 	str	r0, [r1]
 	.loc	0 19 1 is_stmt 1                @ test.c:19:1
-	add	sp, sp, #4
 	bx	lr
-.Ltmp5:
+.Ltmp4:
 .Lfunc_end2:
 	.size	Func2, .Lfunc_end2-Func2
 	.cfi_endproc
@@ -133,50 +117,37 @@ factorial:
 	.cfi_offset r11, -8
 	mov	r11, sp
 	.cfi_def_cfa_register r11
-	sub	sp, sp, #16
-	str	r0, [sp, #8]
-.Ltmp6:
-	.loc	0 29 9 prologue_end             @ test.c:29:9
-	ldr	r0, [sp, #8]
-	.loc	0 29 16 is_stmt 0               @ test.c:29:16
-	cmp	r0, #0
-	beq	.LBB3_2
-	b	.LBB3_1
-.LBB3_1:                                @ %lor.lhs.false
-	.loc	0 29 19                         @ test.c:29:19
-	ldr	r0, [sp, #8]
-	.loc	0 29 9                          @ test.c:29:9
-	cmp	r0, #1
-	bne	.LBB3_3
-	b	.LBB3_2
-.LBB3_2:                                @ %if.then
-	.loc	0 0 9                           @ test.c:0:9
+	sub	sp, sp, #8
+	mov	r1, r0
+	str	r1, [sp]                        @ 4-byte Spill
 	mov	r0, #1
-	.loc	0 30 9 is_stmt 1                @ test.c:30:9
-	str	r0, [r11, #-4]
-	b	.LBB3_4
-.LBB3_3:                                @ %if.end
-	.loc	0 32 12                         @ test.c:32:12
-	ldr	r0, [sp, #8]
+.Ltmp5:
+	.loc	0 29 16 prologue_end            @ test.c:29:16
+	cmp	r1, #2
 	str	r0, [sp, #4]                    @ 4-byte Spill
-	.loc	0 32 28 is_stmt 0               @ test.c:32:28
+	blo	.LBB3_2
+	b	.LBB3_1
+.LBB3_1:                                @ %if.end
+	.loc	0 32 28                         @ test.c:32:28
+	ldr	r0, [sp]                        @ 4-byte Reload
 	sub	r0, r0, #1
-	.loc	0 32 16                         @ test.c:32:16
+	.loc	0 32 16 is_stmt 0               @ test.c:32:16
 	bl	factorial
-	ldr	r1, [sp, #4]                    @ 4-byte Reload
-	mov	r2, r0
+	ldr	r2, [sp]                        @ 4-byte Reload
+	mov	r1, r0
 	.loc	0 32 14                         @ test.c:32:14
 	mul	r0, r1, r2
+	str	r0, [sp, #4]                    @ 4-byte Spill
 	.loc	0 32 5                          @ test.c:32:5
-	str	r0, [r11, #-4]
-	b	.LBB3_4
-.LBB3_4:                                @ %return
+	b	.LBB3_2
+.LBB3_2:                                @ %return
+	.loc	0 0 0                           @ test.c:0:0
+	ldr	r0, [sp, #4]                    @ 4-byte Reload
 	.loc	0 33 1 is_stmt 1                @ test.c:33:1
-	ldr	r0, [r11, #-4]
 	mov	sp, r11
 	pop	{r11, lr}
 	bx	lr
-.Ltmp7:
+.Ltmp6:
 .Lfunc_end3:
 	.size	factorial, .Lfunc_end3-factorial
 	.cfi_endproc
@@ -193,56 +164,11 @@ main:
 	.fnstart
 	.cfi_startproc
 @ %bb.0:                                @ %entry
-	push	{r11, lr}
-	.cfi_def_cfa_offset 8
-	.cfi_offset lr, -4
-	.cfi_offset r11, -8
-	mov	r11, sp
-	.cfi_def_cfa_register r11
-	sub	sp, sp, #24
 	mov	r0, #0
-	str	r0, [sp]                        @ 4-byte Spill
-	str	r0, [r11, #-4]
-	mov	r0, #5
+.Ltmp7:
+	.loc	0 64 5 prologue_end             @ test.c:64:5
+	bx	lr
 .Ltmp8:
-	.loc	0 36 9 prologue_end             @ test.c:36:9
-	str	r0, [r11, #-8]
-	.loc	0 37 23                         @ test.c:37:23
-	ldr	r0, [r11, #-8]
-	.loc	0 37 13 is_stmt 0               @ test.c:37:13
-	bl	factorial
-	mov	r1, r0
-	.loc	0 37 9                          @ test.c:37:9
-	ldr	r0, [sp]                        @ 4-byte Reload
-	str	r1, [sp, #12]
-	.loc	0 48 12 is_stmt 1               @ test.c:48:12
-	str	r0, [sp, #8]
-	.loc	0 51 14                         @ test.c:51:14
-	ldr	r0, .LCPI4_0
-	str	r0, [sp, #8]
-	.loc	0 54 5                          @ test.c:54:5
-	ldr	r0, [sp, #8]
-	mov	lr, pc
-	bx	r0
-	mov	r0, #1
-	.loc	0 56 9                          @ test.c:56:9
-	str	r0, [sp, #4]
-	.loc	0 57 5                          @ test.c:57:5
-	b	.LBB4_1
-.LBB4_1:                                @ %for.cond
-                                        @ =>This Inner Loop Header: Depth=1
-	.loc	0 58 11                         @ test.c:58:11
-	ldr	r0, [sp, #4]
-	add	r0, r0, #1
-	str	r0, [sp, #4]
-	.loc	0 57 5                          @ test.c:57:5
-	b	.LBB4_1
-.Ltmp9:
-	.p2align	2
-@ %bb.2:
-	.loc	0 0 5 is_stmt 0                 @ test.c:0:5
-.LCPI4_0:
-	.long	say_hello
 .Lfunc_end4:
 	.size	main, .Lfunc_end4-main
 	.cfi_endproc
@@ -310,7 +236,7 @@ main:
 .Linfo_string1:
 	.asciz	"test.c"                        @ string offset=105
 .Linfo_string2:
-	.asciz	"/home/fyj/DiskN/WCET_Tool/C_C++" @ string offset=112
+	.asciz	"/home/fyj/DiskN/WCET_Tool/C_C++/test" @ string offset=112
 	.section	.debug_str_offsets,"",%progbits
 	.long	.Linfo_string0
 	.long	.Linfo_string1
